@@ -4930,9 +4930,6 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				article {
 				  container: card/inline-size;
 				}
-				.article-body p {
-				  display: none;
-				}
 			  }
 			  
 			  @container card (min-width: 380px) {
