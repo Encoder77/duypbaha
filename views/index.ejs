@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+<body id="default_theme" class="it_service" lang="<%- lang %>">
+<!-- loader -->
+<div class="bg_load"> <img class="loader_animation" src="/images/loaders/loader_1.png" alt="#" /> </div>
+<!-- end loader -->
+<!-- header -->
+<%- include('partials/header') %>
+<!-- section -->
+<h4  style="font-size: 1.8em; margin-top: 20px; margin-left: 30px; float: left; border-bottom: 5px solid #0fb1f1;" data-key="categories">категории</h4>
+      <div style="clear: both;" ></div>
+<!-- Contenedor -->
+<div class="vmob">
+  <ul id="accordion" class="accordion">
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;">Umumy hojalyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="https://cdn.shopify.com/s/files/1/0017/4417/5193/files/KX_Fast_and_Free_Shipping.png?v=1600527392"></i></div>
+    <ul class="submenu" >
+      <% for(let i=0; i < categories.length; i++) {%>
+        <% if(categories[i].optione == 'Umumy') {%>
+        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><%- categories[i].category %></a></li>
+        <%}%>
+        <%}%>
+    </ul> 
+  </li>
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;">Gurlushyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="https://cdn.shopify.com/s/files/1/0017/4417/5193/files/KX_Environment.png?v=1600527392"></i></div>
+    <ul class="submenu">
+      <% for(let i=0; i < categories.length ; i++) {%>
+        <% if(categories[i].optione == 'Gurlushyk') {%>
+        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><%- categories[i].category %></a></li>
+        <%}%>
+        <%}%>
+    </ul>
+  </li>
+  <li>
+   <div class="link"><p style="padding-left: 15%; margin-top: -3%;">Sowgatlyk we oy bezegleri</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="https://cdn.shopify.com/s/files/1/0017/4417/5193/files/KX_One_Tree_Planted.png?v=1600527392"></i></div>
+   <ul class="submenu" >
+    <% for(let i=0; i < categories.length ; i++) {%>
+      <% if(categories[i].optione == 'Sowgatlyk') {%>
+      <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><%- categories[i].category %></a></li>
+      <%}%>
+      <%}%>
+  </ul>
+  </li>
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;">Kanselyariya we ofis harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="https://cdn.shopify.com/s/files/1/0017/4417/5193/files/KX_HQ_Brand_Fabric.png?v=1600559122"></i></div>
+    <ul class="submenu" >
+      <% for(let i=0; i < categories.length ; i++) {%>
+        <% if(categories[i].optione == 'Kanselyariya') {%>
+        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><%- categories[i].category %></a></li>
+        <%}%>
+        <%}%>
+    </ul> 
+  </li>
+  
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;">Eshikler we yantorbalar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="https://cdn.shopify.com/s/files/1/0017/4417/5193/files/KX_HQ_Support.png?v=1600527392"></i></div>
+    <ul class="submenu">
+                  <% for(let i=0; i < categories.length; i++) {%>
+                    <% if(categories[i].optione == 'Eshikler') {%>
+                    <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><%- categories[i].category %></a></li>
+                    <%}%>
+                    <%}%>
+                </ul>
+  </li>
+  
+ <li>
+   <div class="link"><p style="padding-left: 15%; margin-top: -3%;">Dowrebap enjamlar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="https://cdn.shopify.com/s/files/1/0017/4417/5193/files/KX_Ecologic_Factory.png?v=1600527392"></i></div>
+   <ul class="submenu">
+    <% for(let i=0; i < categories.length ; i++) {%>
+      <% if(categories[i].optione == 'Dowrebap') {%>
+      <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><%- categories[i].category %></a></li>
+      <%}%>
+      <%}%>
+  </ul> 
+  </li>
+</ul>
+</div>
+<div id="slider" class="section main_slider">
+  <div class="container-fuild">
+    <div class="row">
+      <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classicslider1" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+        <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+          <ul>
+            <% for(let i=0; i < banners.length; i++) { %>
+            <li data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="/uploads/banners/<%- banners[i].pic_name %>"  data-rotate="0"  data-saveperformance="off"  data-title="<%- banners[i].head_text %>" data-description="">
+              <!-- MAIN IMAGE -->
+              <!-- <img src="/uploads/banners/<%- banners[i].img_name %>"  alt="#"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
+              <!-- LAYERS -->
+              <video class="img-fluid"  autoplay loop muted>
+                <source src="/uploads/banners/<%- banners[i].img_name %>" type="video/mp4" />
+              </video>
+            </li>
+            <% } %>
+
+
+          </ul>
+          <div class="tp-static-layers"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section padding_layout_1 blog_list">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
+        <div class="full">
+          <% if(posts.length > 0) {%>
+          <% for(let i=0; i < limit; i++) { %>
+          <div class="blog_section">
+          <section class="articles">
+            <article>
+              <div class="article-wrapper">
+                <figure>
+                  <img src="/uploads/posts/<%- posts[i].post_img %>" alt="" />
+                </figure>
+                <div class="article-body">
+                  <h2><%- posts[i].title %></h2>
+                  <div class="post_info">
+                    <ul>
+                      <li><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li>
+                      <li><i class="fa fa-calendar" aria-hidden="true"></i> <%- posts[i].createdAt %></li>
+                    </ul>
+                  </div>
+                  <p>Bahasy: <%- posts[i].excerpt %> TMT</p>
+                  <a href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more">
+                     <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+          <% } %>
+          <% } %>
+          <% if(pagecounter) { %>
+          <div class="center">
+            <ul class="pagination style_1 mb-5">
+              <% for(let p=1;p <= pagecounter; p++) {%>
+              <% if(pageNum==p) {%><li class="active"><%}else{%><li><%}%> <a href="/<%- lang %>/blog?page=<%- p %>&category=<%- url %>"><%- p %></a></li>
+              <% } %>
+            </ul>
+          </div>
+          <% } %>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- section -->
+<div class="section">
+  <div class="container text-monospace">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="main_heading text_align_center" >
+            <h2 data-key="pocemu_my">Почему вы должны выбрать нас</h2>
+            <p class="large" data-key="fast_remont">Быстрый ремонт и лучшая цена</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    </div>
+  
+  </div>
+
+  <!--end section-->
+
+<!--konsultasiya-->
+<div class="section" style="margin-bottom:20px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="contact_us_section">
+            <div class="call_icon"> <img src="/images/it_service/phone_icon.png" alt="#" /> </div>
+            <div class="inner_cont">
+              <h2 data-key="free_sowet">Бесплатные советы от нас</h2>
+              <p data-key="yest_problem">Если у вас возникли проблемы с вашими устройствами берите бесплатную консултацию</p>
+            </div>
+            <div class="button_Section_cont"> <a class="btn dark_gray_bt" data-key="contact" href="/contact">Контакты</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end konsultasiya-->
+<!-- section -->
+<div class="section padding_layout_1 light_silver gross_layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="main_heading text_align_left">
+            <h2 data-key="about_serwis">О Сервисе</h2>
+            <p class="large" data-key="remont_ustr">Легко и эффективно почините устройства</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="full">
+              <div class="service_blog_inner2">
+                <div class="icon text_align_left"><i class="fa fa-wrench"></i></div>
+                <h4 class="service-heading" data-key="doverennye_uslugi">Доверенные Услуги</h4>
+                <p data-key="garantiya100">Гарантия на 100%</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="full">
+              <div class="service_blog_inner2">
+                <div class="icon text_align_left"><i class="fa fa-cog"></i></div>
+                <h4 class="service-heading" data-key="best_price">Лучшая цена и акции</h4>
+                <p data-key="nash_serwis">Наш сервис предлагает различные акции</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="full">
+              <div class="service_blog_inner2">
+                <div class="icon text_align_left"><i class="fa fa-history"></i></div>
+                <h4 class="service-heading" data-key="professional_team">Профессиональная команда</h4>
+                <p data-key="our_team">Наши соотрудники работают профессионально и в самых коротких сроках с выездом домой</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="full">
+              <div class="service_blog_inner2">
+                <div class="icon text_align_left"><i class="fa fa-heart-o"></i></div>
+                <h4 class="service-heading" data-key="dostupnye_serwis">Доступные услуги</h4>
+                <p data-key="my_reshaem">Мы решаем самые сложные вопросы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section -->
+
+
+
+<%- include('partials/footer') %>
+<%- include('partials/js') %>
+</body>
+</html>
+

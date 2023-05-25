@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('partials/head') %>
+<body>
+  <div class="container-scroller"> 
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="/admin">
+           Duypbaha
+          </a>
+          <a class="navbar-brand brand-logo-mini" style="font-size:20px;" href="/admin">
+            D/A
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top justify-content-end"> 
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text"><span class="text-black fw-bold">Admin page</span></h1>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <%- include('partials/nav') %>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+
+                <div class="tab-content tab-content-basic">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+                    <div class="row">
+
+                      <div class="col-lg-6 d-flex flex-column">
+                        <div class="row flex-grow">
+
+                          <div class="col-md-8 col-lg-8 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <h4 class="card-title  card-title-dash">Banners - (<%= banners.length %>)</h4>
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <a href="/createbanner" class="text-small text-white mb-2 btn btn-primary mt-2">Täze Banner</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-10 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-md-10 col-lg-10 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body card-rounded">
+                                
+                                <% for(let i=0; i < banners.length; i++) {%>
+                                <div class="list align-items-center border-bottom py-2">
+                                  <div class="wrapper w-100">
+                                    <a href="/banners/<%= banners[i].id %>" style="color:black;text-decoration: none;">
+                                      <p class="mb-2 font-weight-medium">
+                                      <%= i+1 %>) <%= banners[i].head_text_ru %><br><div style="display: flex;"><p class="m-3"><img width="150px" src="/uploads/banners/<%= banners[i].pic_name %>" ></p><p><%= banners[i].desc_text_ru %></p></div> 
+                                    </p></a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                  </div>
+                                </div>
+                                <% } %>
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <%- include('partials/js') %>
+</body>
+
+</html>
+

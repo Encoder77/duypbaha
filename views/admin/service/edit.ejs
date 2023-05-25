@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('../partials/post_head') %>
+<body>
+  <div class="container-scroller"> 
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="/admin">
+            Duypbaha
+          </a>
+          <a class="navbar-brand brand-logo-mini" style="font-size:20px;" href="/admin">
+            D/A
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top justify-content-end"> 
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text"><span class="text-black fw-bold">Admin page</span></h1>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <%- include('../partials/nav') %>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+
+                <div class="tab-content tab-content-basic">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+
+                    <div class="row">
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                              <div class="card-body">
+                                <h4 class="card-title">Maglumatlary dolduryn</h4>
+                 
+                                  <div class="form-group mb-1">
+                                    <label for="titletm">service Title (TM)</label>
+                                    <input type="text" name="titletm" class="form-control" id="titletm" value="<%- service.service_name_tm %>" placeholder="Name">
+                                  </div>
+                                  <div class="form-group mb-1">
+                                    <label for="extm">Excerpt (TM)</label>
+                                    <input type="text" name="extm" class="form-control" id="extm" value="<%- service.service_excerpt_tm %>" placeholder="Excerpt">
+                                  </div>
+                                  <div class="form-group mb-1">
+                                    <label for="desctm">service desc (TM)</label>
+                                    <input type="text" name="desctm" class="form-control" id="desctm" value="<%- service.service_description_tm %>" placeholder="Desc">
+                                  </div>
+                                  <img src="../uploads/services/<%- service.service_pic %>" width="300" alt="">
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                              <div class="card-body">
+                                <h4 class="card-title">Maglumatlary dolduryn</h4>
+                                <form class="forms-sample" onsubmit="return false;" id="form" enctype="multipart/form-data">
+                                  <div class="form-group mb-1">
+                                    <label for="titleru">service Title (RU)</label>
+                                    <input type="text" name="titleru" class="form-control" id="titleru" value="<%- service.service_name_ru %>" placeholder="Name">
+                                  </div>
+                                  <div class="form-group mb-1">
+                                    <label for="exru">Excerpt (RU)</label>
+                                    <input type="text" name="exru" class="form-control" id="exru" value="<%- service.service_excerpt_ru %>" placeholder="Excerpt">
+                                  </div>
+                                  <div class="form-group mb-1">
+                                    <label for="descru">service desc (RU)</label>
+                                    <input type="text" name="descru" class="form-control" id="descru" value="<%- service.service_description_ru %>" placeholder="Desc">
+                                  </div>
+                                      <input type="hidden" name="secret" id="secret" value="<%= service.id %>">
+                                      <div id="error" class="alert alert-danger" style="display: none;">Error</div>
+                                <div id="success" class="alert alert-success" style="display: none;">Success</div>
+                                  <button type="submit" class="btn btn-primary me-2 text-white" id="submit">Submit</button>                   
+                              </div>
+                            </div>
+                          </div>
+                         
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <%- include('../partials/post_js') %>
+  <script src="../js/serviceedit.js"></script>
+</body>
+
+</html>
+

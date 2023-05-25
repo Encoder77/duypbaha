@@ -1,0 +1,4 @@
+adminlogin: genagurbanguliyev@gmail.com [pass: 123]
+
+1) async await edip cykmaly;
+(5) contact page da google maps locationy duryady shonam sazlap bolsa goymaly...

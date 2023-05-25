@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('partials/head') %>
+<body>
+  <div class="container-scroller"> 
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="/admin">
+           Duypbaha
+          </a>
+          <a class="navbar-brand brand-logo-mini" style="font-size:20px;" href="/admin">
+            D/A
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top justify-content-end"> 
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text"><span class="text-black fw-bold">Admin page</span></h1>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <%- include('partials/nav') %>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+
+                <div class="tab-content tab-content-basic">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+
+                    <div class="row">
+
+                      <div class="col-sm-12 d-flex flex-column">
+                        <div class="row flex-grow">
+
+                          <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Banner sany</p>
+                                        <h4 class="mb-0 fw-bold"><%- countban %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Haryt sany</p>
+                                        <h4 class="mb-0 fw-bold"><%- countp %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Kategoriya sany</p>
+                                        <h4 class="mb-0 fw-bold"><%- countk %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Kommentariya sany</p>
+                                        <h4 class="mb-0 fw-bold"><%- countkom %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+				<div class="row flex-grow">
+
+                          <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Esasy sahypa</p>
+                                        <h4 class="mb-0 fw-bold"><%- Math.round(view.homepage / 2) %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Haryt sahypa</p>
+                                        <h4 class="mb-0 fw-bold"><%- Math.round(view.blogpage / 2) %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Biz barada</p>
+                                        <h4 class="mb-0 fw-bold"><%- Math.round(view.aboutpage / 2) %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div>
+                                        <p class="text-small mb-2">Habarlaşmak</p>
+                                        <h4 class="mb-0 fw-bold"><%- Math.round(view.contactpage /2) %></h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <%- include('partials/js') %>
+</body>
+
+</html>
+

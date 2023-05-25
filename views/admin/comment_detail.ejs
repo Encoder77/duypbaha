@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('partials/post_head') %>
+<body>
+  <div class="container-scroller"> 
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="/admin">
+            Duypbaha
+          </a>
+          <a class="navbar-brand brand-logo-mini" style="font-size:20px;" href="/admin">
+            D/A
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top justify-content-end"> 
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text"><span class="text-black fw-bold">Admin page</span></h1>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <%- include('partials/nav') %>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+
+                <div class="tab-content tab-content-basic">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+
+                    <div class="row">
+                      <div class="col-lg-10 d-flex flex-column">
+      
+                        <div class="row flex-grow">
+                          <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body card-rounded">
+                                <h4 class="card-title  card-title-dash"><%= post[0].title_ru %></h4>
+                                <div class="list align-items-center border-bottom py-2">
+                                  <div class="wrapper w-100">
+                                    <p class="mb-2 font-weight-medium">
+                                      <%= post[0].excerpt_ru %>
+                                    </p>
+                                    <p class="mb-2 font-weight-medium">
+                                      <%= post[0].description_ru %>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="d-flex align-items-center">
+                                        <i class="mdi mdi-calendar text-muted me-1"></i>
+                                        <p class="mb-0 text-small text-muted"><%= post[0].createdAt %></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body card-rounded">
+                                <h4 class="card-title  card-title-dash"><%= comment[0].commenter_mail %></h4>
+                                <div class="list align-items-center border-bottom py-2">
+                                  <div class="wrapper w-100">
+                                    <p class="mb-2 font-weight-medium">
+                                      <%= comment[0].post_id %>) <%= comment[0].firstname %> <%= comment[0].lastname %> (<%= comment[0].status %>)
+                                    </p>
+                                    <p class="mb-2 font-weight-medium">
+                                      <%= comment[0].comment_text %>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="d-flex align-items-center">
+                                        <i class="mdi mdi-calendar text-muted me-1"></i>
+                                        <p class="mb-0 text-small text-muted"><%= comment[0].createdAt %></p>
+                                      </div>
+                                      <div class="d-flex align-items-center">
+                                        <form onsubmit="return false;" id="formapprove">
+                                          <input type="hidden" value="<%= comment[0].id %>" name="secretapp" id="secretapp">
+                                        <button class="btn btn-success text-white mb-0" type="submit">Approve</button>
+                                      </form>
+                                        <form onsubmit="return false;" id="formreject">
+                                          <input type="hidden" value="<%= comment[0].id %>" name="secretrej" id="secretrej">
+                                        <button class="btn btn-danger text-white mb-0" type="submit">Reject</button>
+                                      </form>
+                                      </div>
+                                    </div>
+                                    <div id="error" class="alert alert-danger mt-2" style="display: none;">Error</div>
+                                  <div id="success" class="alert alert-success mt-2" style="display: none;">Success</div>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+
+                         
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <%- include('partials/post_js') %>
+  <script src="../js/apporrejcomment.js"></script>
+</body>
+
+</html>
+

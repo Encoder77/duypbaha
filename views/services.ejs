@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <%- include('partials/head') %>
+<body id="default_theme" class="it_service" lang="<%- lang %>">
+<!-- loader -->
+<div class="bg_load"> <img class="loader_animation" src="/images/loaders/loader_1.png" alt="#" /> </div>
+<!-- end loader -->
+<%- include('partials/header') %>
+<!-- inner page banner -->
+<div id="inner_banner" class="section inner_banner_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="title-holder">
+            <div class="title-holder-cell text-left">
+              <h1 class="page-title" data-key="services">Услуги</h1>
+              <ol class="breadcrumb">
+                <li><a href="/" data-key="home">Главная</a></li>
+                <li class="active" data-key="services">Услуги</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end inner page banner -->
+
+<!-- feedback-->
+<div class="section padding_layout_1 light_silver gross_layout right_gross_layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="main_heading text_align_right">
+            <h2 data-key="nashiotzyvy">Наши отзывы</h2>
+            <p class="large"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row counter">
+      <div class="col-md-4"> </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
+            <div class="text_align_right"><i class="fa fa-smile-o"></i></div>
+            <div class="text_align_right">
+              <p class="counter-heading text_align_right" data-key="dovolnyekli">Довольные клиенты</p>
+            </div>
+            <h5 class="counter-count">2150</h5>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
+            <div class="text_align_right"><i class="fa fa-laptop"></i></div>
+            <div class="text_align_right">
+              <p class="counter-heading text_align_right" data-key="noutbukcomp"></p>Ремонтированных ноутбуков
+            </div>
+            <h5 class="counter-count">1280</h5>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
+            <div class="text_align_right"><i class="fa fa-desktop"></i></div>
+            <div class="text_align_right">
+              <p class="counter-heading" data-key="personalkomp">Ремонтированных персональных компьютеров</p>
+            </div>
+            <h5 class="counter-count">848</h5>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
+            <div class="text_align_right"><i class="fa fa-windows"></i></div>
+            <div class="text_align_right">
+              <p class="counter-heading" data-key="ustanovlennyhop">Установленных ОП</p>
+            </div>
+            <h5 class="counter-count">450</h5>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
+            <div class="text_align_right"><i class="fa fa-server"></i></div>
+            <div class="text_align_right">
+              <p class="counter-heading" data-key="serverengineer">Сервера и сетевая инженерия</p>
+            </div>
+            <h5 class="counter-count">450</h5>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
+            <div class="text_align_right"><i class="fa fa-camera"></i></div>
+            <div class="text_align_right">
+              <p class="counter-heading" data-key="rabotckamera"> Работ с камерами наблюдениями</p>
+            </div>
+            <h5 class="counter-count">320</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- endfeedback-->
+<!-- section -->
+<div class="section">
+  <div class="container text-monospace">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="main_heading text_align_center">
+            <h2 data-key="pocemu_my">Почему вы должны выбрать нас</h2>
+            <p class="large" data-key="fast_remont">Быстрый ремонт и лучшая цена</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    </div>
+  
+  </div>
+
+  <!--end section-->
+</div>
+<!-- section -->
+<div class="section padding_layout_1 light_silver service_list">
+  <div class="container">
+    <div class="row">
+
+<% for(let i=0;i < services.length; i++) {%>
+      <div class="col-md-4 mb-5 service_blog">
+        <div class="full">
+          <div class="service_img"> <img class="img-responsive" src="/uploads/services/<%- services[i].service_pic %>" alt="#" /> </div>
+          <div class="service_cont">
+            <h3 class="service_head"><%- services[i].service_name %></h3>
+            <p><%- services[i].service_excerpt %></p>
+            <div class="bt_cont"> <a class="btn sqaure_bt" href="services/<%- services[i].id %>" data-key="podrobnee">Подробнее...</a> </div>
+          </div>
+        </div>
+      </div>
+
+<%}%>
+    
+    </div>
+  </div>
+</div>
+
+<!-- end section -->
+<!-- section -->
+<div class="section padding_layout_1" style="padding: 0px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <ul class="brand_list">
+            <li><img src="/images/it_service/brand_icon1.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/images/it_service/brand_icon2.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/images/it_service/brand_icon3.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/images/it_service/brand_icon4.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/images/it_service/brand_icon5.png" class="mybrandicon" alt="#" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section -->
+
+<%- include('partials/footer') %>
+<%- include('partials/js') %>
+
+</body>
+</html>

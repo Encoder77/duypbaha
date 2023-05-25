@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/detail_head') %>
+<body id="default_theme" class="it_service" lang="<%- lang %>">
+<!-- loader -->
+<div class="bg_load"> <img class="loader_animation" src="/../images/loaders/loader_1.png" alt="#" /> </div>
+<!-- end loader -->
+<%- include('partials/detail_header') %>
+<!-- inner page banner -->
+<div id="inner_banner" class="section inner_banner_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="title-holder">
+            <div class="title-holder-cell text-left">
+              <h1 class="page-title"><%- service[0].service_name %></h1>
+              <ol class="breadcrumb">
+                <li><a href="/" data-key="home">Главная</a></li>
+                <li class="active"><%- service[0].service_name %></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end inner page banner -->
+<!-- section -->
+<div class="section padding_layout_1 service_list">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-12 service_blog margin_bottom_50">
+            <div class="full">
+              <div class="service_img"> <img class="img-responsive" src="/../uploads/services/<%- service[0].service_pic %>" alt="#" width="600px" /> </div>
+              <div class="service_cont">
+                <h3 class="service_head"><%- service[0].service_name %>
+                </h3>
+                <p><%- service[0].service_description %></p>
+              </div>
+            </div>
+          </div>
+          <% for(let i=0; i < most_viewed.length; i++) {%>
+          <div class="col-md-6 service_blog margin_bottom_50">
+            <div class="full">
+              <div class="service_img"> <img class="img-responsive" src="/../uploads/services/<%- most_viewed[i].service_pic %>" alt="#" /> </div>
+              <div class="service_cont">
+                <h3 class="service_head"><%- most_viewed[i].service_name %></h3>
+                <p><%- most_viewed[i].service_excerpt %></p>
+                <div class="bt_cont"> <a class="btn sqaure_bt" href="<%- most_viewed[i].id %>" data-key="podrobnee">Подробнее...</a> </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="full">
+              <div class="main_heading text_align_left">
+                <h2 data-key="opytnyesot">ОПЫТНЫЕ СООТРУДНИКИ</h2>
+                <p class="large" data-key="bolee15">Более 15 лет наши соотрудники решают самые не решаемые вопросы.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <div class="col-md-3">
+        <div class="side_bar">
+           
+          <div class="side_bar_blog">
+          <div class="side_bar_blog">
+            <h4 data-key="nashiuslugi">НАШИ УСЛУГИ</h4>
+            <div class="categary">
+              <ul>
+                <% for(let i=0; i < services.length; i++) {%>
+                <li><a href="/<%- lang %>/services/<%- services[i].id %>"><i class="fa fa-angle-right"></i> <%- services[i].service_name %></a></li>
+                  <% } %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section -->
+<!-- section -->
+
+<!-- end section -->
+<!-- section -->
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="contact_us_section">
+            <div class="call_icon"> <img src="/../images/it_service/phone_icon.png" alt="#" /> </div>
+            <div class="inner_cont">
+              <h2 data-key="free_sowet">
+                БЕСПЛАТНАЯ КОНСУЛТАЦИЯ ОТ НАС</h2>
+              <p data-key="yest_problem">Если у вас возникли проблемы с вашими устройствами берите бесплатную консултацию.</p>
+            </div>
+            <div class="button_Section_cont"> <a class="btn dark_gray_bt" data-key="contact" href="/contact">Контакты</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section -->
+<!-- section -->
+<div class="section padding_layout_1" style="padding: 50px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <ul class="brand_list">
+            <li><img src="/../images/it_service/brand_icon1.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/../images/it_service/brand_icon2.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/../images/it_service/brand_icon3.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/../images/it_service/brand_icon4.png" class="mybrandicon" alt="#" /></li>
+            <li><img src="/../images/it_service/brand_icon5.png" class="mybrandicon" alt="#" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section -->
+
+<%- include('partials/detail_footer') %>
+<%- include('partials/detail_js') %>
+
+
+</body>
+</html>
