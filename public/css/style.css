@@ -4992,14 +4992,14 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  h1 a {
-				color: #c12c42;
+				color: #aa1e33;
 				font-size: 16px;
 			  }
 			  
 			  .accordion {
 				width: 100%;
 				margin: 30px auto 20px;
-				background: #eeeeee;
+				background: #ffffff;
 				-webkit-border-radius: 0px;
 				-moz-border-radius: 0px;
 				border-radius: 0px;
@@ -5009,7 +5009,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				cursor: pointer;
 				display: block;
 				padding: 65px 15px 30px 42px;
-				color: #1a1a1a;
+				color: #145de6;
 				font-size: 14px;
 				font-weight: 700;
 				position: relative;
@@ -5025,7 +5025,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				top: 16px;
 				left: 12px;
 				font-size: 18px;
-				color: #1a1a1a;
+				color: #000000;
 				-webkit-transition: all 0.4s ease;
 				-o-transition: all 0.4s ease;
 				transition: all 0.4s ease;
@@ -5037,9 +5037,9 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				font-size: 16px;
 			  }
 			  
-			  .accordion li.open .link { color: #872b2b; }
+			  .accordion li.open .link { color: #ff0000; }
 			  
-			  .accordion li.open i { color: #872b2b; }
+			  .accordion li.open i { color: #ff0707; }
 			  
 			  .accordion li.open i.fa-chevron-down {
 				-webkit-transform: rotate(180deg);
@@ -5055,7 +5055,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  
 			  .submenu {
 				display: none;
-				background: #eeeeee;
+				background: #18b2b8;
 				font-size: 13px;
 				text-align: center;
 				padding-top: 3%;
@@ -5064,26 +5064,27 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				padding-right: 3%;
 			  }
 			  
-			  .submenu li { border-bottom: 1px solid #4b4a5e; }
+			  .submenu li { border-bottom: 1px solid #2b24a5; }
 			  
 			  .submenu a {
 				display: block;
 				text-decoration: none;
-				color: #1a1a1a;
+				color: #020408;
 				padding: 12px;
 				padding-left: 42px;
 				-webkit-transition: all 0.25s ease;
 				-o-transition: all 0.25s ease;
 				transition: all 0.25s ease;
+				font-size: 2em;
 			  }
 			  
 			  .submenu a:hover {
-				background: #b63b4d;
+				background: #250cb3;
 				color: #FFF;
 			  }
 
 .loader_animation{
-	width: 89px;
+	width: 400px;
 	height: 89px;
 }
 		/*
@@ -5115,6 +5116,6 @@ font-size: 1.8em;
 
 .cole li a:hover,
 .cole li a:focus {
-  color: #729ea7;
+  color: #14b2d1;
 }
 

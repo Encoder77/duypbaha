@@ -51,16 +51,16 @@
                                 <h4 class="card-title">Maglumatlary dolduryn</h4>
                  
                                   <div class="form-group mb-1">
-                                    <label for="titletm">Post Title (TM)</label>
-                                    <input type="text" name="titletm" class="form-control" id="titletm" value="<%- post.title_tm %>" placeholder="Title" required>
+                                    <label for="titletm">Haryt ady (TM)</label>
+                                    <input type="text" name="titletm" class="form-control" id="titletm" value="<%- post.title_tm %>" placeholder="Ady" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="extm">Excerpt (TM)</label>
-                                    <input type="text" name="extm" class="form-control" id="extm" value="<%- post.excerpt_tm %>" placeholder="Excerpt" required>
+                                    <label for="extm">Bahasy TMT</label>
+                                    <input type="text" name="extm" class="form-control" id="extm" value="<%- post.excerpt_tm %>" placeholder="Bahasy" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="desctm">Post desc (TM)</label>
-                                    <input type="text" name="desctm" class="form-control" id="desctm" value="<%- post.description_tm %>" placeholder="Desc" required>
+                                    <label for="desctm">Haryt goshmaca(TM)</label>
+                                    <input type="text" name="desctm" class="form-control" id="desctm" value="<%- post.description_tm %>" placeholder="Goshmaca" required>
                                   </div>
                                   <img src="../uploads/posts/<%- post.post_img %>" width="300" alt="">
                                 </form>
@@ -73,19 +73,15 @@
                                 <h4 class="card-title">Maglumatlary dolduryn</h4>
                                 <form class="forms-sample" onsubmit="return false;" id="form" enctype="multipart/form-data">
                                   <div class="form-group mb-1">
-                                    <label for="titleru">Post Title (RU)</label>
+                                    <label for="titleru">Haryt Ady(RU)</label>
                                     <input type="text" name="titleru" class="form-control" id="titleru" value="<%- post.title_ru %>" placeholder="Title" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="exru">Excerpt (RU)</label>
-                                    <input type="text" name="exru" class="form-control" id="exru" value="<%- post.excerpt_ru %>" placeholder="Excerpt" required>
-                                  </div>
-                                  <div class="form-group mb-1">
-                                    <label for="descru">Post desc (RU)</label>
-                                    <input type="text" name="descru" class="form-control" id="descru" value="<%- post.description_ru %>" placeholder="Desc" required>
+                                    <label for="descru">Haryt Goshmaca (RU)</label>
+                                    <input type="text" name="descru" class="form-control" id="descru" value="<%- post.description_ru %>" placeholder="Goshmaca" required>
                                   </div>
                                       <div class="form-group">
-                                        <label class="col-sm-3 col-form-label mb-0">Category</label>
+                                        <label class="col-sm-3 col-form-label mb-0">Kategoriyalar</label>
                                         <div class="col-sm-9 mt-0">
                                           <select class="form-control" name="category" id="category" required>
                                             <% for (let i = 0; i < categories.length; i++) { %>
