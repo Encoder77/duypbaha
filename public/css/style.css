@@ -70,7 +70,7 @@
 
 html,
 body {
-	color: #898989;
+	color: #5c5c5c;
 	font-size: 15px;
 	font-family: 'Raleway', sans-serif;
 	line-height: normal;
@@ -774,7 +774,7 @@ hr.dottad_border {
 	margin: 20px auto 0;
 	width: 80px;
 	height: 5px;
-	background: #17a5e9;
+	background: #520101;
 }
 
 .main_heading.text_align_left::after {
@@ -3367,7 +3367,7 @@ footer ul.social_icons {
 
 .gross_layout::before {
 	position: absolute;
-	background: rgba(10, 139, 199, 0.8);
+	background: rgba(131, 130, 130, 0.8);
 	width: 35%;
 	height: 100%;
 	right: 0;
@@ -3633,8 +3633,8 @@ footer ul.social_icons {
 	font-size: 40px;
 	color: #fff;
 	transition: ease all 0.5s;
-	border: solid #17a5e9 2px;
-	background: #17a5e9;
+	border: solid #797878 2px;
+	background: #580202;
 }
 
 .service_blog_inner2 {
@@ -3644,13 +3644,13 @@ footer ul.social_icons {
 
 .service_blog_inner2:hover .icon,
 .service_blog_inner2:focus .icon {
-	border: solid #17a5e9 2px;
-	background: #fff;
-	color: #17a5e9;
+	border: solid #740101 2px;
+	background: #696969;
+	color: #660202;
 }
 
 .topbar-hightlight a {
-	color: #fff;
+	color: #8b8b8b;
 }
 
 .service_cont {
@@ -4683,7 +4683,7 @@ footer ul.social_icons {
 }
 p.mylangstyle  {
 	background-color: #f4f7fb;
-	color: rgb(53, 127, 231);
+	color: rgb(71, 4, 4);
 	width:25px;
 	height: 25px;
 	margin: 10px;
@@ -4692,11 +4692,11 @@ p.mylangstyle  {
 	font-size:12px;
 }
 p.mylangstyle:hover{
-	background-color:rgb(53, 127, 231); 
+	background-color:rgb(109, 109, 109); 
 	color: #e3e9f0;
 }
 p.mylangstyle:link{
-	background-color:rgb(53, 127, 231); 
+	background-color:rgb(73, 3, 3); 
 	color: #e3e9f0;
 }
 .mybrandicon{
@@ -5055,7 +5055,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  
 			  .submenu {
 				display: none;
-				background: #18b2b8;
+				background: #6b0303;
 				font-size: 13px;
 				text-align: center;
 				padding-top: 3%;
@@ -5064,7 +5064,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				padding-right: 3%;
 			  }
 			  
-			  .submenu li { border-bottom: 1px solid #2b24a5; }
+			  .submenu li { border-bottom: 1px solid #838383; }
 			  
 			  .submenu a {
 				display: block;
@@ -5079,7 +5079,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  .submenu a:hover {
-				background: #250cb3;
+				background: #5f0101;
 				color: #FFF;
 			  }
 
