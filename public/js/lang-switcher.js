@@ -6,7 +6,7 @@
 
     let lang = findLocaleMatch();
     let container = document.querySelector(`html [lang*=${lang}]`);
-    container.className = 'lang-match';
+    
 });
 
 function applyStrings(containers) {
