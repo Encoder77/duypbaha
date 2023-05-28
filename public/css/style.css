@@ -4801,6 +4801,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				transform-origin: center;
 				transition: all 0.4s ease-in-out;
 				overflow: hidden;
+				border: 2px solid rgb(99, 6, 6);
 			  }
 			  
 			  article a::after {
