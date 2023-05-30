@@ -53,7 +53,7 @@ function langswitch(code){
     if({
 
     })
-    var langs = ['ru', 'tm']
+    var langs = ['ru', 'tm', 'en']
         if(!langs.includes(url[3])){
             window.location.replace('/'+code+'/'+url[3]);
         }
@@ -64,7 +64,5 @@ function langswitch(code){
             else {
                 window.location.replace('/'+code+'/'+url[4]);
             }
-        }
-
-    
+        }  
 }

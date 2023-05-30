@@ -58,16 +58,22 @@ async index(req, res) {
 
     let posts=[];
 
-
+    let filter = req.originalUrl.split("/")[2]
+    let filters = ['DESC', 'ASC']
+    if(!filters.includes(filter)){
+        filter = 'DESC'      
+    }
+    if(!filter){
+        filter ='DESC'
+    }
 
     if(category){
-        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.post_category = '${category}' group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.post_category = '${category}' group by posts.id ORDER BY posts.excerpt_tm ${filter} LIMIT ${old},${perPageItems}`)
     }
     else{
-        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.excerpt_tm ${filter} LIMIT ${old},${perPageItems}`)
     }
         const categories = await sequelize.query(`SELECT category_${lang} as category, optione, category_slug FROM categories ORDER BY id DESC`, {raw:true})
-
         const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`, {raw:true})
         const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
         
@@ -94,7 +100,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-    res.render("index", { banners,  lang, categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]}); 
+    res.render("index", { banners,  lang, filter, filters, categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]}); 
 
 }
     
@@ -126,11 +132,20 @@ async blogPage(req, res) {
 
 
 
+    let filter = req.originalUrl.split("/")[3]
+    let filters = ['DESC', 'ASC']
+    if(!filters.includes(filter)){
+        filter = 'DESC'      
+    }
+    if(!filter){
+        filter ='DESC'
+    }
+
     if(category){
-        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.post_category = '${category}' group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.post_category = '${category}' group by posts.id ORDER BY posts.excerpt_tm ${filter} LIMIT ${old},${perPageItems}`)
     }
     else{
-        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+        posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.excerpt_tm ${filter} LIMIT ${old},${perPageItems}`)
     }
         const categories = await sequelize.query(`SELECT category_${lang} as category, optione, category_slug FROM categories ORDER BY id DESC`, {raw:true})
 
@@ -160,7 +175,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-        res.render("blog", { posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]});  
+        res.render("blog", { posts:posts[0], filter, filters, categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]});  
  
 }
 

@@ -28,11 +28,11 @@ let countview = [];
 let countpageview = [];
 
 router.get("/", loggedIn, indexController.index) 
-
+router.get("/ASC",  indexController.index) 
 router.get("/admin", loggedIn, adminRouteControllers.adminIndex)
 
 router.get('/blog', indexController.blogPage)
-
+router.get('/blog/ASC', indexController.blogPage)
 router.get('/blog/:id', indexController.blogPageId)
 
 
