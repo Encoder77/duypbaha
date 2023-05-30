@@ -58,7 +58,7 @@ async index(req, res) {
 
     let posts=[];
 
-    let filter = req.originalUrl.split("/")[2]
+    let filter = req.originalUrl.split("/")[3]
     let filters = ['DESC', 'ASC']
     if(!filters.includes(filter)){
         filter = 'DESC'      
