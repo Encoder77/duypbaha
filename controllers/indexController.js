@@ -100,7 +100,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-    res.render("index", { banners,  lang, filter, filters, categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]}); 
+    res.render("index", { banners,  lang, filter,  categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]}); 
 
 }
     
@@ -175,7 +175,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-        res.render("blog", { posts:posts[0], filter, filters, categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]});  
+        res.render("blog", { posts:posts[0], filter, categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]});  
  
 }
 
