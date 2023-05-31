@@ -2,10 +2,10 @@ const db = require("../routes/db-config");
 const sequelize = require('../config/db')
 
 const post = async (req,res) => {
+    
 
 
-
-    const {secret, titleru, exru, descru, category, titletm, extm, desctm} = req.body;
+    const {secret, titleru, descru, category, titletm, extm, desctm} = req.body;
     if(!req.cookies.isAdmin){
         res.render("admin/login", {status:"no", user:"nothing"});
     }

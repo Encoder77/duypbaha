@@ -50,8 +50,8 @@ footer p a:hover,footer p a:focus,
 .footer-menu li a:hover,
 .footer-menu li a:focus,
 footer ul.social_icons li a:hover,
-footer ul.social_icons li a:focus,
-.breadcrumb li a {
+footer ul.social_icons li a:focus
+{
     color: #5c0404;
 }
 

@@ -4,7 +4,6 @@ form.addEventListener("submit", () => {
         exru:exru.value,
         titletm:titletm.value,
         extm:extm.value,
-        picname:picname.value,
         secret:secret.value,
     }
     fetch("/api/updatebanner", {
