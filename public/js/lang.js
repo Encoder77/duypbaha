@@ -54,12 +54,12 @@
                 "predlagayet":"Duypbaha  к вашим услугам",
                 "dopol":"Дополнительно",
                 "prava":'Все права защищены "Duypbaha"',
-                "filter1":"Umumy hojalyk harytlary",
-                "filter2":"Gurluşyk harytlary",
-                "filter3":"Sowgatlyk we öý bezegleri",
-                "filter4":"Kanselýariýa we ofis harytlary",
-                "filter5":"Eşikler we yantorbalar",
-                "filter6":'Döwrebap enjamlar',
+                "filter1":"Общие товары для дома",
+                "filter2":"Строительные материалы",
+                "filter3":"Подарки и украшения для дома",
+                "filter4":"Канцтовары и офисные принадлежности",
+                "filter5":"Одежда и сумки",
+                "filter6":'Современная техника',
               }
           },
           "tm": {
