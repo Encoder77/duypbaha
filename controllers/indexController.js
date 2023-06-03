@@ -89,12 +89,11 @@ async index(req, res) {
       
         
       let url = req.query.category;
-      let urle = req.query.filter;
 const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-    res.render("index", { banners, urle, categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]}); 
+    res.render("index", { banners, categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]}); 
 
 }
     
