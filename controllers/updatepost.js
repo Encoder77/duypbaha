@@ -14,7 +14,7 @@ const post = async (req,res) => {
         await sequelize.query(sql)
      
 
-        return res.json({status:"success", success:"Post uytgedildi"});
+        return res.json({status:"success", success:"Haryt uytgedildi"});
     
     }
 }

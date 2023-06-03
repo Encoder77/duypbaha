@@ -774,7 +774,7 @@ hr.dottad_border {
 	margin: 20px auto 0;
 	width: 80px;
 	height: 5px;
-	background: #520101;
+	background: #BF28ED;
 }
 
 .main_heading.text_align_left::after {
@@ -2686,7 +2686,7 @@ span.skill {
 	padding: 30px 0;
 	float: left;
 	width: 100%;
-	border-top: solid #630303 8px;
+	border-top: solid #BF28ED 8px;
 }
 
 .blog_head {
@@ -2706,7 +2706,7 @@ span.skill {
 .blog_feature_cantant li {
 	font-weight: 500;
 	font-size: 14px;
-	color: #5e0303;
+	color: #BF28ED;
 	float: left;
 	margin-right: 15px;
 }
@@ -2717,7 +2717,7 @@ span.skill {
 
 .blog_feature_cantant li a:hover,
 .blog_feature_cantant li a:focus {
-	color: #039ee3;
+	color: #BF28ED;
 }
 
 .blog_feature_cantant p {
@@ -2736,7 +2736,7 @@ span.skill {
 
 .read_more:hover,
 .read_more:focus {
-	color: #039ee3;
+	color: #BF28ED;
 }
 
 .shr {
@@ -3356,7 +3356,7 @@ footer ul.social_icons {
 
 .gross_layout.right_gross_layout::before {
 	position: absolute;
-	background: rgba(10, 139, 199, 0.8);
+	background: #BF28ED;
 	width: 35%;
 	height: 100%;
 	left: 0;
@@ -3599,7 +3599,7 @@ footer ul.social_icons {
 	color: #fff;
 	transition: ease all 0.5s;
 	border: solid #797878 2px;
-	background: #580202;
+	background: #BF28ED;
 }
 
 .service_blog_inner2 {
@@ -3609,9 +3609,9 @@ footer ul.social_icons {
 
 .service_blog_inner2:hover .icon,
 .service_blog_inner2:focus .icon {
-	border: solid #740101 2px;
+	border: solid #BF28ED 2px;
 	background: #696969;
-	color: #660202;
+	color: #BF28ED;
 }
 
 .topbar-hightlight a {
@@ -4368,7 +4368,7 @@ footer ul.social_icons {
 }
 
 .adress_cont i {
-	color: #6b0505;
+	color: #BF28ED;
 }
 
 .contant_form p {
@@ -4648,7 +4648,7 @@ footer ul.social_icons {
 }
 p.mylangstyle  {
 	background-color: #f4f7fb;
-	color: rgb(71, 4, 4);
+	color: #BF28ED;
 	width:25px;
 	height: 25px;
 	margin: 10px;
@@ -4802,7 +4802,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				transform-origin: center;
 				transition: all 0.4s ease-in-out;
 				overflow: hidden;
-				border: 2px solid rgb(99, 6, 6);
+				border: 2px solid #BF28ED;
 			  }
 			  article p {
 				margin: 0;
@@ -4848,11 +4848,11 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				display: inline-flex;
 				align-items: center;
 				text-decoration: none;
-				color: #740909;
+				color: #BF28ED;
 			  }
 			  
 			  article a:focus {
-				outline: 1px dotted #ff0000;
+				outline: 1px dotted #c401ff;
 			  }
 			  
 			  article a .icon {
@@ -4868,7 +4868,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  /* using the has() relational pseudo selector to update our custom properties */
 			  article:has(:hover, :focus) {
 				--img-scale: 1.1;
-				--title-color: #dd1010;
+				--title-color: #d550fd;
 				--link-icon-translate: 0;
 				--link-icon-opacity: 1;
 				box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -4920,7 +4920,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  ul { list-style-type: none; }
 			  
 			  a {
-				color: #b63b4d;
+				color: #BF28ED;
 				text-decoration: none;
 			  }
 			  
@@ -5001,7 +5001,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  
 			  .submenu {
 				display: none;
-				background: #6b0303;
+				background: #BF28ED;
 				font-size: 13px;
 				text-align: center;
 				padding-top: 3%;
@@ -5025,7 +5025,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  .submenu a:hover {
-				background: #5f0101;
+				background: #BF28ED;
 				color: #FFF;
 			  }
 			  
@@ -5046,7 +5046,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  .accordione .linke {
 				cursor: pointer;
 				display: block;
-				color: #630808;
+				color: #BF28ED;
 				font-size: 14px;
 				font-weight: 700;
 				position: relative;
@@ -5104,7 +5104,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  .submenue a {
 				display: block;
 				text-decoration: none;
-				color: #7e0b0b;
+				color: #BF28ED;
 				-webkit-transition: all 0.25s ease;
 				-o-transition: all 0.25s ease;
 				transition: all 0.25s ease;
@@ -5112,7 +5112,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  .submenue a:hover {
-				background: #5f0101;
+				background: #BF28ED;
 				color: #FFF;
 			  }
 
@@ -5149,6 +5149,6 @@ font-size: 1.8em;
 
 .cole li a:hover,
 .cole li a:focus {
-  color: #14b2d1;
+  color: #BF28ED;
 }
 

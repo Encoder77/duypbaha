@@ -22,7 +22,7 @@ const deletepost = async (req,res) => {
         let sql3 = `DELETE FROM posts where id=${id}`;
         await sequelize.query(sql3)
 
-            return res.json({status:"success", success:"Post pozuldy"});  
+            return res.json({status:"success", success:"Haryt pozuldy"});  
     }
 }
 
