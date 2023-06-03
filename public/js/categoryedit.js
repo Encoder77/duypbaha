@@ -2,6 +2,7 @@ form.addEventListener("submit", () => {
     const category = {
         titleru:titleru.value,
         titletm:titletm.value,
+        option:option.value,
         secret:secret.value,
     }
     fetch("/api/updatecategory", {

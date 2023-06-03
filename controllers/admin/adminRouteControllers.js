@@ -111,7 +111,7 @@ else{
 }
 
 async categoriesPage(req, res){
-    const rows = await sequelize.query(`SELECT id, category_ru as category, date_format(createdAt, '%d/%m/%Y') as createdAt FROM categories ORDER BY id DESC`)
+    const rows = await sequelize.query(`SELECT id, optione, category_ru as category, date_format(createdAt, '%d/%m/%Y') as createdAt FROM categories ORDER BY id DESC`)
         if(req.user){
             res.render("admin/categories", {status:"ok", categories:rows[0] });
         }
@@ -122,7 +122,7 @@ async categoriesPage(req, res){
 
 
 async categoriesPageId(req, res){
-    let sql = `SELECT id, category_ru, category_tm, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
+    let sql = `SELECT id, optione, category_ru, category_tm, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
     const result = await sequelize.query(sql)
     if(req.user){
         res.render('admin/category_detail', { status:"ok", categories:result[0] });
@@ -133,7 +133,7 @@ async categoriesPageId(req, res){
 }
 
 async editCategory(req, res){
-    let sql = `SELECT id, category_ru, category_tm, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
+    let sql = `SELECT id, optione, category_ru, category_tm, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
     const admincategories = await sequelize.query(sql)
 if(req.user){
 
