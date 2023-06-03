@@ -2727,7 +2727,6 @@ span.skill {
 .blog_section p {
 	line-height: 24px;
 	float: left;
-	width: 100%;
 }
 
 .read_more {
@@ -4818,7 +4817,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  /* basic article elements styling */
-			  article h2 {
+			  article .her {
 				margin: 0 0 8px 0;
 				font-family: "Bebas Neue", cursive;
 				font-size: 1em;

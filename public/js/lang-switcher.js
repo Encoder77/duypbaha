@@ -59,7 +59,7 @@ function langswitch(code){
         }
         else{
             if(url[5]){
-                window.location.replace('/'+code+url[4]+'/'+url[5]);
+                window.location.replace('/'+code+'/'+url[4]+'/'+url[5]);
             }
             else {
                 window.location.replace('/'+code+'/'+url[4]);

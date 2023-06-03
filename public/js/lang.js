@@ -60,6 +60,7 @@
                 "filter4":"Канцтовары и офисные принадлежности",
                 "filter5":"Одежда и сумки",
                 "filter6":'Современная техника',
+                "cena": 'Цена',
               }
           },
           "tm": {
@@ -122,6 +123,7 @@
                 "filter4":"Kanselýariýa we ofis harytlary",
                 "filter5":"Eşikler we yantorbalar",
                 "filter6":'Döwrebap enjamlar',
+                "cena": 'Bahasy'
               }
           },
       }

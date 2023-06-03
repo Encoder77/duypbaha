@@ -148,7 +148,7 @@
 		height: 640px;
 	}
 	.full img {
-		max-width: 100%;
+		width: 150px;
 	}
 	header .header_top,header .header_bottom,section,footer,.bottom_footer,.light_silver {
 		float: left;width: 100%;
@@ -535,7 +535,7 @@
        padding: 15px 0 25px;
     }
 	.view_commant div.full img {
-       width: 100%;
+       width: 150px;
     }
 	.product_detail_btm h4 {
     margin: 20px 0 10px 0;
@@ -916,7 +916,7 @@
 		top: 0;
 	}
 	.full img {
-		max-width: 100%;
+		width: 150px;
 	}
 	.bottom_imformation div.full {
 		display: flex;
