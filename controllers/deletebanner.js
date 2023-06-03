@@ -17,6 +17,12 @@ const deletepost = async (req,res) => {
         if(fs.existsSync(filePath)){
         fs.unlinkSync(filePath);
         }
+        let sql2 = `SELECT pic_name FROM banners where id=${id}`;
+        const resul = await sequelize.query(sql2)
+        var filePath = (path.resolve(__dirname, '..', 'uploads', 'banners', resul[0][0].pic_name));
+        if(fs.existsSync(filePath)){
+        fs.unlinkSync(filePath);
+        }
         
         let sql = `DELETE FROM banners where id=${id}`;
         await sequelize.query(sql)
