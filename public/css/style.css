@@ -5006,12 +5006,12 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				padding-right: 3%;
 			  }
 			  
-			  .submenu li { border-bottom: 1px solid #838383; }
+			  .submenu li { border-bottom: 1px solid #ffffff; }
 			  
 			  .submenu a {
 				display: block;
 				text-decoration: none;
-				color: #aaaaaa;
+				color: #000000;
 				padding: 12px;
 				padding-left: 42px;
 				-webkit-transition: all 0.25s ease;
