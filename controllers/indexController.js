@@ -17,7 +17,7 @@ async index(req, res) {
         lang ='ru'
     }
     const banners = await Banner.findAll({ raw: true, attributes: [ 
-        'id', 'img_name', [`head_text_${lang}`, 'head_text' ], [`desc_text_${lang}`, 'desc_text'], 'pic_name'
+        'id', 'img_name', [`head_text_${lang}`, 'head_text' ], [`desc_text_${lang}`, 'desc_text'], 
      ],
      order: [
         ['id', 'DESC']

@@ -28,74 +28,6 @@
 </div>
 <!-- end inner page banner -->
 <!-- section -->
-      <h4  style="font-size: 1.8em; margin-top: 20px; margin-left: 30px; float: left; border-bottom: 5px solid #BF28ED;" data-key="categories">категории</h4>
-      <div style="clear: both;" ></div>
-      <div class="vmob">
-        <ul id="accordion" class="accordion">
-        <li>
-          <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter1" >Umumy hojalyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/254850.ag2.png"></i></div>
-          <ul class="submenu" >
-            <% for(let i=0; i < categories.length; i++) {%>
-              <% if(categories[i].optione == 'Umumy') {%>
-              <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-              <%}%>
-              <%}%>
-          </ul> 
-        </li>
-        <li>
-          <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter2" >Gurlushyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/955540.ca2.png"></i></div>
-          <ul class="submenu">
-            <% for(let i=0; i < categories.length ; i++) {%>
-              <% if(categories[i].optione == 'Gurlushyk') {%>
-              <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-              <%}%>
-              <%}%>
-          </ul>
-        </li>
-        <li>
-         <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter3" >Sowgatlyk we oy bezegleri</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/896640.rkq.png"></i></div>
-         <ul class="submenu" >
-          <% for(let i=0; i < categories.length ; i++) {%>
-            <% if(categories[i].optione == 'Sowgatlyk') {%>
-            <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-            <%}%>
-            <%}%>
-        </ul>
-        </li>
-        <li>
-          <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter4" >Kanselyariya we ofis harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/700590.nz3.png"></i></div>
-          <ul class="submenu" >
-            <% for(let i=0; i < categories.length ; i++) {%>
-              <% if(categories[i].optione == 'Kanselyariya') {%>
-              <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-              <%}%>
-              <%}%>
-          </ul> 
-        </li>
-        
-        <li>
-          <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter5" >Eshikler we yantorbalar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/289400.2nr.png"></i></div>
-          <ul class="submenu">
-                        <% for(let i=0; i < categories.length; i++) {%>
-                          <% if(categories[i].optione == 'Eshikler') {%>
-                          <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-                          <%}%>
-                          <%}%>
-                      </ul>
-        </li>
-        
-       <li>
-         <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter6" >Dowrebap enjamlar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/085970.u7n.png"></i></div>
-         <ul class="submenu">
-          <% for(let i=0; i < categories.length ; i++) {%>
-            <% if(categories[i].optione == 'Dowrebap') {%>
-            <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-            <%}%>
-            <%}%>
-        </ul> 
-        </li>
-      </ul>
-      </div>
       <div class="vmob">
         <ul id="accordione" class="accordione">
           <li>
@@ -147,8 +79,76 @@
           </div>
           <% } %>
         </div>
+  </div>
 <!-- end section -->
-
+<h4  style="font-size: 1.8em; margin-top: 20px; margin-left: 30px; float: left; border-bottom: 5px solid hsl(162, 73%, 46%);" data-key="categories">категории</h4>
+<div style="clear: both;" ></div>
+<div class="vmob">
+  <ul id="accordion" class="accordion">
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter1" >Umumy hojalyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/254850.ag2.png"></i></div>
+    <ul class="submenu" >
+      <% for(let i=0; i < categories.length; i++) {%>
+        <% if(categories[i].optione == 'Umumy') {%>
+        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
+        <%}%>
+        <%}%>
+    </ul> 
+  </li>
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter2" >Gurlushyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/955540.ca2.png"></i></div>
+    <ul class="submenu">
+      <% for(let i=0; i < categories.length ; i++) {%>
+        <% if(categories[i].optione == 'Gurlushyk') {%>
+        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
+        <%}%>
+        <%}%>
+    </ul>
+  </li>
+  <li>
+   <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter3" >Sowgatlyk we oy bezegleri</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/896640.rkq.png"></i></div>
+   <ul class="submenu" >
+    <% for(let i=0; i < categories.length ; i++) {%>
+      <% if(categories[i].optione == 'Sowgatlyk') {%>
+      <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
+      <%}%>
+      <%}%>
+  </ul>
+  </li>
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter4" >Kanselyariya we ofis harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/700590.nz3.png"></i></div>
+    <ul class="submenu" >
+      <% for(let i=0; i < categories.length ; i++) {%>
+        <% if(categories[i].optione == 'Kanselyariya') {%>
+        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
+        <%}%>
+        <%}%>
+    </ul> 
+  </li>
+  
+  <li>
+    <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter5" >Eshikler we yantorbalar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/289400.2nr.png"></i></div>
+    <ul class="submenu">
+                  <% for(let i=0; i < categories.length; i++) {%>
+                    <% if(categories[i].optione == 'Eshikler') {%>
+                    <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
+                    <%}%>
+                    <%}%>
+                </ul>
+  </li>
+  
+ <li>
+   <div class="link"><p style="padding-left: 15%; margin-top: -3%;" data-key="filter6" >Dowrebap enjamlar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/085970.u7n.png"></i></div>
+   <ul class="submenu">
+    <% for(let i=0; i < categories.length ; i++) {%>
+      <% if(categories[i].optione == 'Dowrebap') {%>
+      <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
+      <%}%>
+      <%}%>
+  </ul> 
+  </li>
+</ul>
+</div>
 
 <%- include('partials/footer') %>
 <%- include('partials/js') %>

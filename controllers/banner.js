@@ -19,17 +19,10 @@ const post = async (req,res) => {
 
             var oldpath = files.mypic.filepath;
             var pic = md5(files.mypic.originalFilename+createdAt);
-            var newpath = (path.resolve(__dirname, '..', 'uploads', 'banners', pic+'.mp4'));
+            var newpath = (path.resolve(__dirname, '..', 'uploads', 'banners', pic+'.jpg'));
             fs.rename(oldpath, newpath, function (err) {
               if (err) throw err;
             });
-            var oldpath = files.picname.filepath;
-            var picn = md5(files.picname.originalFilename+createdAt);
-            var newpath = (path.resolve(__dirname, '..', 'uploads', 'banners', picn+'.jpg'));
-            fs.rename(oldpath, newpath, function (err) {
-              if (err) throw err;
-            });
-            
 
     const {titleru, exru, titletm, extm} = fields;
     if(!titleru || !titletm) return res.json({ status: "error", error: "Maglumatlary dolduryň"});
@@ -37,7 +30,7 @@ const post = async (req,res) => {
         res.render("admin/login", {status:"no", user:"nothing"});
     }
     else{
-        let sql = `INSERT INTO banners(img_name, head_text_ru, desc_text_ru, head_text_tm, desc_text_tm, createdAt, pic_name ) VALUES ('${pic+'.mp4'}','${titleru}', '${exru}','${titletm}', '${extm}', now(), '${picn+'.jpg'}' )`;
+        let sql = `INSERT INTO banners(img_name, head_text_ru, desc_text_ru, head_text_tm, desc_text_tm, createdAt) VALUES ('${pic+'.jpg'}','${titleru}', '${exru}','${titletm}', '${extm}', now() )`;
         await sequelize.query(sql)
         return res.redirect('/banners');
 

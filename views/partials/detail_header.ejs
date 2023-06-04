@@ -1,71 +1,60 @@
 <header id="default_header" class="header_style_1">
-    <!-- header top -->
-    <div class="header_top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="full">
-              <div class="topbar-left">
-                <ul class="list-inline">
-                  <li> <span class="topbar-label">
-                    <p style="color:rgb(128, 128, 128);"><a style="text-decoration:none;color:rgb(255, 255, 255);" href="tel:+99364992871">+99364992871</a></p>
-                  </li>
-                  <li>
-                    <p  style="color:rgb(114, 114, 114);"><a style="text-decoration:none;color:rgb(255, 255, 255);" href="tel:+99361876094">+99361876094</a></p>
-                  </li>
-                  </ul>
-                  <ul class="list-inline">
-                  <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span  class="topbar-hightlight"><a href="mailto:duypbaha@gmail.com">duypbaha@gmail.com</a></span> </li>
-                  <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span  class="topbar-hightlight"><a href="mailto:info@duypbaha.com">info@duypbaha.com</a></span> </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 right_section_header_top">
-          
-            <div class="float-right d-flex flex-row justify-content-center align-center">
-              <div class="d-flex align-center">
-                <a onclick="langswitch('ru')" style="text-decoration:none;cursor: pointer;"><p class="mylangstyle">RU</p></a>
-              </div>
-              <div class="d-flex align-center">
-                <a onclick="langswitch('tm')" style="text-decoration:none;cursor: pointer;"><p class="mylangstyle">TM</p></a>
-            </div>
-            </div>
-  
-          </div>
+  <!-- header top -->
+  <!-- end header top -->
+  <!-- header bottom -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="./index.html" class="brand">Duypbaha</a>
+      <div class="float-right d-flex flex-row justify-content-center align-center">
+        <div class="d-flex align-center">
+          <a onclick="langswitch('ru')" style="text-decoration:none;cursor: pointer;"><p class="mylangstyle">RU</p></a>
+        </div>
+        <div class="d-flex align-center">
+          <a onclick="langswitch('tm')" style="text-decoration:none;cursor: pointer;"><p class="mylangstyle">TM</p></a>
         </div>
       </div>
-    </div>
-    <!-- end header top -->
-    <!-- header bottom -->
-    <div class="header_bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <!-- logo start -->
-            <div class="logo"> <a href="/<%- lang %>/"><img src="/../images/logos/it_logo.png" alt="logo" /></a> </div>
-            <!-- logo end -->
-          </div>
-          <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-            <!-- menu start -->
-            <div class="menu_side">
-              <div id="navbar_menu">
-                <ul class="first-ul">
-                  <li> <a href="/<%- lang %>/" data-key="home">Главная</a>
-                  </li>
-                  <li><a href="/<%- lang %>/about-us" data-key="about-us">О нас</a></li>
-                  <li> <a href="/<%- lang %>/blog" data-key="our-blog">Наш блог</a></li>
-       
-                  <li> <a href="/<%- lang %>/contact" data-key="contact">контакты</a><li>
-                 
-              
-                </ul>
-              </div>
-            </div>
-            <!-- menu end -->
-          </div>
-        </div>
+      <div class="menu" id="menu">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a href="/<%- lang %>/" class="menu-link is-active">
+              <i class="menu-icon ion-md-home"></i>
+              <span class="menu-name"data-key="home">Главная</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="/<%- lang %>/about-us" class="menu-link">
+              <i class="menu-icon ion-md-search"></i>
+              <span class="menu-name"data-key="about-us">О нас</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="/<%- lang %>/blog" class="menu-link">
+              <i class="menu-icon ion-md-cart"></i>
+              <span class="menu-name" data-key="our-blog">Наш блог</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="/<%- lang %>/contact" class="menu-link">
+              <i class="menu-icon ion-md-heart"></i>
+              <span class="menu-name"data-key="contact">контакты</span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <!-- header bottom end -->
+    </nav>
+    <script>
+      document.querySelectorAll(".menu-link").forEach((link) => {
+  if (link.href === window.location.href) {
+      link.classList.add("is-active");
+  }else{
+    link.classList.remove('is-active');
+  }
+});
+
+      </script>
   </header>
+
+  
+  <!-- header bottom end -->
+</header>
+

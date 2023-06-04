@@ -774,7 +774,7 @@ hr.dottad_border {
 	margin: 20px auto 0;
 	width: 80px;
 	height: 5px;
-	background: #BF28ED;
+	background: hsl(162, 73%, 46%);
 }
 
 .main_heading.text_align_left::after {
@@ -1546,10 +1546,6 @@ body.light_blue #full_slider.full_slider_inner {
 		7. SECTION
 	-------------------------------------------------------------------*/
 
-.padding_layout_1 {
-	padding-top: 120px;
-	/* padding-bottom: 115px; */
-}
 
 .padding_layout_2 {
 	padding-top: 120px;
@@ -2686,7 +2682,7 @@ span.skill {
 	padding: 30px 0;
 	float: left;
 	width: 100%;
-	border-top: solid #BF28ED 8px;
+	border-top: solid hsl(162, 73%, 46%) 8px;
 }
 
 .blog_head {
@@ -2706,7 +2702,7 @@ span.skill {
 .blog_feature_cantant li {
 	font-weight: 500;
 	font-size: 14px;
-	color: #BF28ED;
+	color: hsl(162, 73%, 46%);
 	float: left;
 	margin-right: 15px;
 }
@@ -2717,7 +2713,7 @@ span.skill {
 
 .blog_feature_cantant li a:hover,
 .blog_feature_cantant li a:focus {
-	color: #BF28ED;
+	color: hsl(162, 73%, 46%);
 }
 
 .blog_feature_cantant p {
@@ -2736,7 +2732,7 @@ span.skill {
 
 .read_more:hover,
 .read_more:focus {
-	color: #BF28ED;
+	color: hsl(162, 73%, 46%);
 }
 
 .shr {
@@ -3356,7 +3352,7 @@ footer ul.social_icons {
 
 .gross_layout.right_gross_layout::before {
 	position: absolute;
-	background: #BF28ED;
+	background: hsl(162, 73%, 46%);
 	width: 35%;
 	height: 100%;
 	left: 0;
@@ -3599,7 +3595,7 @@ footer ul.social_icons {
 	color: #fff;
 	transition: ease all 0.5s;
 	border: solid #797878 2px;
-	background: #BF28ED;
+	background: hsl(162, 73%, 46%);
 }
 
 .service_blog_inner2 {
@@ -3609,9 +3605,9 @@ footer ul.social_icons {
 
 .service_blog_inner2:hover .icon,
 .service_blog_inner2:focus .icon {
-	border: solid #BF28ED 2px;
+	border: solid hsl(162, 73%, 46%) 2px;
 	background: #696969;
-	color: #BF28ED;
+	color: hsl(162, 73%, 46%);
 }
 
 .topbar-hightlight a {
@@ -4368,7 +4364,7 @@ footer ul.social_icons {
 }
 
 .adress_cont i {
-	color: #BF28ED;
+	color: hsl(162, 73%, 46%);
 }
 
 .contant_form p {
@@ -4648,7 +4644,7 @@ footer ul.social_icons {
 }
 p.mylangstyle  {
 	background-color: #f4f7fb;
-	color: #BF28ED;
+	color: hsl(162, 73%, 46%);
 	width:25px;
 	height: 25px;
 	margin: 10px;
@@ -4657,11 +4653,11 @@ p.mylangstyle  {
 	font-size:12px;
 }
 p.mylangstyle:hover{
-	background-color:rgb(109, 109, 109); 
+	background-color:hsl(162, 88%, 30%); 
 	color: #e3e9f0;
 }
 p.mylangstyle:link{
-	background-color:rgb(73, 3, 3); 
+	background-color:hsl(162, 72%, 65%); 
 	color: #e3e9f0;
 }
 .mybrandicon{
@@ -4802,7 +4798,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				transform-origin: center;
 				transition: all 0.4s ease-in-out;
 				overflow: hidden;
-				border: 2px solid #BF28ED;
+				border: 2px solid hsl(162, 73%, 46%);
 			  }
 			  article p {
 				margin: 0;
@@ -4829,12 +4825,12 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  figure {
 				margin: 0;
 				padding: 0;
-				aspect-ratio: 16 / 9;
 				overflow: hidden;
 			  }
 			  
 			  article img {
-				max-width: 100%;
+				width: 100%;
+				height: 110px;
 				transform-origin: center;
 				transform: scale(var(--img-scale));
 				transition: transform 0.4s ease-in-out;
@@ -4848,7 +4844,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				display: inline-flex;
 				align-items: center;
 				text-decoration: none;
-				color: #BF28ED;
+				color: hsl(162, 73%, 46%);
 			  }
 			  
 			  article a:focus {
@@ -4920,7 +4916,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  ul { list-style-type: none; }
 			  
 			  a {
-				color: #BF28ED;
+				color: hsl(162, 73%, 46%);
 				text-decoration: none;
 			  }
 			  
@@ -5001,7 +4997,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  
 			  .submenu {
 				display: none;
-				background: #BF28ED;
+				background: hsl(162, 73%, 46%);
 				font-size: 13px;
 				text-align: center;
 				padding-top: 3%;
@@ -5025,7 +5021,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  .submenu a:hover {
-				background: #BF28ED;
+				background: hsl(162, 73%, 46%);
 				color: #FFF;
 			  }
 			  
@@ -5046,7 +5042,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  .accordione .linke {
 				cursor: pointer;
 				display: block;
-				color: #BF28ED;
+				color: hsl(162, 73%, 46%);
 				font-size: 14px;
 				font-weight: 700;
 				position: relative;
@@ -5076,7 +5072,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				font-size: 16px;
 			  }
 			  
-			  .accordione li.open .linke { color: rgb(189, 11, 11); }
+			  .accordione li.open .linke { color: hsl(162, 72%, 65%); }
 			  
 			  .accordione li.open i { color: #da0808; }
 			  
@@ -5104,7 +5100,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  .submenue a {
 				display: block;
 				text-decoration: none;
-				color: #BF28ED;
+				color: hsl(162, 73%, 46%);
 				-webkit-transition: all 0.25s ease;
 				-o-transition: all 0.25s ease;
 				transition: all 0.25s ease;
@@ -5112,7 +5108,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  .submenue a:hover {
-				background: #BF28ED;
+				background: hsl(162, 73%, 46%);
 				color: #FFF;
 			  }
 
@@ -5149,6 +5145,6 @@ font-size: 1.8em;
 
 .cole li a:hover,
 .cole li a:focus {
-  color: #BF28ED;
+  color: hsl(162, 73%, 46%);
 }
 

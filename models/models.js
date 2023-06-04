@@ -17,7 +17,6 @@ const Banner = sequelize.define( 'banners', {
     desc_text_tm: { type: DataTypes.STRING, allowNull: true  },
 createdAt:{type: DataTypes.DATE,allowNull: true},
 updatedAt:{type: DataTypes.DATE, allowNull: true},
-pic_name: { type: DataTypes.STRING, allowNull: true  },
 }, { timestamps:false })
 
 const Categories = sequelize.define( 'categories', {
