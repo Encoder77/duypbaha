@@ -3595,21 +3595,17 @@ footer ul.social_icons {
 	color: #fff;
 	transition: ease all 0.5s;
 	border: solid #797878 2px;
-	background: hsl(162, 73%, 46%);
 }
 
 .service_blog_inner2 {
 	margin-bottom: 50px;
 	transition: ease all 0.5s;
 }
-
-.service_blog_inner2:hover .icon,
-.service_blog_inner2:focus .icon {
-	border: solid hsl(162, 73%, 46%) 2px;
-	background: #696969;
-	color: hsl(162, 73%, 46%);
+.tin{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
 }
-
 .topbar-hightlight a {
 	color: #fdfdfd;
 }

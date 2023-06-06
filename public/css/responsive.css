@@ -147,9 +147,7 @@
 	.home_page_5 div#pallax_slider {
 		height: 640px;
 	}
-	.full img {
-		width: 100%;
-	}
+
 	header .header_top,header .header_bottom,section,footer,.bottom_footer,.light_silver {
 		float: left;width: 100%;
     }
@@ -765,7 +763,9 @@
 
 
 }
-
+.blog_feature_img img {
+	margin-top: 30px;
+}
 @media (max-width: 767px) {
 	body {
 		overflow-x: hidden;
@@ -913,9 +913,7 @@
 		left: 0;
 		top: 0;
 	}
-	.full img {
-		width: 100%;
-	}
+
 	.bottom_imformation div.full {
 		display: flex;
 		justify-content: center;
