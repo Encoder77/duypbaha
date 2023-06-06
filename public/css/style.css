@@ -395,7 +395,7 @@ h5 {
 
 p {
 	color: #707070;
-	font-size: 15px;
+	font-size: 25px;
 	line-height: 21px;
 }
 
@@ -4815,8 +4815,6 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  /* basic article elements styling */
 			  article .her {
 				margin: 0 0 8px 0;
-				font-family: "Bebas Neue", cursive;
-				font-size: 1em;
 				letter-spacing: 0.01em;
 				color: var(--title-color);
 				transition: color 0.3s ease-out;
