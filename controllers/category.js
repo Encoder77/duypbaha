@@ -5,8 +5,8 @@ const post = async (req,res) => {
 
 
 
-    const {titleru, titletm, option} = req.body;
-    if(!titleru || !titletm || !option) return res.json({ status: "error", error: "Maglumatlary dolduryň"});
+    const {titleru, titletm, option, titleen} = req.body;
+    if(!titleru || !titletm || !option || !titleen) return res.json({ status: "error", error: "Maglumatlary dolduryň"});
     else if(!req.cookies.isAdmin){
         res.render("admin/login", {status:"no", user:"nothing"});
     }
@@ -21,7 +21,7 @@ const post = async (req,res) => {
         let slug8step = slug7step.replace("ň", "n");
         let slug9step = slug8step.replace("ş", "s");
         let slug10step = slug9step.replace("ž", "z");
-        let sql = `INSERT INTO categories (category_ru, category_tm, category_slug, createdAt, optione) VALUES ('${titleru}', '${titletm}', '${slug10step}', now(), '${option}')`;
+        let sql = `INSERT INTO categories (category_ru, category_tm, category_en, category_slug, createdAt, optione) VALUES ('${titleru}', '${titletm}', '${titleen}', '${slug10step}', now(), '${option}')`;
         await sequelize.query(sql)
         return res.json({status:"success", success:"Category gosuldy"});
     }

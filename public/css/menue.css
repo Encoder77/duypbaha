@@ -127,13 +127,15 @@ video {
 @media only screen and (min-width: 576px) {
   .menu-list {
     justify-content: center;
-    column-gap: 3rem; } }
+    column-gap: 3rem; }
+}
 
+    .header {
+      background: var(--color-white);
+      box-shadow: var(--shadow-medium);
+      transition: all 0.35s ease-in-out;
+  }
 @media only screen and (min-width: 768px) {
-  .header {
-    background: var(--color-white);
-    box-shadow: var(--shadow-medium);
-    transition: all 0.35s ease-in-out; }
   .menu {
     position: relative;
     top: 0;
@@ -142,19 +144,7 @@ video {
     height: auto;
     background: none;
     box-shadow: none; }
-    .menu-link.is-active::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: 0;
-      width: 2rem;
-      height: 2px;
-      border: none;
-      outline: none;
-      background: var(--color-teal-800); }
-    .menu-link:hover {
-      color: var(--color-teal-800);
-      transition: all 0.35s ease; }
+    
     .menu-icon {
       display: none;
       visibility: hidden; }
@@ -163,3 +153,16 @@ video {
       font-weight: 500;
       line-height: 1.5;
       margin-bottom: 0.2rem; } }
+      .menu-link.is-active::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        border: none;
+        outline: none;
+        background: var(--color-teal-800); }
+      .menu-link:hover {
+        color: var(--color-teal-800);
+        transition: all 0.35s ease; }

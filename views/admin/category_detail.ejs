@@ -58,7 +58,6 @@
                                         <i class="mdi mdi-calendar text-muted me-1"></i>
                                         <p class="mb-0 text-small text-muted"><%= categories[0].createdAt %></p>
                                       </div>
-                                      <h5 class="mb-0 text-small text-muted"><%= categories[0].optione %></h5>
                                       <div class="d-flex align-items-center">
                                         <a href="/categoryedit/<%= categories[0].id %>" class="btn btn-warning text-white mb-0">Uytgetmek</a>
                                         <form onsubmit="return false;" id="form">
@@ -77,6 +76,18 @@
                             <div class="card card-rounded">
                               <div class="card-body card-rounded">
                                 <h4 class="card-title  card-title-dash"><%= categories[0].category_tm %></h4>
+                                <div class="list align-items-center border-bottom py-2">
+                                  <div class="wrapper w-100">
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body card-rounded">
+                                <h4 class="card-title  card-title-dash"><%= categories[0].category_en %></h4>
                                 <div class="list align-items-center border-bottom py-2">
                                   <div class="wrapper w-100">
                                   </div>

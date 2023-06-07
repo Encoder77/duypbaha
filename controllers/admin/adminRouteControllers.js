@@ -26,7 +26,7 @@ class adminRouteControllers {
 
     async postsPage(req, res){
 
-        const rows = await sequelize.query(`SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru as title, excerpt_ru as excerpt, description_ru as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.id DESC`)
+        const rows = await sequelize.query(`SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru as title, excerpt_ru as excerpt, title_en as title, excerpt_en as excerpt, description_ru as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.id DESC`)
             if(req.user){
                 res.render("admin/posts", {status:"ok", posts:rows[0] });
             }
@@ -38,7 +38,7 @@ class adminRouteControllers {
 
 
     async postsPageId(req, res){
-        let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, excerpt_ru, excerpt_tm, description_ru, description_tm, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.id=${req.params.id} group by posts.id`;
+        let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, title_en, excerpt_ru, excerpt_en, excerpt_tm, description_ru, description_tm, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.id=${req.params.id} group by posts.id`;
         let sql2 = `SELECT * from comments where post_id=${req.params.id} and status="approved" ORDER BY id DESC LIMIT 0, 5`;
         const adminposts = await sequelize.query(sql)
         const comments = await sequelize.query(sql2)
@@ -63,7 +63,7 @@ async createPost(req, res){
 }
 
 async editPost(req, res){
-    let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, excerpt_ru, excerpt_tm, description_ru, description_tm, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.id=${req.params.id} group by posts.id`;
+    let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, title_en, excerpt_ru, excerpt_tm, excerpt_en, description_ru, description_tm, description_en, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" where posts.id=${req.params.id} group by posts.id`;
     let sql2 = `SELECT category_ru as category, category_slug FROM categories ORDER BY id DESC`;
     const adminposts = await sequelize.query(sql)
     const categories = await sequelize.query(sql2)
@@ -111,7 +111,7 @@ else{
 }
 
 async categoriesPage(req, res){
-    const rows = await sequelize.query(`SELECT id, optione, category_ru as category, date_format(createdAt, '%d/%m/%Y') as createdAt FROM categories ORDER BY id DESC`)
+    const rows = await sequelize.query(`SELECT id, category_ru as category, date_format(createdAt, '%d/%m/%Y') as createdAt FROM categories ORDER BY id DESC`)
         if(req.user){
             res.render("admin/categories", {status:"ok", categories:rows[0] });
         }
@@ -122,7 +122,7 @@ async categoriesPage(req, res){
 
 
 async categoriesPageId(req, res){
-    let sql = `SELECT id, optione, category_ru, category_tm, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
+    let sql = `SELECT id,  category_ru, category_tm, category_en, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
     const result = await sequelize.query(sql)
     if(req.user){
         res.render('admin/category_detail', { status:"ok", categories:result[0] });
@@ -133,7 +133,7 @@ async categoriesPageId(req, res){
 }
 
 async editCategory(req, res){
-    let sql = `SELECT id, optione, category_ru, category_tm, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
+    let sql = `SELECT id, optione, category_ru, category_tm, category_en, date_format(createdAt, '%d/%m/%Y') as createdAt from categories where id=${req.params.id}`;
     const admincategories = await sequelize.query(sql)
 if(req.user){
 

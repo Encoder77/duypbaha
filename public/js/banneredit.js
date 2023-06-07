@@ -2,6 +2,8 @@ form.addEventListener("submit", () => {
     const banner = {
         titleru:titleru.value,
         exru:exru.value,
+        titleen:titleen.value,
+        exen:exen.value,
         titletm:titletm.value,
         extm:extm.value,
         secret:secret.value,

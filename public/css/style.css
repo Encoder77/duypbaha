@@ -3601,6 +3601,9 @@ footer ul.social_icons {
 	margin-bottom: 50px;
 	transition: ease all 0.5s;
 }
+.pi{
+ font-size: 15px;
+}
 .tin{
 	border-radius: 50%;
 	width: 100px;
@@ -4842,7 +4845,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  article a:focus {
-				outline: 1px dotted #c401ff;
+				outline: 1px dotted #16ff01;
 			  }
 			  
 			  article a .icon {
@@ -4858,7 +4861,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  /* using the has() relational pseudo selector to update our custom properties */
 			  article:has(:hover, :focus) {
 				--img-scale: 1.1;
-				--title-color: #d550fd;
+				--title-color: #45df3f;
 				--link-icon-translate: 0;
 				--link-icon-opacity: 1;
 				box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;

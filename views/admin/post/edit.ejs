@@ -62,6 +62,14 @@
                                     <label for="desctm">Haryt goshmaca(TM)</label>
                                     <input type="text" name="desctm" class="form-control" id="desctm" value="<%- post.description_tm %>" placeholder="Goshmaca" required>
                                   </div>
+                                  <div class="form-group mb-1">
+                                    <label for="titleen">Haryt ady (EN)</label>
+                                    <input type="text" name="titleen" class="form-control" id="titleen" value="<%- post.title_en %>" placeholder="Ady" required>
+                                  </div>
+                                  <div class="form-group mb-1">
+                                    <label for="descen">Haryt goshmaca(EN)</label>
+                                    <input type="text" name="descen" class="form-control" id="descen" value="<%- post.description_en %>" placeholder="Goshmaca" required>
+                                  </div>
                                   <img src="../uploads/posts/<%- post.post_img %>" width="300" alt="">
                                 </form>
                               </div>
@@ -97,8 +105,6 @@
                               </div>
                             </div>
                           </div>
-                         
-                      
                     </div>
                   </div>
                 </div>

@@ -9,7 +9,7 @@ class indexController {
     
 async index(req, res) {
     let lang = req.originalUrl.split("/")[1]
-    let langs = ['ru', 'tm']
+    let langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
@@ -113,7 +113,7 @@ async blogPage(req, res) {
 
 
     let lang = req.originalUrl.split("/")[1]
-    let langs = ['ru', 'tm']
+    let langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
@@ -179,7 +179,7 @@ const view = await Views.findOne({where:{id:1}});
 async blogPageId(req, res) {
    
         var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm']
+    var langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
@@ -208,7 +208,7 @@ async blogPageId(req, res) {
 
 async aboutPage(req, res){
     var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm']
+    var langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
@@ -226,7 +226,7 @@ const view = await Views.findOne({where:{id:1}});
 
 async servicesPage(req, res){
     var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm']
+    var langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
@@ -244,7 +244,7 @@ const view = await Views.findOne({where:{id:1}});
 async servicesPageId(req, res){
     var san = 1.5;
     var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm']
+    var langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
@@ -273,7 +273,7 @@ async servicesPageId(req, res){
 
 async contactPage(req, res){
     var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm']
+    var langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
