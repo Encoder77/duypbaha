@@ -9,7 +9,6 @@ app.use('/css', express.static(__dirname + '/public/css'))
 app.use('/images', express.static(__dirname + '/public/images'))
 app.use('/fonts', express.static(__dirname + '/public/fonts'))
 app.use('/revolution', express.static(__dirname + '/public/revolution'))
-app.use('/html', express.static(__dirname + '/public/html'))
 app.use('/admin', express.static(__dirname + '/public/admin'))
 app.use('/uploads', express.static(__dirname + '/uploads'))
 
