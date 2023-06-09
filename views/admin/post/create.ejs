@@ -90,12 +90,49 @@
                                     <label for="descru">Haryt Goshmaca (RU)</label>
                                     <textarea type="text" name="descru" class="form-control" id="descru" placeholder="Goshmaca" style="height: 200px;" required></textarea>
                                   </div>
-                                      <div class="form-group">
+                                  <div class="form-group mb-1">
+                                    <select id="option" name="option" class="form-select" aria-label="Default select example" required> 
+                                      <option selected value="Umumy">Umumy hojalyk harytlary</option>
+                                      <option value="Gurlushyk">Gurlushyk harytlary</option>
+                                      <option value="Sowgatlyk">Sowgatlyk we oy bezegleri</option>  
+                                      <option value="Kanselyariya">Kanselyariya we ofis harytlary</option>
+                                      <option value="Eshikler">Eshikler we yantorbalar</option>
+                                      <option value="Dowrebap">Dowrebap enjamlar</option>
+                                    </select>
+                                  </div>
+                                      <div class="form-group mb-1">
                                         <label class="col-sm-3 col-form-label mb-0">Kategoriyalar</label>
                                         <div class="col-sm-9 mt-0">
-                                          <select class="form-control" name="category" id="category" required>
+                                          <select class="form-select" name="category" id="category" required>
                                             <% for (let i = 0; i < categories.length; i++) { %>
+                                              <% if(categories[i].optione == 'Umumy') {%>
+                                                <optgroup label="Umumy hojalyk harytlary">
                                             <option value="<%= categories[i].category_slug %>"><%= categories[i].category %></option>
+                                                 </optgroup>
+                                              <% } %>
+                                              <%   if(categories[i].optione == "Gurlushyk") {%>
+                                                <optgroup label="Gurlushyk harytlary">
+                                            <option value="<%= categories[i].category_slug %>"><%= categories[i].category %></option>
+                                                 </optgroup>
+                                              <% } %>
+                                              <%   if(categories[i].optione == "Sowgatlyk") {%>
+                                                <optgroup label="Sowgatlyk we oy bezegleri">
+                                            <option value="<%= categories[i].category_slug %>"><%= categories[i].category %></option>
+                                                 </optgroup>
+                                              <% } %>
+                                              <%   if(categories[i].optione == "Kanselyariya")  {%>
+                                                <optgroup label="Kanselyariya we ofis harytlary">
+                                            <option value="<%= categories[i].category_slug %>"><%= categories[i].category %></option>
+                                                 </optgroup>
+                                              <% } %><%   if(categories[i].optione == "Eshikler") {%>
+                                                <optgroup label="Eshikler we yantorbalar">
+                                            <option value="<%= categories[i].category_slug %>"><%= categories[i].category %></option>
+                                                 </optgroup>
+                                              <% } %><%   if(categories[i].optione == 'Dowrebap') {%>
+                                               <optgroup label="Dowrebap enjamlar">
+                                            <option value="<%= categories[i].category_slug %>"><%= categories[i].category %></option>
+                                                 </optgroup>
+                                              <% } %>
                                             <% } %>
                                           </select>
                                         </div>

@@ -23,7 +23,6 @@ app.use('/', require("./routes/pages"));
 app.use('/ru', require("./routes/pages"))
 app.use('/tm', require("./routes/pages"))
 app.use('/en', require("./routes/pages"))
-
 app.get('*', function(req, res){
     res.status(404).render('404');
   });

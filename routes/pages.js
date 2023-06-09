@@ -12,6 +12,7 @@ let service = [];
 let posts = [];
 let categories = [];
 let post = [];
+let cart = [];
 let comments = [];
 let adminposts = [];
 let adminservices = [];
@@ -42,8 +43,7 @@ router.get('/services', indexController.servicesPage)
 router.get('/services/:id', indexController.servicesPageId) 
 
 router.get('/contact', indexController.contactPage) 
-
-
+router.get('/cart', indexController.cart) 
 
 router.get("/posts", loggedIn, adminRouteControllers.postsPage) 
 

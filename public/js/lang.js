@@ -61,6 +61,14 @@
                 "filter5":"Одежда и сумки",
                 "filter6":'Современная техника',
                 "cena": 'Цена',
+                "mukdar": 'Количество',
+                "delete": 'Удалить',
+                "jemi": 'Сумма',
+                "subtotal": 'Сумма',
+                "dostawka": 'Доставка',
+                "umumyjem": 'Всего',
+                "sargytet": 'Заказать',
+                "cart": 'КОРЗИНА'
               }
           },
           "tm": {
@@ -123,7 +131,15 @@
                 "filter4":"Kanselýariýa we ofis harytlary",
                 "filter5":"Eşikler we yantorbalar",
                 "filter6":'Döwrebap enjamlar',
-                "cena": 'Bahasy'
+                "cena": 'Bahasy',
+                "mukdar": 'Mukdary',
+                "delete": 'Pozmak',
+                "jemi": 'Jemi',
+                "subtotal": 'Jemi',
+                "dostawka": 'Dostawka',
+                "umumyjem": 'Umumy',
+                "sargytet": 'Sarga',
+                "cart": 'Sebet'
               }
           },
           "en": {
@@ -188,6 +204,14 @@
               "filter6":'Modern technology',
               "search": 'Search...',
               "cena": 'Price',
+              "mukdar": 'Quantity',
+              "delete": 'Delete',
+              "jemi": 'Sum',
+              "subtotal": 'Sum',
+              "dostawka": 'Delivery',
+              "umumyjem": 'Total',
+              "sargytet": 'Checkout',
+              "cart": 'Cart'
             }
         },
       }

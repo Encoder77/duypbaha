@@ -26,131 +26,78 @@
     </div>
   </div>
 </div>
-<!-- end inner page banner -->
-<!-- section -->
-      <div class="vmob">
-        <ul id="accordione" class="accordione">
-          <li>
-            <div class="linke"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-              <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-            </svg></div>
-            <ul class="submenue" >
-              <li><a href="/<%- lang %>/blog?page=<%- pageNum %>&category=<%- url %>&filter=DESC">Gymmatdan arzana</a></li>
-              <li><a href="/<%- lang %>/blog?page=<%- pageNum %>&category=<%- url %>&filter=ASC">Arzandan gymmada</a></li>
-            </ul>
-          </li>
-        </ul>
+<select name="formal" onchange="javascript:handleSelect(this)">
+  <option style="display: none;" value="">Filter</option>
+  <option value="?">Bellenen</option>
+  <option value="?filter=ASC">Arzandan gymmada</option>
+  <option value="?filter=DESC">Gymmatdan arzana</option>
+</select>
+  
+  <script type="text/javascript">
+    function handleSelect(elm)
+    {
+       window.location = elm.value;
+    }
+  </script>
+      <div class="con-cards">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
+        <% if(posts.length > 0) {%>
+        <% for(let i=0; i < limit; i++) { %>
+      <div class="card">
+          <div class="con-star">
+            <i class='bx bx-star'></i>
+        </div>
+        <div class="con-image">
+            <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
+        </div>
+
+        <div class="con-text">
+            <h3>
+              <%- posts[i].title %>
+            </h3>
+        </div>
+
+        <div class="con-price">
+          <%- posts[i].excerpt %>
+        </div>
+        <div >
+          <ul>
+            <li><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li>
+          </ul>
+        </div>
+        <a style="float: left; font-size: 1.3em; font-weight: 600;" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
+        <div class="con-btn">
+            <Button onclick="handleAdd(event)" class="add">
+                Add to cart
+            </Button>
+
+            <div class="con-input-btns">
+                <Button onclick="plusLess(event, 'less')" class="less">
+                    <i class='bx bx-minus' ></i>
+                </Button>
+                <input value="1" type="number">
+                <Button onclick="plusLess(event, 'plus')" class="plus">
+                    <i class='bx bx-plus'></i>
+                </Button>
+            </div>
+        </div>
       </div>
-<div class="section padding_layout_1 blog_list">
-        <div class="full">
-          <% if(posts.length > 0) {%>
-          <% for(let i=0; i < limit; i++) { %>
-          <div class="blog_section">
-          <section class="articles">
-            <article>
-              <div class="article-wrapper">
-                <figure>
-                  <img src="/uploads/posts/<%- posts[i].post_img %>" alt="" />
-                </figure>
-                <div class="article-body">
-                  <span class="her"><%- posts[i].title %></span>
-                  <div >
-                    <ul>
-                      <li><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li>
-                    </ul>
-                  </div>
-                  <div style="width: 120%; " ><p class="pi" data-key="cena" >Bahasy</p>: <%- posts[i].excerpt %> TMT</div>
-                  <a style="float: left; font-size: 1.3em; font-weight: 600;" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more">
-                  </a>
-                </div>
-              </div>
-            </article>
-          </section>
+        <% } %>
+        <% } %>
+        <% if(pagecounter) { %>
+        <div class="center">
+          <ul class="pagination style_1 mb-5">
+            <% for(let p=1;p <= pagecounter; p++) {%>
+            <% if(pageNum==p) {%><li class="active"><%}else{%><li><%}%> <a href="/<%- lang %>/blog?page=<%- p %>&category=<%- url %>"><%- p %></a></li>
+            <% } %>
+          </ul>
         </div>
-          <% } %>
-          <% } %>
-          <% if(pagecounter) { %>
-          <div class="center">
-            <ul class="pagination style_1 mb-5">
-              <% for(let p=1;p <= pagecounter; p++) {%>
-              <% if(pageNum==p) {%><li class="active"><%}else{%><li><%}%> <a href="/<%- lang %>/blog?page=<%- p %>&category=<%- url %>&filter=<%- urle %>"><%- p %></a></li>
-              <% } %>
-            </ul>
-          </div>
-          <% } %>
-        </div>
-  </div>
-<!-- end section -->
-<h4  style="font-size: 1.8em; margin-top: 20px; margin-left: 30px; float: left; border-bottom: 5px solid hsl(162, 73%, 46%);" data-key="categories">категории</h4>
-<div style="clear: both;" ></div>
-<div class="vmob">
-  <ul id="accordion" class="accordion">
-  <li>
-    <div class="link"><p style=" color: aqua; padding-left: 15%; margin-top: -3%;" data-key="filter1" >Umumy hojalyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/254850.ag2.png"></i></div>
-    <ul class="submenu" >
-      <% for(let i=0; i < categories.length; i++) {%>
-        <% if(categories[i].optione == 'Umumy') {%>
-        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-        <%}%>
-        <%}%>
-    </ul> 
-  </li>
-  <li>
-    <div class="link"><p style=" color: orange; padding-left: 15%; margin-top: -3%;" data-key="filter2" >Gurlushyk harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/955540.ca2.png"></i></div>
-    <ul class="submenu">
-      <% for(let i=0; i < categories.length ; i++) {%>
-        <% if(categories[i].optione == 'Gurlushyk') {%>
-        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-        <%}%>
-        <%}%>
-    </ul>
-  </li>
-  <li>
-   <div class="link"><p style=" color: #b12020; padding-left: 15%; margin-top: -3%;" data-key="filter3" >Sowgatlyk we oy bezegleri</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/896640.rkq.png"></i></div>
-   <ul class="submenu" >
-    <% for(let i=0; i < categories.length ; i++) {%>
-      <% if(categories[i].optione == 'Sowgatlyk') {%>
-      <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-      <%}%>
-      <%}%>
-  </ul>
-  </li>
-  <li>
-    <div class="link"><p style=" color: rgb(31, 46, 177); padding-left: 15%; margin-top: -3%;" data-key="filter4" >Kanselyariya we ofis harytlary</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/700590.nz3.png"></i></div>
-    <ul class="submenu" >
-      <% for(let i=0; i < categories.length ; i++) {%>
-        <% if(categories[i].optione == 'Kanselyariya') {%>
-        <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-        <%}%>
-        <%}%>
-    </ul> 
-  </li>
-  
-  <li>
-    <div class="link"><p style="  color: rgb(102, 255, 0); padding-left: 15%; margin-top: -3%;" data-key="filter5" >Eshikler we yantorbalar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/289400.2nr.png"></i></div>
-    <ul class="submenu">
-                  <% for(let i=0; i < categories.length; i++) {%>
-                    <% if(categories[i].optione == 'Eshikler') {%>
-                    <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-                    <%}%>
-                    <%}%>
-                </ul>
-  </li>
-  
- <li>
-   <div class="link"><p style=" color: rgba(88, 50, 6, 0.897); padding-left: 15%; margin-top: -3%;" data-key="filter6" >Dowrebap enjamlar</p><i style="padding-top: 2%;" class="fa fa-chevron-down"></i><i><img width="65" src="/images/images/085970.u7n.png"></i></div>
-   <ul class="submenu">
-    <% for(let i=0; i < categories.length ; i++) {%>
-      <% if(categories[i].optione == 'Dowrebap') {%>
-      <li><a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>&filter=<%- urle %>"><%- categories[i].category %></a></li>
-      <%}%>
-      <%}%>
-  </ul> 
-  </li>
-</ul>
-</div>
+        <% } %>
+      </div>
 
 <%- include('partials/footer') %>
+<script src="/js/cart.js"></script>
 <%- include('partials/js') %>
 </body>
 </html>

@@ -57,6 +57,7 @@ const Posts = sequelize.define( 'posts', {
     description_en: { type: DataTypes.STRING, allowNull: false },
     description_tm: { type: DataTypes.STRING, allowNull: false },
     post_category: { type: DataTypes.STRING, allowNull: true },
+    post_option: { type: DataTypes.STRING, allowNull: true },
     view_count: { type: DataTypes.STRING, allowNull: false, defaultValue: '0' },
 createdAt:{type: DataTypes.DATE,allowNull: true},
 updatedAt:{type: DataTypes.DATE, allowNull: true},
