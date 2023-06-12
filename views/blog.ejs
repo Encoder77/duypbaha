@@ -7,32 +7,62 @@
 <!-- end loader -->
 <%- include('partials/header') %>
 <!-- inner page banner -->
-<div id="inner_banner" class="section inner_banner_section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="full">
-          <div class="title-holder">
-            <div class="title-holder-cell text-left">
-              <h1 class="page-title" data-key="nashiraboty">Наши Работы</h1>
-              <ol class="breadcrumb">
-                <li><a href="/" data-key="home">Главная</a></li>
-                <li class="active" data-key="our-blog">Наш блог</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="category__banner" style="margin-top: 60px;" >
+  <img src="/images/umumy.jpg" alt="Dukan" title="Dukan" class="img-thumbnail category__banner-img">
+  <div class="category__banner-description-box">
+      <p class="category__banner-description" data-key="our-blog" ></p>
   </div>
 </div>
-<select name="formal" onchange="javascript:handleSelect(this)">
-  <option style="display: none;" value="">Filter</option>
+<div class="tag-sub-container">
+    <% for(let i=0; i < categories.length; i++) {%>
+      <% if(cat == 'Umumy' && categories[i].optione == 'Umumy') {%>
+        <a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><div class="sub-item">
+          <%- categories[i].category %>
+        </div></a>
+      <%}%>
+      <%}%>
+      <% for(let i=0; i < categories.length; i++) {%>
+        <% if(cat == 'Gurlushyk' && categories[i].optione == 'Gurlushyk') {%>
+          <a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><div class="sub-item">
+            <%- categories[i].category %>
+          </div></a>
+        <%}%>
+        <%}%>
+        <% for(let i=0; i < categories.length; i++) {%>
+          <% if(cat == 'Sowgatlyk' && categories[i].optione == 'Sowgatlyk') {%>
+            <a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><div class="sub-item">
+              <%- categories[i].category %>
+            </div></a>
+          <%}%>
+          <%}%>
+        <% for(let i=0; i < categories.length; i++) {%>
+          <% if(cat == 'Kanselyariya' && categories[i].optione == 'Kanselyariya') {%>
+            <a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><div class="sub-item">
+              <%- categories[i].category %>
+            </div></a>
+          <%}%>
+          <%}%>
+          <% for(let i=0; i < categories.length; i++) {%>
+            <% if(cat == 'Eshikler' && categories[i].optione == 'Eshikler') {%>
+              <a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><div class="sub-item">
+                <%- categories[i].category %>
+              </div></a>
+            <%}%>
+            <%}%>
+            <% for(let i=0; i < categories.length; i++) {%>
+              <% if(cat == 'Dowrebap' && categories[i].optione == 'Dowrebap') {%>
+                <a href="/<%- lang %>/blog?page=1&category=<%- categories[i].category_slug %>"><div class="sub-item">
+                  <%- categories[i].category %>
+                </div></a>
+              <%}%>
+              <%}%>
+</div>
+<select style="float: right; width: 100px; margin-right: 10px;" class="form-select" onchange="javascript:handleSelect(this)">
+  <option style="display: none;"selected>Filter</option>
   <option value="?">Bellenen</option>
   <option value="?filter=ASC">Arzandan gymmada</option>
   <option value="?filter=DESC">Gymmatdan arzana</option>
 </select>
-  
   <script type="text/javascript">
     function handleSelect(elm)
     {
@@ -45,9 +75,6 @@
         <% if(posts.length > 0) {%>
         <% for(let i=0; i < limit; i++) { %>
       <div class="card">
-          <div class="con-star">
-            <i class='bx bx-star'></i>
-        </div>
         <div class="con-image">
             <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
         </div>

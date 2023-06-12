@@ -142,6 +142,8 @@ async blogPage(req, res) {
         lang ='ru'
     }
 
+    let cat = req.originalUrl.split("=")[1]
+
 
     let posts=[];
 
@@ -208,7 +210,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-        res.render("blog", { posts:posts[0], urle,  categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]});  
+        res.render("blog", { posts:posts[0], urle, cat,  categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]});  
  
 }
 
