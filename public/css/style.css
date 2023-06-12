@@ -3449,14 +3449,12 @@ footer ul.social_icons {
 
 .inner_banner_section {
 	background: url('../images/it_service/inner_page_banner.jpg');
-	min-height: 245px;
 	background-size: cover;
 	background-position: center center;
 }
 
 .cleaning .inner_banner_section {
 	background: url('../images/cleaning_service/inner_page_banner.jpg');
-	min-height: 245px;
 	background-size: cover;
 	background-position: top center;
 }
@@ -4785,6 +4783,10 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  letter-spacing: 1px;
 			  color: rgba(0, 0, 0, 0.4); }
 				
+			.row{
+			 padding: 10px;
+			}
+
 
 			  .con-cards {
 				align-items: center;
@@ -4807,14 +4809,14 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			.con-cards::-webkit-scrollbar {
 				height: 0px;
 			}
-			.card {
+			.carde {
 				box-shadow: 0px 10px 30px 0px rgba(0,0,0,.05);
 				padding: 15px;
 				border-radius: 35px;
-				width: 260px;
-				min-width: 260px;
+				width: 180px;
+				min-width: 180px;
+				min-height: 277px;
 				position: relative;
-				margin: 0px 15px;
 				float: left;
 				background: #fff;
 				scroll-snap-align: center;
@@ -4823,39 +4825,33 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			}
 			.add-active {
 				/* transform: translate(0, -10px); */
-				box-shadow: 0px 10px 30px 0px rgba(254, 160, 26, .2);
-				border: 2px solid hsl(162, 73%, 46%);
+				box-shadow: 0px 10px 30px 0px rgba(15, 216, 48, 0.2);
+				border: 3px solid hsl(162, 73%, 46%);
 			}
 			.add-active .add {
 				display: none;
 			}
-			.add-active .con-image img:not(.bg) {
-				transform: scale(1.15);
-			}
 			.add-active .con-input-btns {
 				display: flex;
 			}
-			.con-star {
-				position: absolute;
-				right: 0px;
-				top: 0px;
-				margin: 30px;
-				font-size: 1.2rem;
-			}
 			.con-image {
-				width: 100%;
+				width: 150px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				height: 200px;
+				height: 80px;
 				border-radius: 30px;
 				background: #f5f5f5;
 			}
 			.con-image img {
-				width: 220px;
-				height: 200px;
+				width: 150px;
+				height: 80px;
 				border-radius: 30px;
 				transition: all .25s ease;
+			}
+			.con-btn{
+				float: left;
+				min-width: 144px;
 			}
 			.con-image .bg {
 				position: absolute;
@@ -4866,7 +4862,6 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			}
 			.con-text {
 				width: 100%;
-				padding: 10px 0px;
 				opacity: .5;
 				font-size: .8rem;
 			}
@@ -4877,7 +4872,6 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				width: 100%;
 				text-align: center;
 				font-weight: bold;
-				padding: 10px;
 				font-size: 1.1rem;
 				padding-top: 0px;
 			}

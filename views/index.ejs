@@ -101,7 +101,7 @@
   </div>
 </section>
 </div>
-
+<div style="clear: both;" ></div>
 <select style="float: right; width: 100px; margin-right: 10px;" class="form-select" onchange="javascript:handleSelect(this)">
   <option style="display: none;"selected>Filter</option>
   <option value="?">Bellenen</option>
@@ -119,10 +119,7 @@
           <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
           <% if(posts.length > 0) {%>
           <% for(let i=0; i < limit; i++) { %>
-        <div class="card">
-            <div class="con-star">
-              <i class='bx bx-star'></i>
-          </div>
+        <div class="carde">
           <div class="con-image">
               <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
           </div>
@@ -137,11 +134,11 @@
             <%- posts[i].excerpt %>
           </div>
           <div >
-            <ul>
+            <ul style="margin-bottom: 0;" >
               <li><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li>
             </ul>
           </div>
-          <a style="float: left; font-size: 1.3em; font-weight: 600;" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
+          <a style="float: left; font-size: 1.3em; font-weight: 600;color: hsl(162, 73%, 46%)" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
           <div class="con-btn">
               <Button onclick="handleAdd(event)" class="add">
                   Add to cart

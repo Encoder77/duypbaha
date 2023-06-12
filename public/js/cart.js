@@ -1,10 +1,10 @@
 function handleAdd(event) {
-	const card = event.target.closest('.card')
+	const card = event.target.closest('.carde')
 	card.classList.add('add-active')
 }
 
 function plusLess(event, type) {
-	const card = event.target.closest('.card')
+	const card = event.target.closest('.carde')
 	const input = card.querySelector('input')
 	let oldVal = Number(input.value)
 	if (type == 'less') {
@@ -18,7 +18,7 @@ function plusLess(event, type) {
 	}
 }
 
-const cards = document.querySelectorAll(".card")
+const cards = document.querySelectorAll(".carde")
 cards.forEach(el  => {
 	const image = el.childNodes[3]
 	const img = image.childNodes[1].currentSrc

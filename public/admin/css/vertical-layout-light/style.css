@@ -8847,14 +8847,7 @@ sup {
   top: -.5em;
 }
 
-a {
-  color: #0d6efd;
-  text-decoration: underline;
-}
 
-a:hover {
-  color: #0a58ca;
-}
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -21816,9 +21809,6 @@ code {
 }
 
 /* Breadcrumbs */
-.breadcrumb {
-  border: 1px solid #dee2e6;
-}
 
 .breadcrumb .breadcrumb-item {
   font-size: 0.812rem;
