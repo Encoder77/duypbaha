@@ -5,22 +5,18 @@ const indexController = require('../controllers/indexController')
 const adminRouteControllers = require('../controllers/admin/adminRouteControllers')
 const db = require("./db-config");
 const router = express.Router();
-let services = [];
 let banners = [];
 let most_viewed = [];
-let service = [];
 let posts = [];
 let categories = [];
 let post = [];
 let cart = [];
 let comments = [];
 let adminposts = [];
-let adminservices = [];
 let admincategories = [];
 let adminpost = [];
 let admincomment = [];
 let adminbanner = [];
-let countservices = [];
 let countposts = [];
 let countcategories = [];
 let countcomments = [];
@@ -39,9 +35,6 @@ router.get('/blog/:id', indexController.blogPageId)
 
 router.get('/about-us', indexController.aboutPage)
 
-router.get('/services', indexController.servicesPage) 
-router.get('/services/:id', indexController.servicesPageId) 
-
 router.get('/contact', indexController.contactPage) 
 router.get('/cart', indexController.cart) 
 
@@ -53,10 +46,6 @@ router.get('/createpost', loggedIn, adminRouteControllers.createPost)
 
 router.get('/postedit/:id', loggedIn, adminRouteControllers.editPost) 
 
-router.get("/service", loggedIn, adminRouteControllers.servicePage) 
-router.get("/createservice", loggedIn, adminRouteControllers.createServicePage) 
-router.get("/service/:id", loggedIn, adminRouteControllers.servicePageId) 
-router.get('/serviceedit/:id', loggedIn, adminRouteControllers.editService) 
 
 router.get("/categories", loggedIn, adminRouteControllers.categoriesPage) 
 

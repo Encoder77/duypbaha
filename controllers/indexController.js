@@ -1,8 +1,6 @@
 const { Banner, Views, Posts, } = require('../models/models')
 const db = require('../routes/db-config')
 const sequelize = require('../config/db')
-
-
 class indexController {
     
 
@@ -88,7 +86,6 @@ async index(req, res) {
         }
     }
         const categories = await sequelize.query(`SELECT category_${lang} as category, optione, category_slug FROM categories ORDER BY id DESC`, {raw:true})
-        const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`, {raw:true})
         const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
         
         if(category){
@@ -113,7 +110,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-    res.render("index", { banners, categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]}); 
+    res.render("index", { banners, categories, posts:posts[0], categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, }); 
 
 }
     
@@ -184,7 +181,6 @@ async blogPage(req, res) {
     }
         const categories = await sequelize.query(`SELECT category_${lang} as category, optione, category_slug FROM categories ORDER BY id DESC`, {raw:true})
 
-        const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`, {raw:true})
         const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
         
         if(category){
@@ -210,7 +206,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-        res.render("blog", { posts:posts[0], urle, cat,  categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, services:services[0]});  
+        res.render("blog", { posts:posts[0], urle, cat,  categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, });  
  
 }
 
@@ -230,7 +226,6 @@ async blogPageId(req, res) {
     const post = await sequelize.query(sql)
     const comments = await sequelize.query(sql2)
     const categories = await sequelize.query(`SELECT category_${lang} as category, optione, category_slug FROM categories ORDER BY id DESC`)
-    const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`)
    
 	if(post[0].length == 0){
 	res.status(404).render('404');
@@ -240,7 +235,7 @@ async blogPageId(req, res) {
         var view = Number(post[0][0].view_count)+0.5;
         await sequelize.query(`update posts set view_count=${view} where id=${req.params.id}`)
         view = 0;
-        res.render('blog_detail', { post:post[0], categories:categories[0], lang, comments:comments[0], services:services[0]}); 
+        res.render('blog_detail', { post:post[0], categories:categories[0], lang, comments:comments[0]}); 
 
 
 }
@@ -254,61 +249,15 @@ async aboutPage(req, res){
     if(!lang){
         lang ='ru'
     }
-    const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`)
+    
 
 const view = await Views.findOne({where:{id:1}});
     await Views.update({aboutpage:view.aboutpage+1}, {where:{id:1}});
 
-    res.render('about-us', {lang, services:services[0]} );
+    res.render('about-us', {lang,} );
 
 }
 
-async servicesPage(req, res){
-    var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm', 'en']
-    if(!langs.includes(lang)){
-        lang = 'ru'      
-    }
-    if(!lang){
-        lang ='ru'
-    }
-    const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`)
-
-const view = await Views.findOne({where:{id:1}});
-    await Views.update({servicepage:view.servicepage+1}, {where:{id:1}});
-
-        res.render("services", { services:services[0], lang }); 
-}
-
-async servicesPageId(req, res){
-    var san = 1.5;
-    var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm', 'en']
-    if(!langs.includes(lang)){
-        lang = 'ru'      
-    }
-    if(!lang){
-        lang ='ru'
-    }
-    let sql = `SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description, view_count FROM services WHERE id=${req.params.id} ORDER BY id DESC`;
-    let sql2 = `SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description, view_count FROM services ORDER BY view_count DESC LIMIT 0,2`;
-          
-
-    const service = await sequelize.query(sql)
-    const most_viewed = await sequelize.query(sql2)
- 
-    const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`)
-	if(service[0].length == 0){
-	res.status(404).render('404');
-}
-        var viewses = Number(service[0][0].view_count)
-        var viewser = 0.5 + viewses;
-        await sequelize.query(`update services set view_count=${viewser} where id=${req.params.id}`)
-        viewser = 0;
-        viewses = 0;
-        res.render('detail', { service:service[0],most_viewed:most_viewed[0], services:services[0], lang}); 
-
-}
 
 async contactPage(req, res){
     var lang = req.originalUrl.split("/")[1]
@@ -319,14 +268,14 @@ async contactPage(req, res){
     if(!lang){
         lang ='ru'
     }
-    const services = await sequelize.query(`SELECT id, service_pic, service_name_${lang} as service_name, service_excerpt_${lang} as service_excerpt, service_description_${lang} as service_description FROM services ORDER BY id DESC`)
 
 const view = await Views.findOne({where:{id:1}});
     await Views.update({contactpage:view.contactpage+1}, {where:{id:1}});
 
-        res.render("contact", { services:services[0], lang });
+        res.render("contact", {lang });
  
 }
+
 async cart(req, res){
     var lang = req.originalUrl.split("/")[1]
     var langs = ['ru', 'tm', 'en']
@@ -336,11 +285,10 @@ async cart(req, res){
     if(!lang){
         lang ='ru'
     }
-
-        res.render("cart", { lang });
- 
+    let sql = `SELECT * FROM posts where id=29`
+       const cart_products = await sequelize.query(sql)
+        res.render("cart", { lang, limit: cart_products[0].length, cart_products:cart_products[0] });
 }
-
 
 
 }

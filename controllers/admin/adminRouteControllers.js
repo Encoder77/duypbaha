@@ -1,4 +1,4 @@
-const { Services, Banner, Views, Posts, Categories, Comments } = require('../../models/models')
+const {  Banner, Views, Posts, Categories, Comments } = require('../../models/models')
 const sequelize = require('../../config/db')
 
 class adminRouteControllers {
@@ -6,7 +6,6 @@ class adminRouteControllers {
     async adminIndex(req, res) {
             if(req.user){
                 
-                const countService = await Services.count()
                 const countPosts = await Posts.count()
                 const countCategories = await Categories.count()
                 const countComments = await Comments.count()
@@ -16,7 +15,7 @@ class adminRouteControllers {
                 // countViews = await Views.count()   
         
 
-                    res.render("admin/dashboard", {status:"ok", user: req.user, counts:countService, countp:countPosts, countk:countCategories, countkom:countComments, countban:countBanners, view});
+                    res.render("admin/dashboard", {status:"ok", user:req.user,  countp:countPosts, countk:countCategories, countkom:countComments, countban:countBanners, view});
             }
             else{
                 res.render("admin/login", {status:"no", user:"nothing"});
@@ -76,39 +75,6 @@ else{
 }
 }
 
-async servicePage(req, res){
-    const rows = await sequelize.query(`SELECT id, service_pic, service_name_ru as service_name, service_excerpt_ru as service_excerpt, service_description_ru as service_description, view_count,date_format(createdAt, '%d/%m/%Y') as createdAt FROM services ORDER BY id DESC`)
-        if(req.user){
-            res.render("admin/services", {status:"ok", services:rows[0] });
-        }
-        else{
-            res.render("admin/login", {status:"no", user:"nothing"});
-        }
-    }
-
-async servicePageId(req, res){
-    let sql = `SELECT id, service_pic, service_name_ru, service_name_tm, service_excerpt_ru, service_excerpt_tm, service_description_ru, service_description_tm, view_count, date_format(createdAt, '%d/%m/%Y') as createdAt from services where id=${req.params.id}`;
-    const result = await sequelize.query(sql)
-    if(req.user){
-        res.render('admin/service_detail', { status:"ok", service:result[0] });
-    }
-    else{
-        res.render("admin/login", {status:"no", user:"nothing"});
-    }
-}
-
-async editService(req, res){
-    let sql = `SELECT id, service_pic, service_name_ru, service_name_tm, service_excerpt_ru, service_excerpt_tm, service_description_ru, service_description_tm, view_count, date_format(createdAt, '%d/%m/%Y') as createdAt from services where id=${req.params.id}`;
-    const adminservices = await sequelize.query(sql)
-    
-if(req.user){
-
-        res.render("admin/service/edit", { id:req.params.id, service:adminservices[0][0]});
-}
-else{
-    res.render("admin/login", {status:"no", user:"nothing"});
-}
-}
 
 async categoriesPage(req, res){
     const rows = await sequelize.query(`SELECT id, category_ru as category, date_format(createdAt, '%d/%m/%Y') as createdAt FROM categories ORDER BY id DESC`)
@@ -230,18 +196,5 @@ async editProfile(req, res){
         }
 
 }
-
-
-async createServicePage(req, res){
-    if(req.user){
-        res.render("admin/service/create", {status:"ok" });
-    }
-    else{
-        res.render("admin/login", {status:"no", user:"nothing"});
-    }
 }
-
-}
-
-
 module.exports = new adminRouteControllers()

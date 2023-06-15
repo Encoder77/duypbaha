@@ -1,48 +1,8 @@
 const cartSide = document.querySelector(".cart")
-  const storage = JSON.parse(localStorage.getItem("cart") || "[]")
+const storage = JSON.parse(localStorage.getItem("cart") || "[]")
 if (storage.length) {
 	storage.forEach(el => {
 		const {name, img, price} = el
-		const newCard = document.createElement("div")
-    newCard.className = "product"
-    const div1 = document.createElement("div")
-    div1.className = "product-image"
-    newCard.appendChild(div1)
-    const imge = document.createElement('img')
-    imge.src = img
-    div1.appendChild(imge)
-    const div2 = document.createElement("div")
-    div2.className = "product-details"
-    newCard.appendChild(div2)
-    const div21 = document.createElement("div")
-    div21.className = "product-title"
-    div21.innerText = name
-    div2.appendChild(div21)
-    const div3 = document.createElement("div")
-    div3.className = "product-price"
-    div3.innerText = price
-    newCard.appendChild(div3)
-    const div4 = document.createElement("div")
-    div4.className = "product-quantity"
-    newCard.appendChild(div4)
-    const div41 = document.createElement("input")
-    div41.type = "number"
-    div41.value = "1"
-    div41.min = "1"
-    div4.appendChild(div41)
-    const div5 = document.createElement("div")
-    div5.className = "product-removal"
-    newCard.appendChild(div5)
-    const div51 = document.createElement("button")
-    div51.className = "remove-product"
-    div51.id = name
-    div51.setAttribute("data-key", "delete");
-    div51.innerText = "Remove"
-    div5.appendChild(div51)
-    const div6 = document.createElement("div")
-    div6.className = "product-line-price"
-    div6.innerText = price
-    newCard.appendChild(div6)
 		cartSide.appendChild(newCard)
 		});
 }

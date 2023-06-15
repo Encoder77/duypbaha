@@ -64,25 +64,10 @@ updatedAt:{type: DataTypes.DATE, allowNull: true},
 }, { timestamps:false })
 
 
-const Services = sequelize.define( 'services', {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    service_pic: { type: DataTypes.STRING, allowNull: false },
-    service_name_ru: { type: DataTypes.STRING, allowNull: false },
-    service_name_tm: { type: DataTypes.STRING, allowNull: false },
-    service_excerpt_ru: { type: DataTypes.STRING, allowNull: false },
-    service_excerpt_tm: { type: DataTypes.STRING, allowNull: false },
-    service_description_ru: { type: DataTypes.STRING, allowNull: false },
-    service_description_tm: { type: DataTypes.STRING, allowNull: false },
-    view_count: { type: DataTypes.STRING, allowNull: false, defaultValue: '0' },
-createdAt:{type: DataTypes.DATE,allowNull: true},
-updatedAt:{type: DataTypes.DATE, allowNull: true},
-}, { timestamps:false })
-
 const Views = sequelize.define( 'views', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     homepage: { type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
 blogpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
-servicepage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
 aboutpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
 contactpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
 }, { timestamps:false })
@@ -95,7 +80,6 @@ module.exports = {
     Banner,
     Categories,
     Comments,
-    Services,
     Posts,
     Views
 }

@@ -13,6 +13,7 @@
       <p class="category__banner-description" data-key="our-blog" ></p>
   </div>
 </div>
+
 <div class="tag-sub-container">
     <% for(let i=0; i < categories.length; i++) {%>
       <% if(cat == 'Umumy' && categories[i].optione == 'Umumy') {%>
@@ -69,62 +70,67 @@
        window.location = elm.value;
     }
   </script>
-      <div class="con-cards">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
-        <% if(posts.length > 0) {%>
-        <% for(let i=0; i < limit; i++) { %>
-      <div class="carde">
-        <div class="con-image">
-            <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
-        </div>
-
-        <div class="con-text">
-            <h3>
-              <%- posts[i].title %>
-            </h3>
-        </div>
-
-        <div class="con-price">
-          <%- posts[i].excerpt %>
-        </div>
-        <div >
-          <ul style="margin-bottom: 0;" >
-            <li><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li>
-          </ul>
-        </div>
-        <a style="float: left; font-size: 1.3em; font-weight: 600;color: hsl(162, 73%, 46%)" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
-        <div class="con-btn">
-            <Button onclick="handleAdd(event)" class="add">
-                Add to cart
-            </Button>
-
-            <div class="con-input-btns">
-                <Button onclick="plusLess(event, 'less')" class="less">
-                    <i class='bx bx-minus' ></i>
-                </Button>
-                <input value="1" type="number">
-                <Button onclick="plusLess(event, 'plus')" class="plus">
-                    <i class='bx bx-plus'></i>
-                </Button>
+           <div class="con-cards">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
+            <% if(posts.length > 0) {%>
+            <% for(let i=0; i < limit; i++) { %>
+          <div class="carde">
+            <div class="id" style="display: none;" ><%- posts[i].id %></div>
+            <div class="con-image">
+                <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
             </div>
-        </div>
-      </div>
-        <% } %>
-        <% } %>
-        <% if(pagecounter) { %>
-        <div class="center">
-          <ul class="pagination style_1 mb-5">
-            <% for(let p=1;p <= pagecounter; p++) {%>
-            <% if(pageNum==p) {%><li class="active"><%}else{%><li><%}%> <a href="/<%- lang %>/blog?page=<%- p %>&category=<%- url %>"><%- p %></a></li>
+    
+            <div class="con-text">
+                <h3>
+                  <%- posts[i].title %>
+                </h3>
+            </div>
+    
+            <div class="con-price">
+              <%- posts[i].excerpt %>
+            </div>
+            <style>
+              .con-price:after{
+              content: 'TMT';
+              }
+            </style>
+            <div >
+              <ul style="margin-bottom: 0;" >
+                <li><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li>
+              </ul>
+            </div>
+            <a style="float: left; font-size: 1.3em; font-weight: 600;color: hsl(162, 73%, 46%)" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
+            <div class="con-btn">
+                <Button onclick="handleAdd(event)" class="add">
+                    Add to cart
+                </Button>
+    
+                <div class="con-input-btns">
+                    <Button onclick="plusLess(event, 'less')" class="less">
+                        <i class='bx bx-minus' ></i>
+                    </Button>
+                    <input value="1" type="number">
+                    <Button onclick="plusLess(event, 'plus')" class="plus">
+                        <i class='bx bx-plus'></i>
+                    </Button>
+                </div>
+            </div>
+          </div>
             <% } %>
-          </ul>
-        </div>
-        <% } %>
-      </div>
-
+            <% } %>
+            <% if(pagecounter) { %>
+            <div class="center">
+              <ul class="pagination style_1 mb-5">
+                <% for(let p=1;p <= pagecounter; p++) {%>
+                <% if(pageNum==p) {%><li class="active"><%}else{%><li><%}%> <a href="/<%- lang %>/blog?page=<%- p %>&category=<%- url %>"><%- p %></a></li>
+                <% } %>
+              </ul>
+            </div>
+            <% } %>
+          </div>
+  <script src="/js/cart.js"></script>
 <%- include('partials/footer') %>
-<script src="/js/cart.js"></script>
 <%- include('partials/js') %>
 </body>
 </html>

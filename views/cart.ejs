@@ -6,15 +6,46 @@
 
 <div class="shopping-cart">
 
-  <div class="column-labels">
-    <label class="product-image" >Image</label>
-    <label class="product-details" >Product</label>
-    <label class="product-price" data-key="cena" >Price</label>
-    <label class="product-quantity" data-key="mukdar" >Quantity</label>
-    <label class="product-removal" data-key="delete" >Remove</label>
-    <label class="product-line-price" data-key="jemi" >Total</label>
+<div style="min-height: 500px;" class="con-cards">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
+    <% if(cart_products.length > 0) {%>
+    <% for(let i=0; i < limit; i++) { %>
+  <div class="carde add-active">
+    <div class="id" style="display: none;" ><%- cart_products[i].id %></div>
+    <div class="con-image">
+        <img class="img" src="/uploads/posts/<%- cart_products[i].post_img %>" alt="">
+    </div>
+
+    <div class="con-text">
+        <h3>
+          <%- cart_products[i].title_ru %>
+        </h3>
+    </div>
+
+    <div  class="con-price">
+      <%- cart_products[i].excerpt_tm %>
+    </div>
+    <style>
+      .con-price:after{
+      content: 'TMT';
+      }
+    </style>
+    <a style="float: left; font-size: 1.3em; font-weight: 600;color: hsl(162, 73%, 46%)" href="/<%- lang %>/blog/<%- cart_products[i].id %>" data-key="podrobnee" class="read-more"></a>
+    <div class="con-btn">
+        <div class="con-input-btns">
+            <Button onclick="plusLess(event, 'less')" class="less">
+                <i class='bx bx-minus' ></i>
+            </Button>
+            <input value="1" type="number">
+            <Button onclick="plusLess(event, 'plus')" class="plus">
+                <i class='bx bx-plus'></i>
+            </Button>
+        </div>
+    </div>
   </div>
-<div class="cart">
+    <% } %>
+    <% } %>
 </div>
 
 <div class="totals">
@@ -35,8 +66,7 @@
       <button class="checkout" data-key="sargytet" >Checkout</button>
 
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/js/cart_page.js" ></script>
+<script src="/js/cart.js" ></script>
 <script src="/js/lang.js"></script>
 <script src="/js/lang-switcher.js"></script>
 <%- include('partials/footer') %>
