@@ -88,19 +88,14 @@
             </div>
     
             <div class="con-price">
-              <%- posts[i].excerpt %>
+             <p style="float: left;" ><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li></p> <%- posts[i].excerpt %>
             </div>
             <style>
               .con-price:after{
               content: 'TMT';
               }
             </style>
-            <div >
-              <ul style="margin-bottom: 0;" >
-                <li><i class="fa fa-comment" aria-hidden="true"></i> <%- posts[i].comment_count %></li>
-              </ul>
-            </div>
-            <a style="float: left; font-size: 1.3em; font-weight: 600;color: hsl(162, 73%, 46%)" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
+            <a style=" font-family: popins; float: left; font-size: 1.3em; font-weight: 600;color: hsl(162, 73%, 46%)" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
             <div class="con-btn">
                 <Button onclick="handleAdd(event)" class="add">
                     Add to cart

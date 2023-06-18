@@ -285,7 +285,7 @@ async cart(req, res){
     if(!lang){
         lang ='ru'
     }
-    let sql = `SELECT * FROM posts where id=29`
+    let sql = `SELECT * FROM posts`
        const cart_products = await sequelize.query(sql)
         res.render("cart", { lang, limit: cart_products[0].length, cart_products:cart_products[0] });
 }

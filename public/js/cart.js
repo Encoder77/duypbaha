@@ -9,6 +9,7 @@ const storage = JSON.parse(localStorage.getItem("cart") || "[]")
 				}
 			 }
 		}
+
 function handleAdd(event) {
 	const card = event.target.closest('.carde')
 	const input = card.querySelector('input')

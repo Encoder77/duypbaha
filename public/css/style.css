@@ -49,6 +49,18 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i);
 @import url(https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i);
+@font-face {
+	font-family: Franklin;
+	src: url(../fonts/FRANKLIN.otf);
+  }
+  @font-face {
+	font-family: arialbold;
+	src: url(../fonts/arial_bold.ttf);
+  }
+  @font-face {
+	font-family: arialblack;
+	src: url(../fonts/arial_black.ttf);
+  }
 
 /*------------------------------------------------------------------
 		2. IMPORT FILES
@@ -72,7 +84,7 @@ html,
 body {
 	color: #494949;
 	font-size: 15px;
-	font-family: 'Raleway', sans-serif;
+	font-family: popins;
 	line-height: normal;
 	font-weight: 400;
 	overflow-x: hidden;
@@ -4826,8 +4838,8 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			}
 			.add-active {
 				/* transform: translate(0, -10px); */
-				box-shadow: 0px 10px 30px 0px rgba(15, 216, 48, 0.2);
-				border: 3px solid hsl(162, 73%, 46%);
+				box-shadow: 0px 10px 30px 0px hsl(0, 0%, 77%);
+				border: 1px solid hsl(0, 0%, 77%);
 			}
 			.add-active .add {
 				display: none;
@@ -4840,13 +4852,13 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				height: 80px;
+				height: 110px;
 				border-radius: 30px;
 				background: #f5f5f5;
 			}
 			.con-image img {
 				width: 150px;
-				height: 80px;
+				height: 110px;
 				border-radius: 30px;
 				transition: all .25s ease;
 			}
@@ -4863,7 +4875,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			}
 			.con-text {
 				width: 100%;
-				opacity: .5;
+				font-family: arialblack;
 				font-size: .8rem;
 			}
 			.con-text h3 {
@@ -4874,6 +4886,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				text-align: center;
 				font-weight: bold;
 				font-size: 1.1rem;
+				font-family: arialbold;
 				padding-top: 0px;
 			}
 			.add {
@@ -5382,6 +5395,7 @@ font-size: 1.8em;
 .categories-slider__item-inner-title {
     font-weight: 700;
     color: #2e2e2e;
+	font-family: Franklin;
     font-size: 18px;
     line-height: 21px;
     width: 132px;
