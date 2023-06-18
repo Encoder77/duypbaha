@@ -4652,13 +4652,18 @@ footer ul.social_icons {
 #navbar_menu a:hover{
 	color:#24d201;
 }
+.flags{
+ margin: 10px;
+}
+.flag{
+	width: 25px;
+	height: 16px;
+}
 p.mylangstyle  {
 	background-color: #f4f7fb;
 	color: hsl(162, 73%, 46%);
 	width:25px;
 	height: 25px;
-	margin: 10px;
-	padding: 4px;
 	border-radius: 5px;
 	font-size:12px;
 }
@@ -4669,6 +4674,15 @@ p.mylangstyle:hover{
 p.mylangstyle:link{
 	background-color:hsl(162, 72%, 65%); 
 	color: #e3e9f0;
+}
+.read-more{
+	font-family: popins; 
+	float: left; 
+	font-size: 1.3em; 
+	color: #505050;
+ }
+ .read-more:hover{
+ color: hsl(162, 73%, 46%);
 }
 .mybrandicon{
 mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
@@ -4805,9 +4819,6 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				justify-content: flex-start;
 				overflow: auto;
 				width: 100%;
-				padding-top: 10px;
-				padding-bottom: 30px;
-				padding-left: 20px;
 				scroll-snap-type: x mandatory;
 				scroll-behavior: smooth;
 			}
@@ -4823,7 +4834,6 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			}
 			.carde {
 				box-shadow: 0px 10px 30px 0px rgba(0,0,0,.05);
-				border-radius: 35px;
 				width: 160px;
 				margin: 6px;
 				min-width: 160px;
@@ -4849,14 +4859,12 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			.con-image {
 				width: 160px;
 				display: flex;
-				height: 120px;
-				border-radius: 30px;
+				height: 140px;
 				background: #f5f5f5;
 			}
 			.con-image img {
 				width: 160px;
-				height: 120px;
-				border-radius: 30px;
+				height: 140px;
 				transition: all .25s ease;
 			}
 			.con-btn{
@@ -4879,23 +4887,15 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				font-size: 1rem;
 			}
 			.con-price {
-				position: absolute;
-				top: 95px;
-				right: 0px;
-				border-radius: 9px 0  9px  0;
-				background-color: hsl(162, 73%, 46%);
-				padding: 3px;
+				margin-left: 30px;
 				font-size: 1.1rem;
 				font-family: arialbold;
-				color: white;
 			}
 			.add {
 				width: 100%;
 				padding: 15px;
-				background: linear-gradient(130deg, hsl(162, 73%, 46%) 0%, hsl(162, 73%, 46%) 100%);
-				border: 0px;
-				border-radius: 20px;
-				color: #fff;
+				border: 2px solid hsl(162, 73%, 46%);
+				color: hsl(162, 73%, 46%);
 				font-weight: bold;
 				font-size: 1rem;
 			}
@@ -4920,10 +4920,9 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				padding: 10px;
 				min-width: 49px;
 				height: 49px;
-				border: 0px;
 				border-radius: 20px;
-				background: linear-gradient(130deg, hsl(162, 73%, 46%) 0%, hsl(162, 73%, 46%) 100%);
-				color: #fff;
+				border: 2px solid hsl(162, 73%, 46%);
+				color: hsl(162, 73%, 46%);
 				font-size: 1.4rem;
 				display: flex;
 				align-items: center;
@@ -5396,7 +5395,7 @@ font-size: 1.8em;
 .categories-slider__item-inner-title {
     font-weight: 700;
     color: #2e2e2e;
-	font-family: Franklin;
+	font-family: popins;
     font-size: 18px;
     line-height: 21px;
     width: 132px;

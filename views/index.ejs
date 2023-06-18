@@ -122,11 +122,11 @@
         <div class="carde">
           <div class="id" style="display: none;" ><%- posts[i].id %></div>
           <div class="con-image">
-              <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
+            <a  href="/<%- lang %>/blog/<%- posts[i].id %>"  class="read-more"> <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt=""></a>
           </div>
   
           <div class="con-text">
-                <%- posts[i].title %>
+            <a  href="/<%- lang %>/blog/<%- posts[i].id %>"  class="read-more"><%- posts[i].title %></a>
           </div>
   
           <div class="con-price">
@@ -137,10 +137,8 @@
             content: 'TMT';
             }
           </style>
-          <a style=" font-family: popins; float: left; font-size: 1.3em; font-weight: 600;color: hsl(162, 73%, 46%)" href="/<%- lang %>/blog/<%- posts[i].id %>" data-key="podrobnee" class="read-more"></a>
           <div class="con-btn">
-              <Button onclick="handleAdd(event)" class="add">
-                  Add to cart
+              <Button onclick="handleAdd(event)" class="add" data-key="addtocart" >
               </Button>
   
               <div class="con-input-btns">

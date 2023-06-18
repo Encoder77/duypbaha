@@ -68,7 +68,8 @@
                 "dostawka": 'Доставка',
                 "umumyjem": 'Всего',
                 "sargytet": 'Заказать',
-                "cart": 'КОРЗИНА'
+                "cart": 'КОРЗИНА',
+                "addtocart": 'В Корзину'
               }
           },
           "tm": {
@@ -139,7 +140,8 @@
                 "dostawka": 'Dostawka',
                 "umumyjem": 'Umumy',
                 "sargytet": 'Sarga',
-                "cart": 'Sebet'
+                "cart": 'Sebet',
+                "addtocart": 'Sebede goş'
               }
           },
           "en": {
@@ -211,7 +213,8 @@
               "dostawka": 'Delivery',
               "umumyjem": 'Total',
               "sargytet": 'Checkout',
-              "cart": 'Cart'
+              "cart": 'Cart',
+              "addtocart": 'Add to cart'
             }
         },
       }
