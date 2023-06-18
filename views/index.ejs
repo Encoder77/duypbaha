@@ -158,7 +158,7 @@
           <div class="center">
             <ul class="pagination style_1 mb-5">
               <% for(let p=1;p <= pagecounter; p++) {%>
-              <% if(pageNum==p) {%><li class="active"><%}else{%><li><%}%> <a href="/<%- lang %>/blog?page=<%- p %>&category=<%- url %>"><%- p %></a></li>
+              <% if(pageNum==p) {%><li class="active"><%}else{%><li><%}%> <a href="/<%- lang %>/?page=<%- p %>&category=<%- url %>"><%- p %></a></li>
               <% } %>
             </ul>
           </div>
