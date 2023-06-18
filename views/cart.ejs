@@ -69,6 +69,11 @@
 <script src="/js/cart.js" ></script>
 <script src="/js/lang.js"></script>
 <script src="/js/lang-switcher.js"></script>
+<script>
+  const cart = document.querySelectorAll('.carde')
+  const storage = JSON.parse(localStorage.getItem("cart") || "[]")
+  
+</script>
 <%- include('partials/footer') %>
 
 
