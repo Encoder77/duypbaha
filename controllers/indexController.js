@@ -81,7 +81,7 @@ async index(req, res) {
                 posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.excerpt_tm ${filter} LIMIT ${old},${perPageItems}`)
             }
             else{
-                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+                posts = await sequelize.query(`SELECT posts.id, view_count, post_option, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = "approved" group by posts.id ORDER BY posts.id DESC`)
             }
         }
     }
@@ -183,8 +183,8 @@ async blogPage(req, res) {
 
         const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
         
-        if(category){
-        pagecount = posts[0].length;
+        if(category || option){
+             pagecount = posts[0].length;
        
         }
         else{
@@ -206,7 +206,7 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-        res.render("blog", { posts:posts[0], urle, cat,  categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, });  
+        res.render("blog", { posts:posts[0], urle, cat,  categories:categories[0], lang, limit: posts[0].length, pageNum, pagecounter, url, option, });  
  
 }
 

@@ -219,7 +219,7 @@ function () {
 
             case 79:
               _context.next = 81;
-              return regeneratorRuntime.awrap(sequelize.query("SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_".concat(lang, " as title, excerpt_").concat(lang, " as excerpt, description_").concat(lang, " as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = \"approved\" group by posts.id ORDER BY posts.id DESC LIMIT ").concat(old, ",").concat(perPageItems)));
+              return regeneratorRuntime.awrap(sequelize.query("SELECT posts.id, view_count, post_option, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_".concat(lang, " as title, excerpt_").concat(lang, " as excerpt, description_").concat(lang, " as description, post_category, count(comments.post_id) as comment_count FROM posts left join comments ON comments.post_id = posts.id and comments.status = \"approved\" group by posts.id ORDER BY posts.id DESC")));
 
             case 81:
               posts = _context.sent;
@@ -447,7 +447,7 @@ function () {
             case 65:
               rows2 = _context2.sent;
 
-              if (category) {
+              if (category || option) {
                 pagecount = posts[0].length;
               } else {
                 pagecount = rows2[0].length;
@@ -490,7 +490,8 @@ function () {
                 limit: posts[0].length,
                 pageNum: pageNum,
                 pagecounter: pagecounter,
-                url: url
+                url: url,
+                option: option
               });
 
             case 76:
