@@ -11,38 +11,15 @@
 <div id="slider" class="section main_slider">
   <div class="container-fuild">
     <div class="row">
-      <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classicslider1" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-        <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
-        <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
-          <ul>
-            <% for(let i=0; i < banners.length; i++) { %>
-            <li data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="/uploads/banners/<%- banners[i].img_name %>"  data-rotate="0"  data-saveperformance="off"  data-title="<%- banners[i].head_text %>" data-description="">
-              <!-- MAIN IMAGE -->
-              <img src="/uploads/banners/<%- banners[i].img_name %>"  alt="#"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-              <!-- LAYERS -->
-              <!-- LAYER NR. BG -->
-              <div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0" 
-                              id="slide-270-layer-1012" 
-                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-                              data-width="full"
-                              data-height="full"
-                              data-whitespace="nowrap"
-                              data-transform_idle="o:1;"
-                              data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" 
-                              data-transform_out="s:300;s:300;" 
-                              data-start="750" 
-                              data-basealign="slide" 
-                              data-responsive_offset="on" 
-                              data-responsive="off"
-                              style="z-index: 5;border-color:rgba(0, 0, 0, 0.50);"> </div>
-              <!-- LAYER NR. 1 -->
-            </li>
-            <% } %>
-
-
-          </ul>
-          <div class="tp-static-layers"></div>
+      <div style="height: 35vw;" class="Sliders">
+        <div class="itemSlider">
+            <img style=" height:35vw;" src="https://wallpaperaccess.com/full/1140732.jpg" alt="pic">
+        </div>
+        <div  class="itemSlider Active">
+            <img style=" height:35vw;" src="https://wallpaperaccess.com/full/2741662.jpg" alt="pic">
+        </div>
+        <div class="itemSlider">
+            <img style=" height:35vw;" src="https://wallpaperaccess.com/full/366926.jpg" alt="pic">
         </div>
       </div>
     </div>
@@ -475,6 +452,133 @@
 </div>
 <!-- end section -->
 <script src="/js/cart.js"></script>
+<script>
+  class Slider {
+    slideIndex = 1;
+    constructor(Options) {
+        this.items = Options;
+        this.initialSetting(this.items);
+        this.Buttons(this.items);
+        this.dots(this.items);
+        this.autoTime(this.items);
+    }
+
+    initialSetting() {
+        const { wrapper, dots, arrowBtn, auto, sliderClass } = this.items;
+
+        if (!wrapper) throw Error('Please Select Query Element');
+        if (typeof wrapper !== 'object') throw Error('Type Wrapper Must Object');
+
+        if (!sliderClass) throw Error('Please Select Slider Class');
+
+        if (dots && typeof dots != 'boolean') throw Error('Type dots Must Boolean');
+
+        if (arrowBtn && typeof arrowBtn != 'boolean') throw Error('Type Button Must Boolean');
+
+        if (auto && typeof auto != 'number') throw Error('Type Auto Must Number');
+        !auto ? (this.auto = 0) : (this.auto = auto);
+    }
+
+    Buttons() {
+        const { wrapper, arrowBtn } = this.items;
+        if (arrowBtn !== false) {
+            wrapper.insertAdjacentHTML(
+                'beforeEnd',
+                `
+                  <div class="buttonsSlider">
+                    <span class="prev">
+                      &#8249;
+                    </span>
+                    <span class="next">
+                      &#8250;
+                    </span>
+                  </div>
+                `
+            );
+
+            const next = document.querySelector('.next');
+            const prev = document.querySelector('.prev');
+
+            next.addEventListener('click', () => {
+                this.showSlider(--this.slideIndex);
+                this.clearTime();
+            });
+            prev.addEventListener('click', () => {
+                this.showSlider(++this.slideIndex);
+                this.clearTime();
+            });
+        }
+    }
+
+    dots() {
+        const { wrapper, dots } = this.items;
+
+        if (dots !== false) {
+            this.itemSlider = wrapper.querySelectorAll('.itemSlider');
+            this.creatDots = [...this.itemSlider].map((element, index) => `<span class="dot" data-target="${++index}"></span>`);
+
+            const wrapperDots = document.createElement('div');
+            wrapperDots.classList.add('dots');
+            wrapperDots.innerHTML = this.creatDots.join('');
+            wrapper.insertAdjacentElement('afterEnd', wrapperDots);
+
+            document.querySelector('.dot').classList.add('ActiveDot');
+            this.allDot = document.querySelectorAll('.dots .dot');
+
+            this.allDot.forEach((element) => {
+                element.addEventListener('click', () => {
+                    this.slideIndex = element.getAttribute('data-target');
+                    this.showSlider(this.slideIndex);
+                    this.clearTime();
+                });
+            });
+        }
+    }
+
+    showSlider() {
+        let { currentSlider } = this.items;
+        if (this.slideIndex > this.itemSlider.length) this.slideIndex = 1;
+        if (this.slideIndex < 1) this.slideIndex = this.itemSlider.length;
+
+        const classActive = document.querySelectorAll('.Active');
+        const classActiveDot = document.querySelectorAll('.ActiveDot');
+        for (let item of classActive) item.classList.remove('Active');
+        for (let item of classActiveDot) item.classList.remove('ActiveDot');
+
+        this.itemSlider[this.slideIndex - 1].classList.add('Active');
+        this.allDot[this.slideIndex - 1].classList.add('ActiveDot');
+
+        currentSlider(this.itemSlider);
+    }
+
+    autoTime() {
+        if (this.auto !== 0) {
+            this.setTime = setInterval(() => {
+                this.showSlider(++this.slideIndex);
+            }, this.auto);
+        }
+    }
+
+    clearTime() {
+        clearInterval(this.setTime);
+        this.autoTime();
+    }
+}
+
+
+
+new Slider({
+    wrapper: document.querySelector('.Sliders'),
+    sliderClass: 'itemSlider',
+    auto: 3000, // false
+    dots: true,
+    arrowBtn: true,
+    currentSlider: (item) => {
+        console.log(item);
+    },
+});
+
+</script>
 <%- include('partials/footer') %>
 <%- include('partials/js') %>
 </body>
