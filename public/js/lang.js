@@ -69,7 +69,8 @@
                 "umumyjem": 'Всего',
                 "sargytet": 'Заказать',
                 "cart": 'КОРЗИНА',
-                "addtocart": 'В Корзину'
+                "addtocart": 'В Корзину',
+                "search": 'Поиск...'
               }
           },
           "tm": {
@@ -141,7 +142,8 @@
                 "umumyjem": 'Umumy',
                 "sargytet": 'Sarga',
                 "cart": 'Sebet',
-                "addtocart": 'Sebede goş'
+                "addtocart": 'Sebede goş',
+                "search": 'Gozleg...'
               }
           },
           "en": {

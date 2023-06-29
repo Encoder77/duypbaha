@@ -786,7 +786,7 @@ hr.dottad_border {
 	margin: 20px auto 0;
 	width: 80px;
 	height: 5px;
-	background: hsl(162, 73%, 46%);
+	background: #45A4DC;
 }
 
 .main_heading.text_align_left::after {
@@ -2694,7 +2694,7 @@ span.skill {
 	padding: 30px 0;
 	float: left;
 	width: 100%;
-	border-top: solid hsl(162, 73%, 46%) 8px;
+	border-top: solid #45A4DC 8px;
 }
 
 .blog_head {
@@ -2714,7 +2714,7 @@ span.skill {
 .blog_feature_cantant li {
 	font-weight: 500;
 	font-size: 14px;
-	color: hsl(162, 73%, 46%);
+	color: #45A4DC;
 	float: left;
 	margin-right: 15px;
 }
@@ -2725,7 +2725,7 @@ span.skill {
 
 .blog_feature_cantant li a:hover,
 .blog_feature_cantant li a:focus {
-	color: hsl(162, 73%, 46%);
+	color: #45A4DC;
 }
 
 .blog_feature_cantant p {
@@ -2744,7 +2744,7 @@ span.skill {
 
 .read_more:hover,
 .read_more:focus {
-	color: hsl(162, 73%, 46%);
+	color: #45A4DC;
 }
 
 .shr {
@@ -3364,7 +3364,7 @@ footer ul.social_icons {
 
 .gross_layout.right_gross_layout::before {
 	position: absolute;
-	background: hsl(162, 73%, 46%);
+	background: #45A4DC;
 	width: 35%;
 	height: 100%;
 	left: 0;
@@ -4374,7 +4374,7 @@ footer ul.social_icons {
 }
 
 .adress_cont i {
-	color: hsl(162, 73%, 46%);
+	color: #45A4DC;
 }
 
 .contant_form p {
@@ -4654,15 +4654,19 @@ footer ul.social_icons {
 }
 .flags{
  margin: 10px;
+ padding-top: 10px;
+ font-size: smaller;
+
 }
 .flag{
-	border-radius: 10px;
-	width: 25px;
-	height: 25px;
+	border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	margin: auto;
 }
 p.mylangstyle  {
 	background-color: #f4f7fb;
-	color: hsl(162, 73%, 46%);
+	color: #45A4DC;
 	width:25px;
 	height: 25px;
 	border-radius: 5px;
@@ -4684,7 +4688,7 @@ p.mylangstyle:link{
 	color: #505050;
  }
  .read-more:hover{
- color: hsl(162, 73%, 46%);
+ color: #45A4DC;
 }
 .mybrandicon{
 mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
@@ -4896,8 +4900,8 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			.add {
 				width: 100%;
 				padding: 15px;
-				border: 2px solid hsl(162, 73%, 46%);
-				color: hsl(162, 73%, 46%);
+				border: 2px solid #45A4DC;
+				color: #45A4DC;
 				font-weight: bold;
 				font-size: 1rem;
 			}
@@ -4923,8 +4927,8 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				min-width: 49px;
 				height: 49px;
 				border-radius: 20px;
-				border: 2px solid hsl(162, 73%, 46%);
-				color: hsl(162, 73%, 46%);
+				border: 2px solid #45A4DC;
+				color: #45A4DC;
 				font-size: 1.4rem;
 				display: flex;
 				align-items: center;
@@ -4956,7 +4960,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  ul { list-style-type: none; }
 			  
 			  a {
-				color: hsl(162, 73%, 46%);
+				color: #45A4DC;
 				text-decoration: none;
 			  }
 			  
@@ -5037,7 +5041,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  
 			  .submenu {
 				display: none;
-				background: hsl(162, 73%, 46%);
+				background: #45A4DC;
 				font-size: 13px;
 				text-align: center;
 				padding-top: 3%;
@@ -5061,7 +5065,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  .submenu a:hover {
-				background: hsl(162, 73%, 46%);
+				background: #45A4DC;
 				color: #FFF;
 			  }
 			  
@@ -5082,7 +5086,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  .accordione .linke {
 				cursor: pointer;
 				display: block;
-				color: hsl(162, 73%, 46%);
+				color: #45A4DC;
 				font-size: 14px;
 				font-weight: 700;
 				position: relative;
@@ -5140,7 +5144,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  .submenue a {
 				display: block;
 				text-decoration: none;
-				color: hsl(162, 73%, 46%);
+				color: #45A4DC;
 				-webkit-transition: all 0.25s ease;
 				-o-transition: all 0.25s ease;
 				transition: all 0.25s ease;
@@ -5148,7 +5152,7 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 			  }
 			  
 			  .submenue a:hover {
-				background: hsl(162, 73%, 46%);
+				background: #45A4DC;
 				color: #FFF;
 			  }
 
@@ -5185,7 +5189,7 @@ font-size: 1.8em;
 
 .cole li a:hover,
 .cole li a:focus {
-  color: hsl(162, 73%, 46%);
+  color: #45A4DC;
 }
 
 /* umumy banner stiller */
@@ -5417,13 +5421,13 @@ margin-bottom: 20px;
 	font-size: 1.6em;
 	font-weight: 400;
  font-family: popins;
- border-bottom: 3px solid rgb(32, 190, 26);
+ border-bottom: 3px solid #4169E1;
  margin-left: 10px;
  float: left;
  margin-bottom: 20px;
 }
 .h2category::first-letter{
- color: rgb(19, 212, 12);
+ color: #4169E1;
 }
 .view {
     background-color: #fff;
@@ -5475,7 +5479,7 @@ margin-bottom: 20px;
 	border-radius: 5px;
 	border: 1px solid silver;
 	outline: none;
-  color: #00B4CC;
+  color: #45A4DC;
 }
 
 /*Resize the wrap to see the search bar change!*/
@@ -5483,7 +5487,7 @@ margin-bottom: 20px;
   width: 30%;
 }
 .itms{
- background-color: #00B4CC;
+ background-color: #45A4DC;
  margin-left: 10px;
  padding: 7px 10px;
  border-radius: 3px;

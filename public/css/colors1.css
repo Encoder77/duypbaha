@@ -30,7 +30,7 @@ a.btn.dark_gray_bt:focus,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover,
 .icon_feature {
-	background: hsl(162, 73%, 46%);
+	background: #45A4DC;
     background-size: 100% 100%;
     border: none;
 }
@@ -40,7 +40,7 @@ a.btn.dark_gray_bt:focus,
     border: none;
 }
 .theme_bg {
-	background: hsl(162, 73%, 46%);
+	background: #45A4DC;
 }
 
 #navbar_menu > ul > li a.active,
@@ -52,12 +52,12 @@ footer p a:hover,footer p a:focus,
 footer ul.social_icons li a:hover,
 footer ul.social_icons li a:focus
 {
-    color: hsl(162, 73%, 46%);
+    color: #45A4DC;
 }
 
 .btn.sqaure_bt {
     border-radius: 0;
-    background: hsl(162, 73%, 46%);
+    background: #45A4DC;
 }
 
 .btn.sqaure_bt span {
@@ -70,16 +70,16 @@ footer ul.social_icons li a:focus
 footer h2::after,
 .footer_mail-section .field button.button_custom,
 .cprt,.contact_us_section {
-	background: hsl(162, 73%, 46%);
+	background: #45A4DC;
 }
 
 .tp-caption.tp-shape.tp-shapewrapper.tp-resizeme.rs-parallaxlevel-0 {
-    background: hsl(162, 73%, 46%) !important;
+    background: #45A4DC !important;
 }
 
 a.btn.main_bt,
 button.btn.main_bt {
-	background: hsl(162, 73%, 46%);
+	background: #45A4DC;
 	border: none;
 }
 
@@ -87,7 +87,7 @@ a.btn.main_bt:hover,
 a.btn.main_bt:focus,
 button.btn.main_bt:hover,
 button.btn.main_bt:focus {
-	background: hsl(162, 73%, 46%);
+	background: #45A4DC;
 	background-size: 100% 100%;
 	color: #858585;
 }
@@ -111,7 +111,7 @@ a.btn.light_btn:focus {
 }
 
 .modal-backdrop {
-	background-color: hsl(162, 73%, 46%);
+	background-color: #45A4DC;
 }
 
 #navbar_menu ul ul,
@@ -128,7 +128,7 @@ hr.dottad_border,
 .pagination>.active>span:hover,
 .comment_section,
 .boder_dottat_small {
-	border-color: hsl(162, 73%, 46%);
+	border-color: #45A4DC;
 }
 
 
@@ -174,8 +174,8 @@ body.light_blue button.btn.white_btn:hover,
 body.light_blue a.btn.white_btn:hover,
 body.light_blue button.btn.white_btn:focus,
 body.light_blue a.btn.white_btn:focus {
-	background: hsl(162, 73%, 46%);
-	border-color: hsl(162, 73%, 46%);
+	background: #45A4DC;
+	border-color: #45A4DC;
 	color: #fff;
 }
 
@@ -195,7 +195,7 @@ a.btn.white_btn:hover {
 }
 
 .tp-bannertimer {
-    background: hsl(162, 73%, 46%) !important;
+    background: #45A4DC !important;
 }
 
 

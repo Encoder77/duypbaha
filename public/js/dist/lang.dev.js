@@ -71,7 +71,8 @@ var langdata = {
         "umumyjem": 'Всего',
         "sargytet": 'Заказать',
         "cart": 'КОРЗИНА',
-        "addtocart": 'В Корзину'
+        "addtocart": 'В Корзину',
+        "search": 'Поиск...'
       }
     },
     "tm": {
@@ -143,7 +144,8 @@ var langdata = {
         "umumyjem": 'Umumy',
         "sargytet": 'Sarga',
         "cart": 'Sebet',
-        "addtocart": 'Sebede goş'
+        "addtocart": 'Sebede goş',
+        "search": 'Gozleg...'
       }
     },
     "en": {
