@@ -12,15 +12,13 @@
   <div class="container-fuild">
     <div class="row">
       <div style="height: 35vw;" class="Sliders">
+        <% if(banners.length > 0) {%>
+          <% for(let i=0; i < banners.length; i++) { %>
         <div class="itemSlider">
-            <img style=" height:35vw;" src="https://wallpaperaccess.com/full/1140732.jpg" alt="pic">
+            <img style=" height:35vw;" src="/uploads/banners/<%- banners[i].img_name %>" alt="pic">
         </div>
-        <div  class="itemSlider Active">
-            <img style=" height:35vw;" src="https://wallpaperaccess.com/full/2741662.jpg" alt="pic">
-        </div>
-        <div class="itemSlider">
-            <img style=" height:35vw;" src="https://wallpaperaccess.com/full/366926.jpg" alt="pic">
-        </div>
+        <% } %>
+        <% } %>
       </div>
     </div>
   </div>
