@@ -5583,3 +5583,19 @@ margin-bottom: 20px;
 .itemSlider.Active {
   visibility: visible;
   opacity: 1; }
+
+   .h44{
+	font-size: xx-large;
+	font-weight: 900;
+	margin-left: 16px;
+   }
+  .ext{
+   color: black;
+   font-size: medium;
+   margin-left: 16px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .categ:hover{
+   background-color: #f7f5f5;
+  }
+  
