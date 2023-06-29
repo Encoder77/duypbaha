@@ -6,7 +6,6 @@ const category = require("../category");
 const profile = require("../profile");
 const approvecomment = require("../approvecomment");
 const rejectcomment = require("../rejectcomment");
-const send = require("../send");
 const deletepost = require("../deletepost");
 const deletebanner = require("../deletebanner");
 const deletecategory = require("../deletecategory");
@@ -40,7 +39,6 @@ router.post("/deletecategory", deletecategory);
 router.post("/updatepost", updatepost);
 router.post("/updatebanner", updatebanner);
 router.post("/updatecategory", updatecategory);
-router.post("/send", send);
 router.post("/createcomment", comment);
 
 

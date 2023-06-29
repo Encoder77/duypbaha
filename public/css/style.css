@@ -4656,8 +4656,9 @@ footer ul.social_icons {
  margin: 10px;
 }
 .flag{
+	border-radius: 10px;
 	width: 25px;
-	height: 16px;
+	height: 25px;
 }
 p.mylangstyle  {
 	background-color: #f4f7fb;
@@ -5448,4 +5449,42 @@ margin-bottom: 20px;
     margin-bottom: 6px;
     width: 100%;
     justify-content: space-between;
+}
+
+
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid silver;
+	outline: none;
+  color: #00B4CC;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+}
+.itms{
+ background-color: #00B4CC;
+ margin-left: 10px;
+ padding: 7px 10px;
+ border-radius: 3px;
 }
