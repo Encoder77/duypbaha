@@ -2,173 +2,166 @@
 <html lang="en">
   <%- include('partials/head') %>
 <body id="default_theme" class="it_service" lang="<%- lang %>">
-<!-- loader -->
-
-<!-- end loader -->
-<!-- header -->
 <%- include('partials/header') %>
-<!-- section -->
-<div id="slider" class="section main_slider">
-  <div class="container-fuild">
-    <div class="row">
-      <div style="height: 35vw;" class="Sliders">
-        <% if(banners.length > 0) {%>
-          <% for(let i=0; i < banners.length; i++) { %>
-        <div class="itemSlider">
-            <img style=" height:35vw;" src="/uploads/banners/<%- banners[i].img_name %>" alt="pic">
+<div class="container">
+    <div id="slider" class="section main_slider">
+      <div class="container-fuild">
+        <div class="row">
+          <div style="height: 35vw; border-radius: 20px; margin-top: 8vw; margin-bottom: 30px;" class="Sliders">
+            <% if(banners.length > 0) {%>
+              <% for(let i=0; i < banners.length; i++) { %>
+            <div class="itemSlider">
+                <img style=" height:35vw; border-radius: 20px;" src="/uploads/banners/<%- banners[i].img_name %>" alt="pic">
+            </div>
+            <% } %>
+            <% } %>
+          </div>
         </div>
-        <% } %>
-        <% } %>
       </div>
     </div>
-  </div>
-</div>
-<!-- Contenedor -->
-<div class="container">
-  <div class="home-menu-cat"><span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-left: 4px solid #8A33FD; padding-left: 7px; font-size: 1.6em;" data-key="categories" >category</span><a href="/<%- lang %>/blog/?option=Umumy"><div class="view"><div class="view-text">Все<span role="img" aria-label="right" class="anticon anticon-right" style="font-size: 14px; margin-left: 5px;"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></div></div></a></div>
-<div class="con-cards" >
-  <div class="category owl-carousel">
-    <div class="categ" style="padding: 16px; border-radius: 20px;" >
-      <a href="/<%- lang %>/blog/?option=Umumy">
-        <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-        <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter1" >category</h4>
-      </a>
+    <div class="home-menu-cat"><span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-left: 4px solid #8A33FD; padding-left: 7px; font-size: 1.6em;" data-key="categories" >category</span><a href="/<%- lang %>/blog/?option=Umumy"><div class="view"><div class="view-text">Все<span role="img" aria-label="right" class="anticon anticon-right" style="font-size: 14px; margin-left: 5px;"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></div></div></a></div>
+  <div class="con-cards" >
+    <div class="category owl-carousel">
+      <div class="categ" style="  padding: 16px; border-radius: 20px;" >
+        <a href="/<%- lang %>/blog/?option=Umumy">
+          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
+          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter1" >category</h4>
+        </a>
+      </div>
+      <div class="categ" style="padding: 16px; border-radius: 20px;" >
+        <a href="/<%- lang %>/blog/?option=Umumy">
+          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
+          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter2" >category</h4>
+        </a>
+      </div>
+      <div class="categ" style="padding: 16px; border-radius: 20px;" >
+        <a href="/<%- lang %>/blog/?option=Umumy">
+          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
+          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter3" >category</h4>
+        </a>
+      </div>
+      <div class="categ" style="padding: 16px; border-radius: 20px;" >
+        <a href="/<%- lang %>/blog/?option=Umumy">
+          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
+          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter4" >category</h4>
+        </a>
+      </div>
+      <div class="categ" style="padding: 16px; border-radius: 20px;" >
+        <a href="/<%- lang %>/blog/?option=Umumy">
+          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
+          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter5" >category</h4>
+        </a>
+      </div>
+      <div class="categ" style="padding: 16px; border-radius: 20px;" >
+        <a href="/<%- lang %>/blog/?option=Umumy">
+          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
+          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter6" >category</h4>
+        </a>
+      </div>
     </div>
-    <div class="categ" style="padding: 16px; border-radius: 20px;" >
-      <a href="/<%- lang %>/blog/?option=Umumy">
-        <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-        <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter2" >category</h4>
-      </a>
-    </div>
-    <div class="categ" style="padding: 16px; border-radius: 20px;" >
-      <a href="/<%- lang %>/blog/?option=Umumy">
-        <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-        <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter3" >category</h4>
-      </a>
-    </div>
-    <div class="categ" style="padding: 16px; border-radius: 20px;" >
-      <a href="/<%- lang %>/blog/?option=Umumy">
-        <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-        <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter4" >category</h4>
-      </a>
-    </div>
-    <div class="categ" style="padding: 16px; border-radius: 20px;" >
-      <a href="/<%- lang %>/blog/?option=Umumy">
-        <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-        <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter5" >category</h4>
-      </a>
-    </div>
-    <div class="categ" style="padding: 16px; border-radius: 20px;" >
-      <a href="/<%- lang %>/blog/?option=Umumy">
-        <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-        <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter6" >category</h4>
-      </a>
-    </div>
-  </div>
-</div>
-</div>
-<style>
-  .row > * {
-   margin: 0;
-  }
-
-</style>
-<hr>
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="d-flex  align-items-center">  
-              <img src="/images/it_service/box.png" alt="">
-              <div>
-                <h4 class="h44  mb-0 fw-bold">2324</h4>
-                <p class="ext mb-2">products in the website</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="d-flex  align-items-center">
-              <img src="/images/it_service/brand.png" alt="">
-              <div>
-                <h4 class="h44 mb-0 fw-bold">324</h4>
-                <p class="ext mb-2">our global partners </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-3">
-            <div class="d-flex  align-items-center">
-              <img src="/images/it_service/sold.png" alt="">
-              <div> 
-                <h4 class="h44 mb-0 fw-bold">23234</h4>
-                <p class="ext mb-2">items sold so far</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="d-flex  align-items-center">
-              <img src="/images/it_service/web.png" alt="">
-              <div>  
-                <h4 class="h44 mb-0 fw-bold">2324</h4>
-                <p class="ext mb-2">visits to our website</p> 
-              </div>
-            </div>
-          </div>
-          
-        </div>
-<hr>
-<div style="clear: both;" ></div>
-<div class="home-menu-cat"><span style="font-size: 1.6em; font-family: arialbold; border-left: 4px solid #44A4DB; margin: 30px; padding-left: 10px;">Sonky harytlar</span><a href="/<%- lang %>/blog/?option=Umumy"><div style="margin-top: 30px;" class="view"><div style="font-family: arialbold;" class="view-text">Все<span role="img" aria-label="right" class="anticon anticon-right" style="font-size: 14px; margin-left: 5px; "><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></div></div></a></div>
-<div class="con-cards" >
-    <div class="slider owl-carousel">
-  <% if(posts.length > 0) {%>
-  <% for(let i=0; i < limit; i++) { %> 
-    <% if(posts[i].post_option == 'Umumy') {%>
-<div class="carde">
-  <div class="id" style="display: none;" ><%- posts[i].id %></div>
-  <div class="con-image">
-    <a  href="/<%- lang %>/blog/<%- posts[i].id %>"> <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt=""></a>
-  </div>
-
-  <div class="con-text">
-    <a  href="/<%- lang %>/blog/<%- posts[i].id %>"  class="read-more"><%- posts[i].title %></a>
-  </div>
-
-  <div class="con-price">
-    <%- posts[i].excerpt %>
   </div>
   <style>
-    .con-price:after{
-    content: 'TMT';
+    .row > * {
+    margin: 0;
     }
-  </style>
-  <div class="con-btn">
-      <Button onclick="handleAdd(event)" class="add" data-key="addtocart" >
-      </Button>
 
-      <div class="con-input-btns">
-          <Button onclick="plusLess(event, 'less')" class="less">
-              <i class='bx bx-minus' ></i>
-          </Button>
-          <input value="1" type="number">
-          <Button onclick="plusLess(event, 'plus')" class="plus">
-              <i class='bx bx-plus'></i>
-          </Button>
-      </div>
+  </style>
+  <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="d-flex  align-items-center">  
+                <img src="/images/it_service/box.png" alt="">
+                <div>
+                  <h4 class="h44  mb-0 fw-bold">2324</h4>
+                  <p class="ext mb-2">products in the website</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="d-flex  align-items-center">
+                <img src="/images/it_service/brand.png" alt="">
+                <div>
+                  <h4 class="h44 mb-0 fw-bold">324</h4>
+                  <p class="ext mb-2">our global partners </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-3">
+              <div class="d-flex  align-items-center">
+                <img src="/images/it_service/sold.png" alt="">
+                <div> 
+                  <h4 class="h44 mb-0 fw-bold">23234</h4>
+                  <p class="ext mb-2">items sold so far</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="d-flex  align-items-center">
+                <img src="/images/it_service/web.png" alt="">
+                <div>  
+                  <h4 class="h44 mb-0 fw-bold">2324</h4>
+                  <p class="ext mb-2">visits to our website</p> 
+                </div>
+              </div>
+            </div>
+          </div>
+  <hr>
+  <div style="clear: both;" ></div>
+  <div class="home-menu-cat"><span style="font-size: 1.6em; font-family: arialbold; border-left: 4px solid #44A4DB; margin: 30px; padding-left: 10px;">Sonky harytlar</span><a href="/<%- lang %>/blog/?option=Umumy"><div style="margin-top: 30px;" class="view"><div style="font-family: arialbold;" class="view-text">Все<span role="img" aria-label="right" class="anticon anticon-right" style="font-size: 14px; margin-left: 5px; "><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></div></div></a></div>
+  <div class="con-cards" >
+      <div class="slider owl-carousel">
+    <% if(posts.length > 0) {%>
+    <% for(let i=0; i < limit; i++) { %> 
+      <% if(posts[i].post_option == 'Umumy') {%>
+  <div class="carde">
+    <div class="id" style="display: none;" ><%- posts[i].id %></div>
+    <div class="con-image">
+      <a  href="/<%- lang %>/blog/<%- posts[i].id %>"> <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt=""></a>
+    </div>
+
+    <div class="con-text">
+      <a  href="/<%- lang %>/blog/<%- posts[i].id %>"  class="read-more"><%- posts[i].title %></a>
+    </div>
+
+    <div class="con-price">
+      <%- posts[i].excerpt %>
+    </div>
+    <style>
+      .con-price:after{
+      content: 'TMT';
+      }
+    </style>
+    <div class="con-btn">
+        <Button onclick="handleAdd(event)" class="add" data-key="addtocart" >
+        </Button>
+
+        <div class="con-input-btns">
+            <Button onclick="plusLess(event, 'less')" class="less">
+                <i class='bx bx-minus' ></i>
+            </Button>
+            <input value="1" type="number">
+            <Button onclick="plusLess(event, 'plus')" class="plus">
+                <i class='bx bx-plus'></i>
+            </Button>
+        </div>
+    </div>
   </div>
-</div>
-  <% } %>
-  <% } %>
-  <% } %>
-</div>
+    <% } %>
+    <% } %>
+    <% } %>
+  </div>
+  </div>
 </div>
 <script>
   $(".slider").owlCarousel({
     autoPlay: 2000,
     pagination : true,
     responsive: true,
-    items : 8,
-    itemsDesktop : [1199,8],
-    itemsDesktopSmall : [980,6],
-    itemsTablet: [768, 4],
+    items : 6,
+    itemsDesktop : [1199,6],
+    itemsDesktopSmall : [980,4],
+    itemsTablet: [768, 2],
     itemsMobile : [479,2]
   });
   $(".category").owlCarousel({
@@ -177,95 +170,11 @@
     responsive: true,
     items : 4,
     itemsDesktop : [1199,4],
-    itemsDesktopSmall : [980,2],
-    itemsTablet: [768,3],
-    itemsMobile : [479,3]
+    itemsDesktopSmall : [980,3],
+    itemsTablet: [768,2],
+    itemsMobile : [479,2]
   });
 </script>
-<div class="section">
-  <div class="container text-monospace">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="full">
-          <div class="main_heading text_align_center" >
-            <h2 data-key="pocemu_my">Наши привилегии</h2>
-            <p class="large" data-key="fast_remont">Быстрый ремонт и лучшая цена</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <!--end section-->
-<!--konsultasiya-->
-<div class="section" style="margin-bottom:20px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="full">
-          <div class="contact_us_section">
-            <div class="call_icon"> <img src="/images/it_service/phone_icon.png" alt="#" /> </div>
-            <div class="inner_cont">
-              <h2 data-key="free_sowet">Бесплатные советы от нас</h2>
-              <p data-key="yest_problem">Если у вас возникли проблемы с вашими устройствами берите бесплатную консултацию</p>
-            </div>
-            <div class="button_Section_cont"> <a class="btn dark_gray_bt" data-key="contact" href="/contact">Контакты</a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--end konsultasiya-->
-<!-- section -->
-<div class="section padding_layout_1 light_silver gross_layout">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="full">
-          <div class="main_heading text_align_left">
-            <h2 data-key="about_serwis">О Сервисе</h2>
-            <p class="large" data-key="remont_ustr">Легко и эффективно почините устройства</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="full">
-              <div class="service_blog_inner2">
-                <img class="tin" src="/images/ruki.jpeg" alt="">
-                <h4 style="padding-left: 120px; padding-top: 30px;" class="service-heading" data-key="doverennye_uslugi">Доверенные Услуги</h4>
-                <p style="float: left; font-size: 1em;" data-key="garantiya100">Гарантия на 100%</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="full">
-              <div class="service_blog_inner2">
-                <img class="tin" src="/images/procent.jpeg" alt="">
-                <h4 style="padding-left: 120px; padding-top: 30px;" class="service-heading" data-key="best_price">Лучшая цена и акции</h4>
-                <p style="float: left; font-size: 1em;" data-key="nash_serwis">Наш сервис предлагает различные акции</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="full">
-              <div class="service_blog_inner2">
-                <img class="tin" src="/images/personal.jpeg" alt="">
-                <h4 style="padding-left: 120px; padding-top: 30px;" class="service-heading" data-key="professional_team">Профессиональная команда</h4>
-                <p style="float: left; font-size: 1em;" data-key="our_team">Наши соотрудники работают профессионально и в самых коротких сроках с выездом домой</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end section -->
 <script src="/js/cart.js"></script>
 <script>
   class Slider {
