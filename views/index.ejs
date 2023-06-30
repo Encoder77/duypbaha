@@ -110,47 +110,23 @@
   <div style="clear: both;" ></div>
   <div class="home-menu-cat"><span style="font-size: 1.6em; font-family: arialbold; border-left: 4px solid #44A4DB; margin: 30px; padding-left: 10px;">Sonky harytlar</span><a href="/<%- lang %>/blog/?option=Umumy"><div style="margin-top: 30px;" class="view"><div style="font-family: arialbold;" class="view-text">Все<span role="img" aria-label="right" class="anticon anticon-right" style="font-size: 14px; margin-left: 5px; "><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></div></div></a></div>
   <div class="con-cards" >
-      <div class="slider owl-carousel">
-    <% if(posts.length > 0) {%>
-    <% for(let i=0; i < limit; i++) { %> 
-      <% if(posts[i].post_option == 'Umumy') {%>
-  <div class="carde">
-    <div class="id" style="display: none;" ><%- posts[i].id %></div>
-    <div class="con-image">
-      <a  href="/<%- lang %>/blog/<%- posts[i].id %>"> <img class="img" src="/uploads/posts/<%- posts[i].post_img %>" alt=""></a>
+    <div class="slider owl-carousel">
+      <% if(posts.length > 0) {%>
+        <% for(let i=0; i < limit; i++) { %> 
+              <div class="haryt" style=" margin-left: 10px; padding: 16px; border-radius: 20px; float: left;" >
+                <a href="/<%- lang %>/blog/<%- posts[i].id %>">
+                  <img style="width: 245x; height: 238px; margin: auto; border-radius: 10px;" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
+                  <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" ><%- posts[i].title %></h4>
+                  <h4 style="font-size: 1.3em; font-family: popins; margin-top: 10px; text-align: center; align-items: center ; color: rgb(19, 206, 19); border-bottom: 2px solid #44A4DB; padding: 0;"><%- posts[i].excerpt %></h4>
+                  <h4 style="font-size: 1.3em; font-weight: 300; margin-top: 10px; text-align: center; align-items: center ; position: absolute; color: antiquewhite; margin-left: 10px;">Sebede gosh <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg></h4>
+                  <img  src="/images/it_service/stelka.png" alt="">
+                </a>
+              </div>
+            <% } %>
+            <% } %>
     </div>
-
-    <div class="con-text">
-      <a  href="/<%- lang %>/blog/<%- posts[i].id %>"  class="read-more"><%- posts[i].title %></a>
-    </div>
-
-    <div class="con-price">
-      <%- posts[i].excerpt %>
-    </div>
-    <style>
-      .con-price:after{
-      content: 'TMT';
-      }
-    </style>
-    <div class="con-btn">
-        <Button onclick="handleAdd(event)" class="add" data-key="addtocart" >
-        </Button>
-
-        <div class="con-input-btns">
-            <Button onclick="plusLess(event, 'less')" class="less">
-                <i class='bx bx-minus' ></i>
-            </Button>
-            <input value="1" type="number">
-            <Button onclick="plusLess(event, 'plus')" class="plus">
-                <i class='bx bx-plus'></i>
-            </Button>
-        </div>
-    </div>
-  </div>
-    <% } %>
-    <% } %>
-    <% } %>
-  </div>
   </div>
 </div>
 <script>
@@ -158,8 +134,8 @@
     autoPlay: 2000,
     pagination : true,
     responsive: true,
-    items : 6,
-    itemsDesktop : [1199,6],
+    items : 4,
+    itemsDesktop : [1199,4],
     itemsDesktopSmall : [980,4],
     itemsTablet: [768, 2],
     itemsMobile : [479,2]
