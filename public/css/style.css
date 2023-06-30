@@ -4681,11 +4681,12 @@ p.mylangstyle:link{
 	color: #e3e9f0;
 }
 .read-more{
-	font-family: popins; 
+	font-family: arialbold; 
 	float: left; 
 	min-height: 43px;
 	font-size: 1.1em; 
-	color: #505050;
+	text-align: center;
+	color: #000000;
  }
  .read-more:hover{
  color: #45A4DC;
@@ -4869,8 +4870,8 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				background: #f5f5f5;
 			}
 			.con-image img {
-				width: 160px;
-				height: 140px;
+				width: 245px;
+				height: 238px;
 				transition: all .25s ease;
 			}
 			.con-btn{
@@ -4893,10 +4894,15 @@ mix-blend-mode: multiply; object-fit: cover; width: 161px; height: 42px;}
 				font-size: 1rem;
 			}
 			.con-price {
-				margin-left: 30px;
+				text-align: center;
+				padding: 0;
+				float: left;
 				font-size: 1.1rem;
+				color: #48BC4E;
+				border-bottom: 2px solid #44A4DB;
 				font-family: arialbold;
 			}
+			
 			.add {
 				width: 100%;
 				padding: 15px;
@@ -5564,7 +5570,7 @@ margin-bottom: 20px;
 .dots {
   display: flex;
   position: absolute;
-  bottom: 25%;
+  bottom: 30%;
   left: 43%;
  }
   .dots .dot {
