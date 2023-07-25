@@ -21,29 +21,6 @@ createdAt:{type: DataTypes.DATE,allowNull: true},
 updatedAt:{type: DataTypes.DATE, allowNull: true},
 }, { timestamps:false })
 
-const Categories = sequelize.define( 'categories', {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    category_ru: { type: DataTypes.STRING, allowNull: true },
-    category_tm: { type: DataTypes.STRING, allowNull: true },
-    category_en: { type: DataTypes.STRING, allowNull: true },
-    category_slug: { type: DataTypes.STRING, allowNull: true },
-    option: { type: DataTypes.STRING, allowNull: true },
-createdAt:{type: DataTypes.DATE,allowNull: true},
-updatedAt:{type: DataTypes.DATE, allowNull: true},
-}, { timestamps:false })
-
-const Comments = sequelize.define( 'comments', {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    firstname: { type: DataTypes.STRING, allowNull: false },
-    lastname: { type: DataTypes.STRING, allowNull: false },
-    comment_text: { type: DataTypes.STRING, allowNull: false },
-    commenter_mail: { type: DataTypes.STRING, allowNull: false },
-    status: { type: DataTypes.STRING, allowNull: false, defaultValue: 'pending' },
-    post_id: { type: DataTypes.STRING, allowNull: false },
-createdAt:{type: DataTypes.DATE,allowNull: true},
-updatedAt:{type: DataTypes.DATE, allowNull: true},
-}, { timestamps:false })
-
 const Posts = sequelize.define( 'posts', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     post_img: { type: DataTypes.STRING, allowNull: true },
@@ -65,11 +42,10 @@ updatedAt:{type: DataTypes.DATE, allowNull: true},
 
 
 const Views = sequelize.define( 'views', {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, defaultValue: '0', autoIncrement: true },
     homepage: { type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
-blogpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
-aboutpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
-contactpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
+    blogpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
+    aboutpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
 }, { timestamps:false })
 
 
@@ -78,8 +54,6 @@ contactpage:{ type: DataTypes.INTEGER, allowNull: false, defaultValue: '0' },
 module.exports = {
     User,
     Banner,
-    Categories,
-    Comments,
     Posts,
     Views
 }

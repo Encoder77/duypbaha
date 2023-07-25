@@ -70,8 +70,6 @@
                                       <div class="d-flex align-items-center">
                                         <i class="mdi mdi-eye text-muted me-1"></i>
                                         <p class="mb-0 text-small text-muted me-2"><%= post[0].view_count %></p>
-                                        <i class="mdi mdi-comment text-muted me-1"></i>
-                                        <p class="mb-0 text-small text-muted me-2"><%= post[0].comment_count %></p>
                                         <a href="/postedit/<%= post[0].id %>" class="btn btn-warning text-white mb-0">Uytgetmek</a>
                                         <form onsubmit="return false;" id="form">
                                           <input type="hidden" value="<%= post[0].id %>" name="secret" id="secret">
@@ -122,31 +120,6 @@
                             </div>
                           </div>
                          
-                        </div>
-                        <div class="row flex-grow">
-                          <% for(let i=0; i < comments.length; i++) {%>
-                          <div class="col-md-6 col-lg-6 grid-margin stretch-card">
-                            <div class="card card-rounded">
-                              <div class="card-body card-rounded">
-                                <h4 class="card-title  card-title-dash"><%= comments[i].firstname %> <%= comments[i].lastname %></h4>
-                                <div class="list align-items-center border-bottom py-2">
-                                  <div class="wrapper w-100">
-                                    <p class="mb-2 font-weight-medium">
-                                      <%= comments[i].commenter_mail %>
-                                    </p>
-                                    <p class="mb-2 font-weight-medium">
-                                      <%= comments[i].comment_text %>
-                                    </p>
-                                    <p class="mb-2 font-weight-medium">
-                                      <%= comments[i].createdAt %>
-                                    </p>
-                                  </div>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
-                          <% } %>
                         </div>
                       </div>
                       

@@ -3,7 +3,6 @@ form.addEventListener("submit", () => {
         titleru:titleru.value,
         titletm:titletm.value,
         titleen:titleen.value,
-        option:option.value,
         secret:secret.value,
     }
     fetch("/api/updatecategory", {

@@ -2,283 +2,346 @@
 <html lang="en">
   <%- include('partials/head') %>
 <body id="default_theme" class="it_service" lang="<%- lang %>">
+
 <%- include('partials/header') %>
-<div class="container">
-    <div id="slider" class="section main_slider">
-      <div class="container-fuild">
-        <div class="row">
-          <div style="height: 35vw; border-radius: 20px; margin-top: 8vw; margin-bottom: 30px;" class="Sliders">
-            <% if(banners.length > 0) {%>
-              <% for(let i=0; i < banners.length; i++) { %>
-            <div class="itemSlider">
-                <img style=" height:35vw; border-radius: 20px;" src="/uploads/banners/<%- banners[i].img_name %>" alt="pic">
-            </div>
-            <% } %>
-            <% } %>
+<section class="tm-banner">
+  <!-- Flexslider -->
+  <div class="flexslider flexslider-banner">
+    <ul class="slides">
+      <li>
+        <div class="tm-banner-inner">
+          <h1 class="tm-banner-title"><span class="tm-yellow-text">Täjirçilik ugry</span></h1>
+          <p class="tm-banner-subtitle">Siz uçin</p>
+          
+        </div>
+        <img src="img/banner-1.jpg" alt="Image" />
+      </li>
+      <li>
+        <div class="tm-banner-inner">
+          <h1 class="tm-banner-title"><span class="tm-yellow-text">Täjirçilik ugry</span></h1>
+          <p class="tm-banner-subtitle">Siz uçin</p>
+        </div>
+        <img src="img/banner-2.jpg" alt="Image" />
+      </li>
+      <li>
+        <div class="tm-banner-inner">
+          <h1 class="tm-banner-title"><span class="tm-yellow-text">Täjirçilik ugry</span></h1>
+          <p class="tm-banner-subtitle">Siz uçin</p>
+        </div>
+        <img src="img/banner-3.jpg" alt="Image" />
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- gray bg -->
+<section class="container tm-home-section-1" id="more">
+  <div class="section-margin-top" id="visit">
+    <div class="row">
+      <div class="tm-section-header">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <hr>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h2 class="tm-section-title">Places you must visit</h2>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="row reveal">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2">
+          <img src="img/index-03.jpg" alt="image" class="img-responsive">
+          <h3>Goa beach</h3>
+          <p class="tm-date">28 March 2022</p>
+          <div class="tm-home-box-2-container">
+            <a href="" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2">
+          <img src="img/index-04.jpg" alt="image" class="img-responsive">
+          <h3>Rajasthan desert</h3>
+          <p class="tm-date">26 March 2022</p>
+          <div class="tm-home-box-2-container">
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2">
+          <img src="img/index-05.jpg" alt="image" class="img-responsive">
+          <h3>Konkan railway journey</h3>
+          <p class="tm-date">24 March 2016</p>
+          <div class="tm-home-box-2-container">
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2 tm-home-box-2-right">
+          <img src="img/index-06.jpg" alt="image" class="img-responsive">
+          <h3>Assam jungles</h3>
+          <p class="tm-date">22 March 2016</p>
+          <div class="tm-home-box-2-container">
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="home-menu-cat"><span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-left: 4px solid #8A33FD; padding-left: 7px; font-size: 1.6em;" data-key="categories" >category</span><a href="/<%- lang %>/blog/?option=Umumy"><div class="view"><div class="view-text">Все<span role="img" aria-label="right" class="anticon anticon-right" style="font-size: 14px; margin-left: 5px;"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></div></div></a></div>
-  <div class="con-cards" >
-    <div class="category owl-carousel">
-      <div class="categ" style="  padding: 16px; border-radius: 20px;" >
-        <a href="/<%- lang %>/blog/?option=Umumy">
-          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter1" >category</h4>
-        </a>
+    <!-- <div class="row">
+      <div class="col-lg-12">
+        <p class="home-description">Paryatana is the travelling website which will guide you through out
+          your travelling journey </p>
       </div>
-      <div class="categ" style="padding: 16px; border-radius: 20px;" >
-        <a href="/<%- lang %>/blog/?option=Umumy">
-          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter2" >category</h4>
-        </a>
-      </div>
-      <div class="categ" style="padding: 16px; border-radius: 20px;" >
-        <a href="/<%- lang %>/blog/?option=Umumy">
-          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter3" >category</h4>
-        </a>
-      </div>
-      <div class="categ" style="padding: 16px; border-radius: 20px;" >
-        <a href="/<%- lang %>/blog/?option=Umumy">
-          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter4" >category</h4>
-        </a>
-      </div>
-      <div class="categ" style="padding: 16px; border-radius: 20px;" >
-        <a href="/<%- lang %>/blog/?option=Umumy">
-          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter5" >category</h4>
-        </a>
-      </div>
-      <div class="categ" style="padding: 16px; border-radius: 20px;" >
-        <a href="/<%- lang %>/blog/?option=Umumy">
-          <img style="width: 270px; height: 270px; margin: auto; border-radius: 10px;" src="/images/category/categories1.jpg" alt="">
-          <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" data-key="filter6" >category</h4>
-        </a>
-      </div>
-    </div>
+    </div> -->
   </div>
-  <style>
-    .row > * {
-    margin: 0;
-    }
+</section>
+<!-- Banner -->
 
-  </style>
-  <hr>
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="d-flex  align-items-center">  
-                <img src="/images/it_service/box.png" alt="">
-                <div>
-                  <h4 class="h44  mb-0 fw-bold">2324</h4>
-                  <p class="ext mb-2">products in the website</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="d-flex  align-items-center">
-                <img src="/images/it_service/brand.png" alt="">
-                <div>
-                  <h4 class="h44 mb-0 fw-bold">324</h4>
-                  <p class="ext mb-2">our global partners </p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-sm-3">
-              <div class="d-flex  align-items-center">
-                <img src="/images/it_service/sold.png" alt="">
-                <div> 
-                  <h4 class="h44 mb-0 fw-bold">23234</h4>
-                  <p class="ext mb-2">items sold so far</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="d-flex  align-items-center">
-                <img src="/images/it_service/web.png" alt="">
-                <div>  
-                  <h4 class="h44 mb-0 fw-bold">2324</h4>
-                  <p class="ext mb-2">visits to our website</p> 
-                </div>
-              </div>
+<!-- white bg -->
+<section class="tm-white-bg section-padding-bottom">
+  <div class="container reveal">
+    <div class="row">
+      <div class="tm-section-header section-margin-top" id="popular">
+        <div class="col-lg-4 col-md-3 col-sm-3">
+          <hr>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <h2 class="tm-section-title">Popular Packages</h2>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-3">
+          <hr>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="tm-home-box-3">
+          <div class="tm-home-box-3-img-container">
+            <img src="img/index-07.jpg" alt="image" class="img-responsive">
+          </div>
+          <div class="tm-home-box-3-info">
+            <p class="tm-home-box-3-description"><b>Kanyakumari :</b> From scenic beaches
+              to alluring temples, Kanyakumari includes some of the best sceneries you will ever
+              witness.</p>
+            <div class="tm-home-box-2-container">
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span
+                  class="tm-home-box-2-description box-3">Travel</span></a>
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
             </div>
           </div>
-  <hr>
-  <div style="clear: both;" ></div>
-  <div class="home-menu-cat"><span style="font-size: 1.6em; font-family: arialbold; border-left: 4px solid #44A4DB; margin: 30px; padding-left: 10px;">Sonky harytlar</span><a href="/<%- lang %>/blog/?option=Umumy"><div style="margin-top: 30px;" class="view"><div style="font-family: arialbold;" class="view-text">Все<span role="img" aria-label="right" class="anticon anticon-right" style="font-size: 14px; margin-left: 5px; "><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></div></div></a></div>
-  <div class="con-cards" >
-    <div class="slider owl-carousel">
-      <% if(posts.length > 0) {%>
-        <% for(let i=0; i < limit; i++) { %> 
-              <div class="haryt" style=" margin-left: 10px; padding: 16px; border-radius: 20px; float: left;" >
-                <a href="/<%- lang %>/blog/<%- posts[i].id %>">
-                  <img style="width: 245x; height: 238px; margin: auto; border-radius: 10px;" src="/uploads/posts/<%- posts[i].post_img %>" alt="">
-                  <h4 style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 10px; text-align: center;" ><%- posts[i].title %></h4>
-                  <h4 style="font-size: 1.3em; font-family: popins; margin-top: 10px; text-align: center; align-items: center ; color: rgb(19, 206, 19); border-bottom: 2px solid #44A4DB; padding: 0;"><%- posts[i].excerpt %></h4>
-                  <h4 style="font-size: 1.3em; font-weight: 300; margin-top: 10px; text-align: center; align-items: center ; position: absolute; color: antiquewhite; margin-left: 10px;">Sebede gosh <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                  </svg></h4>
-                  <img  src="/images/it_service/stelka.png" alt="">
-                </a>
-              </div>
-            <% } %>
-            <% } %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="tm-home-box-3 reveal">
+          <div class="tm-home-box-3-img-container">
+            <img src="img/index-08.jpg" alt="image" class="img-responsive">
+          </div>
+          <div class="tm-home-box-3-info">
+            <p class="tm-home-box-3-description"><b>Varanasi : </b> A vacation to this spiritual land is
+              one of
+              those few experiences of a lifetime that one can’t afford to miss out.</p>
+            <div class="tm-home-box-2-container">
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span
+                  class="tm-home-box-2-description box-3">Travel</span></a>
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="tm-home-box-3 reveal">
+          <div class="tm-home-box-3-img-container">
+            <img src="img/index-09.jpg" alt="image" class="img-responsive">
+          </div>
+          <div class="tm-home-box-3-info">
+            <p class="tm-home-box-3-description"><b>Kashmir :</b> Enclosed by the Himalayas,surrounded
+              by lush valleys, this is a holiday destination to fall in love with.</p>
+            <div class="tm-home-box-2-container">
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span
+                  class="tm-home-box-2-description box-3">Travel</span></a>
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="tm-home-box-3 reveal">
+          <div class="tm-home-box-3-img-container">
+            <img src="img/index-10.jpg" alt="image" class="img-responsive">
+          </div>
+          <div class="tm-home-box-3-info">
+            <p class="tm-home-box-3-description"><b>Kedarnath :</b> This place is a lush
+              green region with meandering rivers, snow-clad peaks and offers complete serenity.</p>
+            <div class="tm-home-box-2-container">
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span
+                  class="tm-home-box-2-description box-3">Travel</span></a>
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="tm-home-box-3 reveal">
+          <div class="tm-home-box-3-img-container">
+            <img src="img/index-12.jpg" alt="image" class="img-responsive">
+          </div>
+          <div class="tm-home-box-3-info">
+            <p class="tm-home-box-3-description"><b>Triupathi Balaji :</b> Sri Venkateswara Swami Vaari Temple is a Hindu temple situated in the hill town of Tirumala at Tirupati,India.</p>
+            <div class="tm-home-box-2-container">
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span
+                  class="tm-home-box-2-description box-3">Travel</span></a>
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="tm-home-box-3 reveal">
+          <div class="tm-home-box-3-img-container">
+            <img src="/img/index-13.jpg" alt="image" class="img-responsive">
+          </div>
+          <div class="tm-home-box-3-info">
+            <p class="tm-home-box-3-description"><b>Imagicaa :</b> Imagicaa is a  theme park in Khopoli India. <br>
+              It is owned Imagicaa world. <br> It has theme, water, and snow parks.</p>
+            <div class="tm-home-box-2-container">
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span
+                  class="tm-home-box-2-description box-3">Travel</span></a>
+              <a href="#" class="tm-home-box-2-link"><i
+                  class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  $(".slider").owlCarousel({
-    autoPlay: 2000,
-    pagination : true,
-    responsive: true,
-    items : 4,
-    itemsDesktop : [1199,4],
-    itemsDesktopSmall : [980,4],
-    itemsTablet: [768, 2],
-    itemsMobile : [479,2]
-  });
-  $(".category").owlCarousel({
-    autoPlay: 2000,
-    pagination : true,
-    responsive: true,
-    items : 4,
-    itemsDesktop : [1199,4],
-    itemsDesktopSmall : [980,3],
-    itemsTablet: [768,2],
-    itemsMobile : [479,2]
-  });
-</script>
-<script src="/js/cart.js"></script>
-<script>
-  class Slider {
-    slideIndex = 1;
-    constructor(Options) {
-        this.items = Options;
-        this.initialSetting(this.items);
-        this.Buttons(this.items);
-        this.dots(this.items);
-        this.autoTime(this.items);
-    }
+</section>
 
-    initialSetting() {
-        const { wrapper, dots, arrowBtn, auto, sliderClass } = this.items;
-
-        if (!wrapper) throw Error('Please Select Query Element');
-        if (typeof wrapper !== 'object') throw Error('Type Wrapper Must Object');
-
-        if (!sliderClass) throw Error('Please Select Slider Class');
-
-        if (dots && typeof dots != 'boolean') throw Error('Type dots Must Boolean');
-
-        if (arrowBtn && typeof arrowBtn != 'boolean') throw Error('Type Button Must Boolean');
-
-        if (auto && typeof auto != 'number') throw Error('Type Auto Must Number');
-        !auto ? (this.auto = 0) : (this.auto = auto);
-    }
-
-    Buttons() {
-        const { wrapper, arrowBtn } = this.items;
-        if (arrowBtn !== false) {
-            wrapper.insertAdjacentHTML(
-                'beforeEnd',
-                `
-                  <div class="buttonsSlider">
-                    <span class="prev">
-                      &#8249;
-                    </span>
-                    <span class="next">
-                      &#8250;
-                    </span>
-                  </div>
-                `
-            );
-
-            const next = document.querySelector('.next');
-            const prev = document.querySelector('.prev');
-
-            next.addEventListener('click', () => {
-                this.showSlider(--this.slideIndex);
-                this.clearTime();
-            });
-            prev.addEventListener('click', () => {
-                this.showSlider(++this.slideIndex);
-                this.clearTime();
-            });
-        }
-    }
-
-    dots() {
-        const { wrapper, dots } = this.items;
-
-        if (dots !== false) {
-            this.itemSlider = wrapper.querySelectorAll('.itemSlider');
-            this.creatDots = [...this.itemSlider].map((element, index) => `<span class="dot" data-target="${++index}"></span>`);
-
-            const wrapperDots = document.createElement('div');
-            wrapperDots.classList.add('dots');
-            wrapperDots.innerHTML = this.creatDots.join('');
-            wrapper.insertAdjacentElement('afterEnd', wrapperDots);
-
-            document.querySelector('.dot').classList.add('ActiveDot');
-            this.allDot = document.querySelectorAll('.dots .dot');
-
-            this.allDot.forEach((element) => {
-                element.addEventListener('click', () => {
-                    this.slideIndex = element.getAttribute('data-target');
-                    this.showSlider(this.slideIndex);
-                    this.clearTime();
-                });
-            });
-        }
-    }
-
-    showSlider() {
-        let { currentSlider } = this.items;
-        if (this.slideIndex > this.itemSlider.length) this.slideIndex = 1;
-        if (this.slideIndex < 1) this.slideIndex = this.itemSlider.length;
-
-        const classActive = document.querySelectorAll('.Active');
-        const classActiveDot = document.querySelectorAll('.ActiveDot');
-        for (let item of classActive) item.classList.remove('Active');
-        for (let item of classActiveDot) item.classList.remove('ActiveDot');
-
-        this.itemSlider[this.slideIndex - 1].classList.add('Active');
-        this.allDot[this.slideIndex - 1].classList.add('ActiveDot');
-
-        currentSlider(this.itemSlider);
-    }
-
-    autoTime() {
-        if (this.auto !== 0) {
-            this.setTime = setInterval(() => {
-                this.showSlider(++this.slideIndex);
-            }, this.auto);
-        }
-    }
-
-    clearTime() {
-        clearInterval(this.setTime);
-        this.autoTime();
-    }
-}
-
-
-
-new Slider({
-    wrapper: document.querySelector('.Sliders'),
-    sliderClass: 'itemSlider',
-    auto: 3000, // false
-    dots: true,
-    arrowBtn: true,
-    currentSlider: (item) => {
-        console.log(item);
-    },
-});
-
-</script>
+<section class="container tm-home-section-1" id="more">
+  <div class="section-margin-top" id="visit">
+    <div class="row">
+      <div class="tm-section-header">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <hr>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h2 class="tm-section-title">Places you must visit</h2>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="row reveal">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2">
+          <img src="img/index-03.jpg" alt="image" class="img-responsive">
+          <h3>Goa beach</h3>
+          <p class="tm-date">28 March 2022</p>
+          <div class="tm-home-box-2-container">
+            <a href="" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2">
+          <img src="img/index-04.jpg" alt="image" class="img-responsive">
+          <h3>Rajasthan desert</h3>
+          <p class="tm-date">26 March 2022</p>
+          <div class="tm-home-box-2-container">
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2">
+          <img src="img/index-05.jpg" alt="image" class="img-responsive">
+          <h3>Konkan railway journey</h3>
+          <p class="tm-date">24 March 2016</p>
+          <div class="tm-home-box-2-container">
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+        <div class="tm-home-box-2 tm-home-box-2-right">
+          <img src="img/index-06.jpg" alt="image" class="img-responsive">
+          <h3>Assam jungles</h3>
+          <p class="tm-date">22 March 2016</p>
+          <div class="tm-home-box-2-container">
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+            <a href="#" class="tm-home-box-2-link"><span
+                class="tm-home-box-2-description">Travel</span></a>
+            <a href="#" class="tm-home-box-2-link"><i
+                class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-lg-12">
+        <p class="home-description">Paryatana is the travelling website which will guide you through out
+          your travelling journey </p>
+      </div>
+    </div> -->
+  </div>
+</section>
 <%- include('partials/footer') %>
 <%- include('partials/js') %>
 </body>

@@ -1,10 +1,58 @@
-<script src="/../js/jquery.min.js"></script>
-<script src="/../js/bootstrap.min.js"></script>
-<!-- menu js -->
-<script src="/../js/menumaker.js"></script>
-<!-- wow animation -->
-<script src="/../js/wow.js"></script>
-<!-- custom js -->
-<script src="/../js/custom.js"></script>
-<script src="/../js/lang.js"></script>
-<script src="/../js/lang-switcher.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
+	<script type="text/javascript" src="js/scrollToTop.js"></script>					<!-- Scroll To Top -->
+  	<script type="text/javascript" src="js/moment.js"></script>							<!-- moment.js -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
+	<script type="text/javascript" src="js/date-check.js"></script>					<!-- bootstrap js -->
+
+	<script src="js/rellax.min.js"></script>
+	<script src="js/arz-main.js"></script>
+
+
+
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+
+	<script type="text/javascript" src="js/templatemo-script.js"></script> <!-- Templatemo Script -->
+	<script type="text/javascript" src="js/update-copyrightYear.js"></script> <!--Updating the copyright year-->
+	<script>
+		// HTML document is loaded. DOM is ready.
+		$(function () {
+
+			$('#hotelCarTabs a').click(function (e) {
+				e.preventDefault()
+				$(this).tab('show')
+			})
+
+			$('.date').datetimepicker({
+				format: 'MM/DD/YYYY'
+			});
+			$('.date-time').datetimepicker();
+
+			// https://css-tricks.com/snippets/jquery/smooth-scrolling/
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location
+					.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+
+		// Load Flexslider when everything is loaded.
+		$(window).load(function () {
+
+			//	For images only
+			$('.flexslider').flexslider({
+				controlNav: false
+			});
+
+
+		});
+	</script>
+
+	<script type="text/javascript" src="./js/onscrollReveal.js"></script>

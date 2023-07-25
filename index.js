@@ -6,6 +6,8 @@ const dotenv = require("dotenv").config();
 const PORT = process.env.PORT;
 app.use('/js', express.static(__dirname + '/public/js'))
 app.use('/css', express.static(__dirname + '/public/css'))
+app.use('/img', express.static(__dirname + '/public/img'))
+app.use('/favicon', express.static(__dirname + '/public/favicon'))
 app.use('/images', express.static(__dirname + '/public/images'))
 app.use('/fonts', express.static(__dirname + '/public/fonts'))
 app.use('/revolution', express.static(__dirname + '/public/revolution'))
@@ -35,7 +37,7 @@ const start = async () => {
       await sequelize.sync()
 	.then(e => console.log(e))
 	.catch(e => console.log(e));
-      app.listen(PORT, () => console.log(`Server started on port------- ${PORT}`));  
+      app.listen(PORT, () => console.log(`Server started on port------- http://127.0.0.1:${PORT}`));  
   } catch (error) {
       console.log(error)
   }

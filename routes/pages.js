@@ -6,37 +6,22 @@ const adminRouteControllers = require('../controllers/admin/adminRouteController
 const db = require("./db-config");
 const router = express.Router();
 let banners = [];
-let most_viewed = [];
 let posts = [];
-let categories = [];
 let post = [];
-let cart = [];
-let comments = [];
 let adminposts = [];
-let admincategories = [];
 let adminpost = [];
-let admincomment = [];
 let adminbanner = [];
 let countposts = [];
-let countcategories = [];
-let countcomments = [];
 let countbanners = [];
 let countview = [];
 let countpageview = [];
 
 router.get("/", loggedIn, indexController.index) 
-router.get("/ASC",  indexController.index) 
-router.get("/admin", loggedIn, adminRouteControllers.adminIndex)
-
-router.get('/blog', indexController.blogPage)
-router.get('/blog/ASC', indexController.blogPage)
-router.get('/blog/:id', indexController.blogPageId)
-
-
+router.get("/services", loggedIn, indexController.blogPage) 
 router.get('/about-us', indexController.aboutPage)
 
 router.get('/contact', indexController.contactPage) 
-router.get('/cart', indexController.cart) 
+router.get("/admin", loggedIn, adminRouteControllers.adminIndex)
 
 router.get("/posts", loggedIn, adminRouteControllers.postsPage) 
 
@@ -46,30 +31,6 @@ router.get('/createpost', loggedIn, adminRouteControllers.createPost)
 
 router.get('/postedit/:id', loggedIn, adminRouteControllers.editPost) 
 
-
-router.get("/categories", loggedIn, adminRouteControllers.categoriesPage) 
-
-router.get("/categories/:id", loggedIn, adminRouteControllers.categoriesPageId) 
-
-router.get('/categoryedit/:id', loggedIn, adminRouteControllers.editCategory) 
-
-router.get('/createcategory', loggedIn, (req, res) => {
-
-    if(req.user){
-        res.render('admin/category/create', { status:"ok"});
-    }
-    else{
-        res.render("admin/login", {status:"no", user:"nothing"});
-    }
-})
-
-
-router.get("/comments", loggedIn, adminRouteControllers.commentsPage) 
-
-router.get("/comments/:id", loggedIn, adminRouteControllers.commentsPageId) 
-
-
-router.get('/commentedit/:id', loggedIn, adminRouteControllers.editComment) 
 
 router.get("/banners", loggedIn, adminRouteControllers.bannersPage) 
 router.get("/banners/:id", loggedIn, adminRouteControllers.bannersPageId) 

@@ -9304,7 +9304,6 @@ progress {
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) / 2);
   padding-left: calc(var(--bs-gutter-x) / 2);
-  margin-top: 50px;
 }
 
 .col {
@@ -12638,13 +12637,7 @@ fieldset:disabled .swal2-modal .swal2-buttonswrapper .swal2-styled,
   border-top-right-radius: 0;
 }
 
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
+
 
 .nav-link {
   display: block;

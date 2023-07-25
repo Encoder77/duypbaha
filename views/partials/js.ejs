@@ -1,82 +1,58 @@
-<!-- js section -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<!-- menu js -->
-<script src="/js/menumaker.js"></script>
-<!-- wow animation -->
-<script src="/js/wow.js"></script>
-<!-- custom js -->
-<script src="/js/custom.js"></script>
-<!-- revolution js files -->
-<script src="/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<!--carousel-->
-<!-- You can use latest version of jQuery  -->
-<script src="/js/popper.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/lang.js"></script>
-<script src="/js/lang-switcher.js"></script>
-<script>
-$(function() {
-	var Accordion = function(el, multiple) {
-		this.el = el || {};
-		this.multiple = multiple || false;
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
+	<script type="text/javascript" src="js/scrollToTop.js"></script>					<!-- Scroll To Top -->
+  	<script type="text/javascript" src="js/moment.js"></script>							<!-- moment.js -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
+	<script type="text/javascript" src="js/date-check.js"></script>					<!-- bootstrap js -->
 
-		// Variables privadas
-		var links = this.el.find('.link');
-		// Evento
-		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-	}
+	<script src="js/rellax.min.js"></script>
+	<script src="js/arz-main.js"></script>
 
-	Accordion.prototype.dropdown = function(e) {
-		var $el = e.data.el;
-			$this = $(this),
-			$next = $this.next();
 
-		$next.slideToggle();
-		$this.parent().toggleClass('open');
 
-		if (!e.data.multiple) {
-			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-		};
-	}	
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 
-	var accordion = new Accordion($('#accordion'), false);
-});
-</script>
-<script>
-	$(function() {
-		var Accordion = function(el, multiple) {
-			this.el = el || {};
-			this.multiple = multiple || false;
-	
-			// Variables privadas
-			var links = this.el.find('.linke');
-			// Evento
-			links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-		}
-	
-		Accordion.prototype.dropdown = function(e) {
-			var $el = e.data.el;
-				$this = $(this),
-				$next = $this.next();
-	
-			$next.slideToggle();
-			$this.parent().toggleClass('open');
-	
-			if (!e.data.multiple) {
-				$el.find('.submenue').not($next).slideUp().parent().removeClass('open');
-			};
-		}	
-	
-		var accordion = new Accordion($('#accordione'), false);
-	});
+	<script type="text/javascript" src="js/templatemo-script.js"></script> <!-- Templatemo Script -->
+	<script type="text/javascript" src="js/update-copyrightYear.js"></script> <!--Updating the copyright year-->
+	<script>
+		// HTML document is loaded. DOM is ready.
+		$(function () {
+
+			$('#hotelCarTabs a').click(function (e) {
+				e.preventDefault()
+				$(this).tab('show')
+			})
+
+			$('.date').datetimepicker({
+				format: 'MM/DD/YYYY'
+			});
+			$('.date-time').datetimepicker();
+
+			// https://css-tricks.com/snippets/jquery/smooth-scrolling/
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location
+					.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+
+		// Load Flexslider when everything is loaded.
+		$(window).load(function () {
+
+			//	For images only
+			$('.flexslider').flexslider({
+				controlNav: false
+			});
+
+
+		});
 	</script>
+
+	<script type="text/javascript" src="./js/onscrollReveal.js"></script>
