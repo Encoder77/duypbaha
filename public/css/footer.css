@@ -1,6 +1,3 @@
-*{
- color: #071c34;
-}
 html {
   font-size: 62.5%;
 }
@@ -33,7 +30,7 @@ margin-bottom: 5px;
 height: 110px;
 }
 .contact-page-form.contact-form input[type="submit"] {
-background: #B0DDE1;
+background: #100049;
 width: 150px;
 border-color: #B0DDE1;
 }
@@ -113,17 +110,13 @@ body {
 
 footer {
   display: flex;
-  background-color: #B0DDE1;
+  background-image: linear-gradient(rgb(158, 1, 1), rgb(35, 3, 150));
+  border-radius: 40px 40px 0 0 ;
   padding-bottom: 2.8rem;
   justify-content: center;
   min-height: 30rem;
 }
 
-.bottom-footer {
-  background-color: #B0DDE1;
-  text-align: center;
-  color: white;
-}
 
  footer .pages {
   width: 30%;

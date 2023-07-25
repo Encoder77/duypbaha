@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
 }
 .tm-header {
-  background: #B0DDE1;
+  background: #babebe;
   height: 80px;
   width: 100vw;
   position: fixed;
@@ -1069,7 +1069,7 @@ hr {
     height: 50px;
     position: fixed;
     top: 15px;
-    right: 15px;
+    right: 25px;
     background-color: rgba(15, 15, 15, 0.7);
     z-index: 1000;
     display: flex;
@@ -1313,7 +1313,7 @@ body {
   overflow-x: hidden;
 }
 .tm-header {
-  background: #B0DDE1;
+  background: #ffffff;
   height: 80px;
   width: 100vw;
   position: fixed;
@@ -1346,8 +1346,12 @@ body {
   float: left;
 }
 .tm-nav li a {
-  color: rgb(255, 255, 255);
+  color: rgb(8, 0, 54);
   display: block;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
   /* padding: 45px 34px 15px 34px; */
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -1359,7 +1363,7 @@ body {
 .tm-nav li a:focus,
 .tm-nav li a:hover {
   /* background: #fcdd44; */
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Banner */
@@ -2391,7 +2395,7 @@ hr {
     height: 50px;
     position: fixed;
     top: 15px;
-    right: 15px;
+    right: 25px;
     background-color: rgba(15, 15, 15, 0.7);
     z-index: 1000;
     display: flex;
