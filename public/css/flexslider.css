@@ -93,6 +93,7 @@ html[xmlns] .flexslider .slides {
 }
 .flexslider .slides img {
   height: auto;
+  max-height: 500px;
 }
 .flex-viewport {
   max-height: 2000px;
