@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
 }
 .tm-header {
-  background: #babebe;
+  background: #ffffff;
   height: 80px;
   width: 100vw;
   position: fixed;
@@ -79,14 +79,14 @@ body {
   float: left;
 }
 .tm-nav li a {
-  color: white;
-  display: block;
-  /* padding: 45px 34px 15px 34px; */
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  padding: 10px 20px;
-  margin: 20px 5px;
-  border-radius: 0px;
+  color: #07004b;
+  text-align: center;
+  font-feature-settings: 'salt' on, 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
 }
 .tm-nav li a.active {
   /* color: #fcdd44; */
@@ -97,7 +97,7 @@ body {
   display: block;
   width: 0;
   height: 3px;
-  background: #fcdd44;
+  background: #9e2601;
   transition: width 0.4s;
 }
 /* .tm-nav li a:focus, */
@@ -1058,7 +1058,7 @@ hr {
     float: none;
   }
   .tm-nav li a {
-    color: white;
+    color: rgba(9, 0, 48, 0.164);
     display: block;
     padding: 20px 30px 20px;
   }
@@ -1263,7 +1263,7 @@ hr {
   content: '';
   width: 100%;
   height: 3px;
-  background-color: #fcdd44;
+  background-color: #af0101;
 }
 .tm-banner-link {
   transition: transform 0.04s;
@@ -1346,25 +1346,22 @@ body {
   float: left;
 }
 .tm-nav li a {
-  color: rgb(8, 0, 54);
   display: block;
-  font-size: 1.1em;
-  font-weight: 600;
-  font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
-  /* padding: 45px 34px 15px 34px; */
   text-transform: uppercase;
   transition: all 0.3s ease;
   padding: 10px 20px;
   margin: 20px 5px;
   border-radius: 10px;
+  color: #010046;
+text-align: center;
+font-feature-settings: 'salt' on, 'clig' off, 'liga' off;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
 }
-.tm-nav li a.active,
-.tm-nav li a:focus,
-.tm-nav li a:hover {
-  /* background: #fcdd44; */
-  color: #000000;
-}
+
 
 /* Banner */
 .tm-banner-inner {
@@ -1659,17 +1656,22 @@ body {
   margin-top: 100px;
 }
 hr {
-  border-top: 1px solid #111010;
+  border-top: 4px solid #111010;
 }
 .tm-section-header {
   margin-bottom: 70px;
   overflow: hidden;
 }
 .tm-section-title {
-  text-align: center;
   text-transform: uppercase;
-  font-size: 36px;
-  font-weight: 300;
+  color: #263640;
+text-align: center;
+font-feature-settings: 'salt' on, 'liga' off;
+font-family: Poppins;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: 64px; /* 133.333% */
 }
 .tm-home-box-2 {
   background-color: white;

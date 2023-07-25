@@ -110,11 +110,11 @@ body {
 
 footer {
   display: flex;
-  background-image: linear-gradient(rgb(158, 1, 1), rgb(35, 3, 150));
-  border-radius: 40px 40px 0 0 ;
+  background-color: #020142;
   padding-bottom: 2.8rem;
   justify-content: center;
   min-height: 30rem;
+  
 }
 
 
