@@ -10,6 +10,7 @@
               "contact":"Контакты",
               "follow":"Подписывайтесь на нас",
               "biz":"Что мы делаем",
+              "aboutitem":"Подробно",
               "deviz":"Удовлетворение потребностей клиентов является нашим главным приоритетом",
               }
           },
@@ -23,6 +24,7 @@
                 "contact":"Habarlaşmak",
                 "follow":"Bizi yzarla",
                 "biz":"Biz näme edýäris",
+                "aboutitem":"Doly maglumat",
                 "deviz":"Müşderini kanagatlandyrmak ilkinji nobatda durýar",
               }
           },
@@ -36,6 +38,7 @@
             "contact":"Сontact",
             "follow":"Follow Us",
             "biz":"What we do",
+            "aboutitem":"About ",
             "deviz":"Customer satisfaction is our first priority",
             }
         },

@@ -1,41 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/detail_head') %>
+<%- include('partials/head') %>
 <body id="default_theme" class="it_service" lang="<%- lang %>">
 <!-- loader -->
 
 <!-- end loader -->
 <!-- header -->
-<%- include('partials/detail_header') %>
+<%- include('partials/header') %>
 
-<div class="section padding_layout_1 blog_grid">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
-        <div class="full">
-          <div class="blog_section margin_bottom_0">
-            <div class="blog_feature_img"> <img class="img-responsive" src="/../uploads/posts/<%- post[0].post_img %>" alt="#"> </div>
-            <div class="blog_feature_cantant">
-              <p class="blog_head"><%- post[0].title %></p>
-              <div class="post_info">
-                <ul>
-                  <li><i class="fa fa-comment" aria-hidden="true"></i><%- post[0].comment_count %></li>
-                </ul>
-              </div>
-              <div style="clear: both;" ></div>
-              <h4 style=" float: left; border-bottom: 4px solid #2e851d;">Haryt barada maglumat: </h4>
-              <p><%- post[0].description %></p>
-            </div>
-          </div>
+
+<div class = "card-wrapper">
+  <div class = "card">
+    <!-- card left -->
+    <div class = "product-imgs">
+      <div class = "img-display">
+        <div class = "img-showcase">
+          <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
+          <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
+          <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
+          <img src = "/../uploads/posts/<%- post[0].post_img %>" alt = "shoe image">
         </div>
+      </div>
+      <div class = "img-select">
+        <div class = "img-item">
+          <a href = "#" data-id = "1">
+            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
+          </a>
+        </div>
+        <div class = "img-item">
+          <a href = "#" data-id = "2">
+            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
+          </a>
+        </div>
+        <div class = "img-item">
+          <a href = "#" data-id = "3">
+            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
+          </a>
+        </div>
+        <div class = "img-item">
+          <a href = "#" data-id = "4">
+            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" alt = "shoe image">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- card right -->
+    <div class = "product-content">
+      <h2 class = "product-title"  ><%- post[0].title %></h2>
+      <div class = "product-detail">
+        <h2 data-key="aboutitem" style="font-size: 2rem; font-weight: 600; margin: 30px 0 20px 0; border-bottom: 2px solid silver; float: left">about this item: </h2>
+        <p style="font-size: larger; font-weight: 400; float: left"><%- post[0].description %></p>
       </div>
     </div>
   </div>
 </div>
-</div>
-<!-- end section -->
-<%- include('partials/detail_footer') %>
-<%- include('partials/detail_js') %>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}
+</style>
+
+<script>
+const imgs = document.querySelectorAll('.img-select a');
+const imgBtns = [...imgs];
+let imgId = 1;
+
+imgBtns.forEach((imgItem) => {
+    imgItem.addEventListener('click', (event) => {
+        event.preventDefault();
+        imgId = imgItem.dataset.id;
+        slideImage();
+    });
+});
+
+function slideImage(){
+    const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+    document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+}
+
+window.addEventListener('resize', slideImage);
+</script>
+<%- include('partials/footer') %>
 <%- include('partials/js') %>
 <script src="/../js/comment.js"></script>
 </body>

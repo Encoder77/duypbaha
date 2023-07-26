@@ -10,7 +10,7 @@ const post = async (req,res) => {
         res.render("admin/login", {status:"no", user:"nothing"});
     }
     else{
-        let sql = `UPDATE posts SET title_ru = '${titleru}', description_ru = '${descru}', title_ru = '${titleen}', description_ru = '${descen}',  title_tm = '${titletm}', description_tm = '${desctm}',  post_category = '${category}', updatedAt = now() WHERE id= '${secret}'`;
+        let sql = `UPDATE posts SET title_ru = '${titleru}', description_ru = '${descru}', title_en = '${titleen}', description_en = '${descen}',  title_tm = '${titletm}', description_tm = '${desctm}',  post_category = '${category}', updatedAt = now() WHERE id= '${secret}'`;
         await sequelize.query(sql)
      
 

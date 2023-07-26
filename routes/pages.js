@@ -17,7 +17,9 @@ let countview = [];
 let countpageview = [];
 
 router.get("/", loggedIn, indexController.index) 
-router.get("/services", loggedIn, indexController.blogPage) 
+router.get("/submitted", loggedIn, indexController.submitted) 
+router.get("/current", loggedIn, indexController.current)
+router.get("/projects", loggedIn, indexController.projects)
 router.get('/services/:id', indexController.blogPageId)
 router.get('/about-us', indexController.aboutPage)
 

@@ -47,7 +47,7 @@ async index(req, res) {
     let posts=[];
 
 
-                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC`)
+                posts = await sequelize.query(`SELECT posts.id, post_category,  view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description  FROM posts group by posts.id ORDER BY posts.id DESC`)
 
         const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
 
@@ -60,16 +60,11 @@ async index(req, res) {
                 pagecounter++;    
             }  
         }
-      
-const view = await Views.findOne({where:{id:1}});
-
-    await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
     res.render("index", { banners, posts:posts[0],  lang, limit: posts[0].length, pageNum, pagecounter, }); 
 
 }
-    
-async blogPage(req, res) {
+async submitted(req, res) {
     let pagecount, limitt;
     let old = 0;
     let pagecounter = 1;
@@ -111,7 +106,99 @@ const view = await Views.findOne({where:{id:1}});
 
     await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
 
-        res.render("services", { posts:posts[0], lang, limit: posts[0].length, pageNum, pagecounter,});  
+        res.render("submitted", { posts:posts[0], lang, limit: posts[0].length, pageNum, pagecounter,});  
+ 
+}
+
+async current(req, res) {
+    let pagecount, limitt;
+    let old = 0;
+    let pagecounter = 1;
+    let pageNum = req.query.page;
+    if(!pageNum){
+        pageNum = 1;
+    }
+    let perPageItems=10;
+
+        old = pageNum * 10 - perPageItems;
+
+
+    let lang = req.originalUrl.split("/")[1]
+    let langs = ['ru', 'tm', 'en']
+    if(!langs.includes(lang)){
+        lang = 'ru'      
+    }
+    if(!lang){
+        lang ='ru'
+    }
+
+
+    let posts=[];
+
+                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+
+        const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
+        
+            pagecount = rows2[0].length;
+        for(let i=0; i < rows2[0].length; i++){
+            if(pagecount <= perPageItems){  
+            }
+            else{
+                pagecount = pagecount - perPageItems;
+                pagecounter++;    
+            }  
+        }
+const view = await Views.findOne({where:{id:1}});
+
+    await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
+
+        res.render("current", { posts:posts[0], lang, limit: posts[0].length, pageNum, pagecounter,});  
+ 
+}
+
+async projects(req, res) {
+    let pagecount, limitt;
+    let old = 0;
+    let pagecounter = 1;
+    let pageNum = req.query.page;
+    if(!pageNum){
+        pageNum = 1;
+    }
+    let perPageItems=10;
+
+        old = pageNum * 10 - perPageItems;
+
+
+    let lang = req.originalUrl.split("/")[1]
+    let langs = ['ru', 'tm', 'en']
+    if(!langs.includes(lang)){
+        lang = 'ru'      
+    }
+    if(!lang){
+        lang ='ru'
+    }
+
+
+    let posts=[];
+
+                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+
+        const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
+        
+            pagecount = rows2[0].length;
+        for(let i=0; i < rows2[0].length; i++){
+            if(pagecount <= perPageItems){  
+            }
+            else{
+                pagecount = pagecount - perPageItems;
+                pagecounter++;    
+            }  
+        }
+const view = await Views.findOne({where:{id:1}});
+
+    await Views.update({blogpage:view.blogpage+1}, {where:{id:1}});
+
+        res.render("projects", { posts:posts[0], lang, limit: posts[0].length, pageNum, pagecounter,});  
  
 }
 
@@ -141,20 +228,47 @@ async blogPageId(req, res) {
 
 }
 async aboutPage(req, res){
-    var lang = req.originalUrl.split("/")[1]
-    var langs = ['ru', 'tm', 'en']
+    let pagecount, limitt;
+    let old = 0;
+    let pagecounter = 1;
+    let pageNum = req.query.page;
+    if(!pageNum){
+        pageNum = 1;
+    }
+    let perPageItems=10;
+
+        old = pageNum * 10 - perPageItems;
+
+
+    let lang = req.originalUrl.split("/")[1]
+    let langs = ['ru', 'tm', 'en']
     if(!langs.includes(lang)){
         lang = 'ru'      
     }
     if(!lang){
         lang ='ru'
     }
-    
 
+
+    let posts=[];
+
+                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+
+        const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
+        
+            pagecount = rows2[0].length;
+        for(let i=0; i < rows2[0].length; i++){
+            if(pagecount <= perPageItems){  
+            }
+            else{
+                pagecount = pagecount - perPageItems;
+                pagecounter++;    
+            }  
+        }
 const view = await Views.findOne({where:{id:1}});
     await Views.update({aboutpage:view.aboutpage+1}, {where:{id:1}});
 
-    res.render('about', {lang,} );
+    res.render('about', {posts:posts[0], lang, limit: posts[0].length, pageNum, pagecounter,} );
 
 }
 

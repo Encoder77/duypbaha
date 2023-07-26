@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+<body id="default_theme" class="it_service" lang="<%- lang %>">
+
+<%- include('partials/header') %>
+
+<section class="tm-white-bg ">
+  <div class="container reveal active">
+    <div class="row">
+      <div class="tm-section-header section-margin-top" id="popular">
+        <div class="col-lg-4 col-md-3 col-sm-3">
+          <hr>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <h2 class="tm-section-title" data-key="current" >Current</h2>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-3">
+          <hr>
+        </div>
+      </div>
+      <% if(posts.length > 0) {%>
+        <% for(let i=0; i < limit; i++) { %>
+          <% if(posts[i].post_category == 'current') {%>
+      <div class="col-lg-6">
+        <div class="tm-home-box-3">
+          <a href="/<%- lang %>/services/<%- posts[i].id %>">
+          <div class="tm-home-box-3-img-container">
+            <img src="/uploads/posts/<%- posts[i].post_img %>" alt="image" class="img-responsive">
+          </div>
+          <div class="tm-home-box-3-info">
+            <p class="tm-home-box-3-description"  ><%- posts[i].description %></p>
+            <p class="tm-date"><%- posts[i].createdAt %></p>
+          </div>
+          </a>
+        </div>
+      </div>
+      <% } %>
+      <% } %>
+      <% } %>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>
+<%- include('partials/js') %>
+</body>
+</html>
+

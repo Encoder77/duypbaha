@@ -17,22 +17,23 @@
       <!-- Testimonial -->
       <div class="col-lg-12">
         <div class="tm-what-we-do-right">
-          <div class="tm-about-box-2 margin-bottom-30">
-            <img src="/../img/about-2.jpg" alt="image" class="tm-about-box-2-img">
-            <div class="tm-about-box-2-text">
-              <h3 class="tm-about-box-2-title">Rent bike for tourists on famous places</h3>
-                      <p class="tm-about-box-2-description gray-text">The company provides bicycles for tourists on famous places. The company has the goal to make it easier and more convenient for tourists to explore various tourist attractions in a city.</p>
-                      <p class="tm-about-box-2-footer">Kuala Lumpur, Malaysia</p>
-            </div>
-          </div>
+          <% if(posts.length > 0) {%>
+            <% for(let i=0; i < limit; i++) { %>
+              <% if(posts[i].post_category == 'current') {%>
           <div class="tm-about-box-2 reveal active">
-            <img src="/../img/about-3.jpg" alt="image" class="tm-about-box-2-img">
+            <a href="/<%- lang %>/services/<%- posts[i].id %>">
+            <img src="/uploads/posts/<%- posts[i].post_img %>" alt="image" class="tm-about-box-2-img">
             <div class="tm-about-box-2-text">
-              <h3 class="tm-about-box-2-title">Booking a hotel on different places</h3>
-                      <p class="tm-about-box-2-description gray-text">The Hotels offer a variety of amenities and services to their guests</p>
-                      <p class="tm-about-box-2-footer">The Radisson Hotel</p>
+              <h3 class="tm-about-box-2-title"><%- posts[i].title %></h3>
+              
+                      <p class="tm-about-box-2-description gray-text"><%- posts[i].description %></p>
+                      
             </div>
+            </a>
           </div>
+          <% } %>
+          <% } %>
+          <% } %>
         </div>
         <!-- --------------------------- -->
       </div>

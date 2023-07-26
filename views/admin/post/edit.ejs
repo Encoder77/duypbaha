@@ -84,16 +84,16 @@
                                     <label for="descru">Post Goshmaca (RU)</label>
                                     <input type="text" name="descru" class="form-control" id="descru" value="<%- post.description_ru %>" placeholder="Goshmaca" required>
                                   </div>
-                                      <div class="form-group mb-1">
-                                        <label class="col-sm-3 col-form-label mb-0">Kategoriyalar</label>
-                                        <div class="col-sm-9 mt-0">
-                                          <select class="form-select" name="category" id="category" required>
-                                            <option selected value="Umumy">Umumy hojalyk Postlary</option>
-                                            <option value="Gurlushyk">Gurlushyk Postlary</option>
-                                             <option value="Sowgatlyk">Sowgatlyk we oy bezegleri</option> 
-                                          </select>
-                                        </div>
-                                      </div>
+                                  <div class="form-group mb-1">
+                                    <label for="descru">Sahypa</label>
+                                    <select id="category" name="category" class="form-select" aria-label="Default select example" required> 
+                                      <option selected value="<%- post.post_category %>"><%- post.post_category %></option>
+                                      <option value="submitted">Tabşyrylan desgalar sahypa</option>
+                                      <option value="current">Häzirki işlerimiz sahypa</option>
+                                      <option value="projects">Taslamalar sahypa</option>  
+                                      <option value="about">Biz barada sahypa</option>  
+                                    </select>
+                                  </div>
                                       <input type="hidden" name="secret" id="secret" value="<%= post.id %>">
                                       <div id="error" class="alert alert-danger" style="display: none;">Error</div>
                                 <div id="success" class="alert alert-success" style="display: none;">Success</div>
