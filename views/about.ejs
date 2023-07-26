@@ -19,7 +19,7 @@
         <div class="tm-what-we-do-right">
           <% if(posts.length > 0) {%>
             <% for(let i=0; i < limit; i++) { %>
-              <% if(posts[i].post_category == 'current') {%>
+              <% if(posts[i].post_category == 'about') {%>
           <div class="tm-about-box-2 reveal active">
             <a href="/<%- lang %>/services/<%- posts[i].id %>">
             <img src="/uploads/posts/<%- posts[i].post_img %>" alt="image" class="tm-about-box-2-img">
