@@ -1,13 +1,10 @@
 form.addEventListener("submit", () => {
     const post = {
         titleru:titleru.value,
-        exru:extm.value,
         descru:descru.value,
         titleen:titleen.value,
-        exen:extm.value,
         descen:descen.value,
         titletm:titletm.value,
-        extm:extm.value,
         desctm:desctm.value,
         category:category.value,
         secret:secret.value,

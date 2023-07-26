@@ -13,7 +13,6 @@ app.use('/fonts', express.static(__dirname + '/public/fonts'))
 app.use('/revolution', express.static(__dirname + '/public/revolution'))
 app.use('/admin', express.static(__dirname + '/public/admin'))
 app.use('/uploads', express.static(__dirname + '/uploads'))
-app.use('/html', express.static('/html'))
 app.set("view engine", "ejs");
 app.set("views", "./views");
 

@@ -23,7 +23,7 @@ class adminRouteControllers {
 
     async postsPage(req, res){
 
-        const rows = await sequelize.query(`SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru as title, excerpt_ru as excerpt, title_en as title, excerpt_en as excerpt, description_ru as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC`)
+        const rows = await sequelize.query(`SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru as title,  title_en as title,  description_ru as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC`)
             if(req.user){
                 res.render("admin/posts", {status:"ok", posts:rows[0] });
             }
@@ -35,7 +35,7 @@ class adminRouteControllers {
 
 
     async postsPageId(req, res){
-        let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, title_en, excerpt_ru, excerpt_en, excerpt_tm, description_ru, description_tm, post_category FROM posts where posts.id=${req.params.id} group by posts.id`;
+        let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, title_en,  description_ru, description_tm, description_en, post_category FROM posts where posts.id=${req.params.id} group by posts.id`;
         const adminposts = await sequelize.query(sql)
 
      if(req.user){
@@ -47,10 +47,8 @@ class adminRouteControllers {
     }
 
 async createPost(req, res){
-    let sql = `SELECT category_ru as category, category_slug, optione FROM categories ORDER BY id DESC`;
-    const categories = await sequelize.query(sql)
     if(req.user){
-        res.render('admin/post/create', { status:"ok", categories:categories[0] });
+        res.render('admin/post/create', { status:"ok"});
     }
     else{
         res.render("admin/login", {status:"no", user:"nothing"});
@@ -58,13 +56,11 @@ async createPost(req, res){
 }
 
 async editPost(req, res){
-    let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, title_en, excerpt_ru, excerpt_tm, excerpt_en, description_ru, description_tm, description_en, post_category, post_option where posts.id=${req.params.id} group by posts.id`;
-    let sql2 = `SELECT category_ru as category, category_slug, optione FROM categories ORDER BY id DESC`;
+    let sql = `SELECT posts.id as id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_ru, title_tm, title_en,  description_ru, description_tm, description_en, post_category  FROM posts where posts.id=${req.params.id} group by posts.id`;
     const adminposts = await sequelize.query(sql)
-    const categories = await sequelize.query(sql2)
 
 if(req.user){
-        res.render("admin/post/edit", { id:req.params.id, post:adminposts[0][0], categories:categories[0] });    
+        res.render("admin/post/edit", { id:req.params.id, post:adminposts[0][0] });    
 }
 else{
     res.render("admin/login", {status:"no", user:"nothing"});

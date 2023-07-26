@@ -51,23 +51,19 @@
                                 <h4 class="card-title">Maglumatlary dolduryn</h4>
                  
                                   <div class="form-group mb-1">
-                                    <label for="titletm">Haryt ady (TM)</label>
+                                    <label for="titletm">Post ady (TM)</label>
                                     <input type="text" name="titletm" class="form-control" id="titletm" value="<%- post.title_tm %>" placeholder="Ady" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="extm">Bahasy TMT</label>
-                                    <input type="number" name="extm" class="form-control" id="extm" value="<%- post.excerpt_tm %>" placeholder="Bahasy" required>
-                                  </div>
-                                  <div class="form-group mb-1">
-                                    <label for="desctm">Haryt goshmaca(TM)</label>
+                                    <label for="desctm">Post goshmaca(TM)</label>
                                     <input type="text" name="desctm" class="form-control" id="desctm" value="<%- post.description_tm %>" placeholder="Goshmaca" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="titleen">Haryt ady (EN)</label>
+                                    <label for="titleen">Post ady (EN)</label>
                                     <input type="text" name="titleen" class="form-control" id="titleen" value="<%- post.title_en %>" placeholder="Ady" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="descen">Haryt goshmaca(EN)</label>
+                                    <label for="descen">Post goshmaca(EN)</label>
                                     <input type="text" name="descen" class="form-control" id="descen" value="<%- post.description_en %>" placeholder="Goshmaca" required>
                                   </div>
                                   <img src="../uploads/posts/<%- post.post_img %>" width="300" alt="">
@@ -81,20 +77,20 @@
                                 <h4 class="card-title">Maglumatlary dolduryn</h4>
                                 <form class="forms-sample" onsubmit="return false;" id="form" enctype="multipart/form-data">
                                   <div class="form-group mb-1">
-                                    <label for="titleru">Haryt Ady(RU)</label>
+                                    <label for="titleru">Post Ady(RU)</label>
                                     <input type="text" name="titleru" class="form-control" id="titleru" value="<%- post.title_ru %>" placeholder="Title" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="descru">Haryt Goshmaca (RU)</label>
+                                    <label for="descru">Post Goshmaca (RU)</label>
                                     <input type="text" name="descru" class="form-control" id="descru" value="<%- post.description_ru %>" placeholder="Goshmaca" required>
                                   </div>
                                       <div class="form-group mb-1">
                                         <label class="col-sm-3 col-form-label mb-0">Kategoriyalar</label>
                                         <div class="col-sm-9 mt-0">
                                           <select class="form-select" name="category" id="category" required>
-                                            <% for (let i = 0; i < categories.length; i++) { %>
-                                            <option value="<%= categories[i].category_slug %>" <% if(categories[i].category_slug==post.post_category) { %>selected<% } %>><%= categories[i].category %></option>
-                                            <% } %>
+                                            <option selected value="Umumy">Umumy hojalyk Postlary</option>
+                                            <option value="Gurlushyk">Gurlushyk Postlary</option>
+                                             <option value="Sowgatlyk">Sowgatlyk we oy bezegleri</option> 
                                           </select>
                                         </div>
                                       </div>

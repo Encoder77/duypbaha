@@ -6,7 +6,6 @@ const profile = require("../profile");
 const deletepost = require("../deletepost");
 const deletebanner = require("../deletebanner");
 const updatepost = require("../updatepost");
-const updatebanner = require("../updatebanner");
 const register = require("./register");
 const router = express.Router();
 
@@ -27,7 +26,6 @@ router.post("/createbanner", banner);
 router.post("/deletepost", deletepost);
 router.post("/deletebanner", deletebanner);
 router.post("/updatepost", updatepost);
-router.post("/updatebanner", updatebanner);
 
 
 

@@ -8,8 +8,19 @@
     <div class="row">
       <div class="tm-site-name-container" style="float: left;">
         <a href="/" class="tm-site-name">
-          <img src="img/PARYATANA-new.png" width="250" height=auto" id="logo">
+          <img src="/../img/PARYATANA-new.png" width="250" height=auto" id="logo">
         </a>
+      </div>
+      <div style="float: left;">
+        <div style="float: left;" >
+          <a onclick="langswitch('ru')" class="flags" style="color: #535252; padding: 5px; text-decoration:none;cursor: pointer;"><img  style="border-radius: 15px;width: 30px;height: 30px;margin-top: 20px; margin-left: 20px;" src="/images/flags/ru.png" alt=""></a>
+        </div>
+        <div style="float: left;" >
+          <a onclick="langswitch('tm')" class="flags" style="color: #535252; padding: 5px; text-decoration:none;cursor: pointer;"><img  style="border-radius: 15px;width: 30px;height: 30px;margin-top: 20px;" src="/images/flags/tm.png" alt=""></a>
+        </div>
+        <div style="float: left;" >
+          <a onclick="langswitch('en')" class="flags" style="color: #535252; padding: 5px; text-decoration:none;cursor: pointer;"><img  style="border-radius: 15px;width: 30px;height: 30px;margin-top: 20px;" src="/images/flags/en.png" alt=""></a>
+        </div>
       </div>
       <div class="col-lg-6 col-md-8 col-sm-9">
         <div class="mobile-menu-icon">
@@ -22,16 +33,23 @@
         </div>
         <nav class="tm-nav" style="float: left; width: max-content;">
           <ul>
-            <li><a id="one" href="/" class="active">Home</a></li>
-            <li><a class="upper_links" href="/about-us">About</a></li>
-            <li><a class="upper_links" href="/services?category=submitted">Submitted facilities</a></li>
-            <li><a class="upper_links" href="/services?category=current">Our current affairs</a></li>
-            <li><a class="upper_links" href="/services?category=projects">Projects</a></li>
-            <li><a class="upper_links" href="/contact">Contact</a></li>
+            <li><a id="one" href="/<%- lang %>/" class="active" data-key="home" >Home</a></li>
+            <li><a class="upper_links" href="/<%- lang %>/about-us" data-key="about" >About-us</a></li>
+            <li><a class="upper_links" href="/<%- lang %>/services?category=submitted" data-key="submitted" >Submitted facilities</a></li>
+            <li><a class="upper_links" href="/<%- lang %>/services?category=current" data-key="current" >Our current affairs</a></li>
+            <li><a class="upper_links" href="/<%- lang %>/services?category=projects" data-key="projects" >Projects</a></li>
+            <li><a class="upper_links" href="/<%- lang %>/contact" data-key="contact" >Contact</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </div>
 </div>
-
+<script>
+document.querySelectorAll(".upper_links").forEach((link) => {
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+        link.setAttribute("id", "one");
+    }
+});
+</script>

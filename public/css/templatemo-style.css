@@ -15,9 +15,11 @@ a/**
  * COLOR CODES
  * Yellow	#FCDD44
  *
+ 
+
  */
 
-/* CSS Resets */ 
+
 ul,p {
   margin: 0;
   padding: 0;
@@ -2359,7 +2361,7 @@ line-height: 64px; /* 133.333% */
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1370px) {
   .tm-banner {
     margin-top: 8%;
   }

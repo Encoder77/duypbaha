@@ -14,10 +14,10 @@
         </div>
         <div>
           <a class="navbar-brand brand-logo" href="/admin">
-            Duypbaha
+           Ajayyp Gurlushyk
           </a>
           <a class="navbar-brand brand-logo-mini" style="font-size:20px;" href="/admin">
-            D/A
+            Adminpanel
           </a>
         </div>
       </div>
@@ -52,23 +52,19 @@
                                 <form class="forms-sample" action="/api/createpost" method="POST" id="form" enctype="multipart/form-data">
                  
                                   <div class="form-group mb-1">
-                                    <label for="titletm">Haryt Ady (TM)</label>
+                                    <label for="titletm">Post Ady (TM)</label>
                                     <input type="text" name="titletm" class="form-control" id="titletm" placeholder="Ady" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="extm">Bahasy TMT</label>
-                                    <input type="number" name="extm" class="form-control" id="extm" placeholder="Bahasy" required>
-                                  </div>
-                                  <div class="form-group mb-1">
-                                    <label for="desctm">Haryt Maglumat (TM)</label>
+                                    <label for="desctm">Post Maglumat (TM)</label>
                                     <textarea type="text" name="desctm" class="form-control" id="desctm" placeholder="Goshmaca" style="height: 200px;" required></textarea>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="titleen">Haryt Ady (EN)</label>
+                                    <label for="titleen">Post Ady (EN)</label>
                                     <input type="text" name="titleen" class="form-control" id="titleen" placeholder="Ady" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="descen">Haryt Maglumat (EN)</label>
+                                    <label for="descen">Post Maglumat (EN)</label>
                                     <textarea type="text" name="descen" class="form-control" id="descen" placeholder="Goshmaca" style="height: 200px;" required></textarea>
                                   </div>
                                   <div class="form-group mb-1">
@@ -83,21 +79,18 @@
                               <div class="card-body">
                                 <h4 class="card-title">Maglumatlary dolduryn</h4>
                                   <div class="form-group mb-1">
-                                    <label for="titleru">Haryt Ady (RU)</label>
+                                    <label for="titleru">Post Ady (RU)</label>
                                     <input type="text" name="titleru" class="form-control" id="titleru" placeholder="Ady" required>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <label for="descru">Haryt Goshmaca (RU)</label>
+                                    <label for="descru">Post Goshmaca (RU)</label>
                                     <textarea type="text" name="descru" class="form-control" id="descru" placeholder="Goshmaca" style="height: 200px;" required></textarea>
                                   </div>
                                   <div class="form-group mb-1">
-                                    <select id="option" name="option" class="form-select" aria-label="Default select example" required> 
-                                      <option selected value="Umumy">Umumy hojalyk harytlary</option>
-                                      <option value="Gurlushyk">Gurlushyk harytlary</option>
+                                    <select id="category" name="category" class="form-select" aria-label="Default select example" required> 
+                                      <option selected value="Umumy">Umumy hojalyk Postlary</option>
+                                      <option value="Gurlushyk">Gurlushyk Postlary</option>
                                       <option value="Sowgatlyk">Sowgatlyk we oy bezegleri</option>  
-                                      <option value="Kanselyariya">Kanselyariya we ofis harytlary</option>
-                                      <option value="Eshikler">Eshikler we yantorbalar</option>
-                                      <option value="Dowrebap">Dowrebap enjamlar</option>
                                     </select>
                                   </div>
                                       <div id="error" class="alert alert-danger" style="display: none;">Error</div>

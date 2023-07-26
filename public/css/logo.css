@@ -7,6 +7,7 @@ body{
     margin: 0;
 }
 
+
 #logo{
     margin-top: -1.2rem;
 }
@@ -16,7 +17,7 @@ body{
 }
 
 @media(max-width: 991px){
-    .tm-header .container .row img{
+    .tm-site-name img{
         margin-left: -2.1rem;
         margin-bottom: -10rem;
         height: 50px;
@@ -31,3 +32,4 @@ body{
         margin-left: 1rem;
     }
 }
+

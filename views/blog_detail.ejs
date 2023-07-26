@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/detail_head') %>
+<body id="default_theme" class="it_service" lang="<%- lang %>">
+<!-- loader -->
+
+<!-- end loader -->
+<!-- header -->
+<%- include('partials/detail_header') %>
+
+<div class="section padding_layout_1 blog_grid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
+        <div class="full">
+          <div class="blog_section margin_bottom_0">
+            <div class="blog_feature_img"> <img class="img-responsive" src="/../uploads/posts/<%- post[0].post_img %>" alt="#"> </div>
+            <div class="blog_feature_cantant">
+              <p class="blog_head"><%- post[0].title %></p>
+              <div class="post_info">
+                <ul>
+                  <li><i class="fa fa-comment" aria-hidden="true"></i><%- post[0].comment_count %></li>
+                </ul>
+              </div>
+              <div style="clear: both;" ></div>
+              <h4 style=" float: left; border-bottom: 4px solid #2e851d;">Haryt barada maglumat: </h4>
+              <p><%- post[0].description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end section -->
+<%- include('partials/detail_footer') %>
+<%- include('partials/detail_js') %>
+<%- include('partials/js') %>
+<script src="/../js/comment.js"></script>
+</body>
+</html>

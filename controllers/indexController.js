@@ -15,7 +15,7 @@ async index(req, res) {
         lang ='ru'
     }
     const banners = await Banner.findAll({ raw: true, attributes: [ 
-        'id', 'img_name', [`head_text_${lang}`, 'head_text' ], [`desc_text_${lang}`, 'desc_text'], 
+        'id', 'img_name', 
      ],
      order: [
         ['id', 'DESC']
@@ -47,7 +47,7 @@ async index(req, res) {
     let posts=[];
 
 
-                posts = await sequelize.query(`SELECT posts.id, view_count, post_option, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC`)
+                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC`)
 
         const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
 
@@ -94,7 +94,7 @@ async blogPage(req, res) {
 
     let posts=[];
 
-                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
+                posts = await sequelize.query(`SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description, post_category FROM posts group by posts.id ORDER BY posts.id DESC LIMIT ${old},${perPageItems}`)
 
         const rows2 = await sequelize.query(`SELECT * FROM posts`, {raw:true}) 
         
@@ -126,7 +126,7 @@ async blogPageId(req, res) {
     if(!lang){
         lang ='ru'
     }
-    let sql = `SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title, excerpt_${lang} as excerpt, description_${lang} as description, post_category where posts.id=${req.params.id} group by posts.id`;
+    let sql = `SELECT posts.id, view_count, date_format(posts.createdAt, '%d/%m/%Y') as createdAt, post_img, title_${lang} as title,  description_${lang} as description, post_category FROM posts where posts.id=${req.params.id}  group by posts.id`;
     const post = await sequelize.query(sql)
 	if(post[0].length == 0){
 	res.status(404).render('404');
@@ -168,11 +168,17 @@ async contactPage(req, res){
     if(!lang){
         lang ='ru'
     }
-
+    const banners = await Banner.findAll({ raw: true, attributes: [ 
+        'id', 'img_name', 
+     ],
+     order: [
+        ['id', 'DESC']
+    ]
+    });
 const view = await Views.findOne({where:{id:1}});
     await Views.update({contactpage:view.contactpage+1}, {where:{id:1}});
 
-        res.render("contact", {lang });
+        res.render("contact", {lang, banners });
  
 }
 

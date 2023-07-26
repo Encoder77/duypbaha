@@ -8,15 +8,13 @@
   <!-- Flexslider -->
   <div class="flexslider flexslider-banner">
     <ul class="slides">
+      <% if(banners.length > 0) {%>
+        <% for(let i=0; i < banners.length; i++) { %>
       <li>
-        <img src="img/banner-1.jpg" alt="Image" />
+        <img src="/uploads/banners/<%- banners[i].img_name %>" alt="Image" />
       </li>
-      <li>
-        <img src="img/banner-2.jpg" alt="Image" />
-      </li>
-      <li>
-        <img src="img/banner-3.jpg" alt="Image" />
-      </li>
+      <% } %>
+      <% } %>
     </ul>
   </div>
 </section>

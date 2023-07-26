@@ -23,18 +23,11 @@ const post = async (req,res) => {
             fs.rename(oldpath, newpath, function (err) {
               if (err) throw err;
             });
-
-            const {titleru, exru, titletm, extm, titleen, exen} = fields;
-            if(!titleru || !titletm || !titleen) return res.json({ status: "error", error: "Maglumatlary dolduryň"});
-            else if(!req.cookies.isAdmin){
-                res.render("admin/login", {status:"no", user:"nothing"});
-            }
-            else{
-                let sql = `INSERT INTO banners(img_name,  head_text_en, desc_text_en, head_text_ru, desc_text_ru, head_text_tm, desc_text_tm, createdAt) VALUES ('${pic+'.jpg'}' ,'${titleen}', '${exen}' ,'${titleru}', '${exru}','${titletm}', '${extm}', now())`;
+      
+                let sql = `INSERT INTO banners(img_name,   createdAt) VALUES ('${pic+'.jpg'}' ,now())`;
                 await sequelize.query(sql)
                 return res.redirect('/banners');
         
-            }
         })
         }
 

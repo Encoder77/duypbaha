@@ -11,8 +11,6 @@ const deletepost = async (req,res) => {
     else{ 
         let sql1 = `SELECT id, post_img FROM posts where id=${id}`;
         const result = await sequelize.query(sql1)
-        let sql2 = `DELETE FROM comments where post_id=${result[0][0].id}`;
-        await sequelize.query(sql2)
         var filePath = (path.resolve(__dirname, '..', 'uploads', 'posts', result[0][0].post_img));
         if(fs.existsSync(filePath)){
         fs.unlinkSync(filePath);   

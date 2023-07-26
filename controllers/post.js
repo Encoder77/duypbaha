@@ -25,13 +25,13 @@ const post = async (req,res) => {
               if (err) throw err;
             });
 
-    const {titleru, descru, category, titletm, titleen, extm, desctm,  descen, option} = fields;
-    if(!titleru || !descru || !titletm || !desctm || !titleen || !descen || !category || !option) return res.json({ status: "error", error: "Maglumatlary dolduryň"});
+    const {titleru, descru, category, titletm, titleen,  desctm,  descen,} = fields;
+    if(!titleru || !descru || !titletm || !desctm || !titleen || !descen || !category ) return res.json({ status: "error", error: "Maglumatlary dolduryň"});
     else if(!req.cookies.isAdmin){
         res.render("admin/login", {status:"no", user:"nothing"});
     }
     else{
-        let sql = `INSERT INTO posts(post_img, title_ru, description_ru, excerpt_ru, title_en, description_en, excerpt_en, title_tm, description_tm, excerpt_tm, post_category, post_option, view_count, createdAt ) VALUES ('${pic+'.jpg'}','${titleru}', '${descru}', '${extm}','${titleen}', '${descen}', '${extm}','${titletm}', '${desctm}', '${extm}', '${category}', '${option}', '0', now())`;
+        let sql = `INSERT INTO posts(post_img, title_ru, description_ru,  title_en, description_en,  title_tm, description_tm,  post_category,  view_count, createdAt ) VALUES ('${pic+'.jpg'}','${titleru}', '${descru}', '${titleen}', '${descen}', '${titletm}', '${desctm}',  '${category}',  '0', now())`;
         await sequelize.query(sql)
         return res.redirect('/posts');
   
